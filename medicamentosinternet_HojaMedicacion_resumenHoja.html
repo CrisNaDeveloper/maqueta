@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Medicamentos - Hoja de medicación personalizada</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Medicamentos - Consultas <em>online</em></h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">Hoja de medicación personalizada</a></li>
+						<li>Hoja de medicación resumida</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Hoja de medicación personalizada</h3>
+	
+
+
+    <div class="alert alert-info" role="dialog" aria-label="mensaje informativo">
+        <div class="row">
+            <div class="col-sm-1 hidden-xs">
+                <img title="Información" src="../img/ico_information.gif" alt="Icono con una i latina que acompaña a un texto informativo">
+            </div>
+            <div class="col-xs-12 col-sm-11">
+                <p>ASEGURESE DE QUE:</p>
+                <ul>
+                    <li>Incluye la misma posología que la pautada por su médico.</li>
+                    <li>La frecuencia de adminsitración que le ha indicado el profesional sanitario correspondiente
+                    es la única válida.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <h4>Información para: mi</h4>        
+
+
+
+        <div class="col-xs-12 col-sm-6">
+            <h4>Información para:
+            mi</h4>
+        </div>
+        <div class="col-xs-12 col-sm-6 text-right">
+            <h4>
+                <a id="ctl00_ContenedorContenidoSeccion_linkResumen" href="javascript:__doPostBack(&#39;ctl00$ContenedorContenidoSeccion$linkResumen&#39;,&#39;&#39;)"><b>Vea su hoja de medicación resumida&nbsp;>></b></a>
+            </h4>
+        </div>
+        <div class="clearfix">
+        </div>
+        
+        <div class="panel">
+            <fieldset class="panel-body">
+                <legend class="row col-xs-12">Hoja de medicación detallada - Información elaborada por el paciente</legend>
+                <div class="clearfix"></div>
+
+                
+                        <div class="panel-formulario form-group">
+                            <div class="form-group col-xs-12 text-right">
+                                <input type="image" name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$btnEdit" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_btnEdit" src="../img/icnEdit.gif" alt="Editar" style="border-width:0px;" />
+                                <input type="image" name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$btnBorrar" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_btnBorrar" src="../img/icnBorrar.gif" alt="Eliminar" style="border-width:0px;" />
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_divCaratula" class="datosMedicamento col-sm-5 col-md-12">
+                                    <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_imgCaratula" title="Cantonaje del medicamento seleccionado" oncopy="return false" oncontextmenu="return false" src="../comun/visorCaratulas.aspx?cod=654732" style="border-width:0px;" /><br />
+                                </div>
+                                <div class="datosMedicamentoTexto col-sm-7 col-md-12">
+                                    <ul aria-label="Datos del medicamento" role="contentinfo">
+                                        <li>
+                                            XARELTO 10 mg 10 comprimidos recubiertos</li>
+                                        <li><b>Principio activo:</b>
+                                            rivaroxaban</li>
+                                        <li><b>Vía:</b>
+                                            Oral</li>
+                                        <li><b>Forma:</b>
+                                            Comprimidos</li>
+                                        <li><b>Receta:</b>
+                                            Seguridad Social y validación</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9">
+                                <fieldset class="col-sm-7 cajasHojaM" role="group">
+                                    <legend class="row col-xs-12">Dosificación:</legend>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <!-- cajaComida -->
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_imgDesayuno" title="Desayuno" src="../img/desayuno_ico.jpg" alt="Desayuno" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtDesayuno" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_labelDesayuno" class="control-label">Desayuno</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$txtDesayuno" type="text" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtDesayuno" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_imgComida" title="Comida" src="../img/comida_ico.jpg" alt="Comida" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtComida" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_labelComida" class="control-label">Comida</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$txtComida" type="text" value="1" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtComida" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_imgCena" title="Cena" src="../img/cena_ico.jpg" alt="Cena" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtCena" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_labelCena" class="control-label">Cena</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$txtCena" type="text" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtCena" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_imgAcostarse" title="Acostarse" src="../img/acostarse_ico.jpg" alt="Acostarse" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtAcostarse" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_labelAcostarse" class="control-label">Acostarse</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$txtAcostarse" type="text" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtAcostarse" class="form-control" />
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="col-sm-5 cajasHojaMF" role="group">
+                                    <legend class="row col-xs-12">Duración del tratamiento:</legend>
+                                    <div class="col-xs-6 text-center">
+                                        <!-- fichasHorasFecha -->
+                                        <i class="glyphicon glyphicon-calendar"></i>
+
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtFechaInicio" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_labelFechaInicio" class="control-label">Fecha inicio</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$txtFechaInicio" type="text" value="CRÓNICO" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtFechaInicio" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 text-center">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtFechaFin" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_labeltxtFechaFin" class="control-label">Fecha Fin</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl00$txtFechaFin" type="text" value="CRÓNICO" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl00_txtFechaFin" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                <div class="clearfix">
+                                </div>
+                                <div class="">
+                                    <p>
+                                        <b>Recomendaciones:</b>
+                                        Tome los comprimidos enteros, sin partir ni masticar, tragándolos con ayuda de un vaso de agua.
+Puede tomar este medicamento con o sin alimentos; si tiene molestias de estómago, tómelo con algún alimento.
+Siga estrictamente la pauta indicada por su médico en cuanto a dosis y frecuencia de administración.
+Avise a su médico si padece o ha padecido problemas de riñón o problemas de hígado.
+Este medicamento modifica la acción de otros fármacos, NO tome otros medicamentos sin consultar antes a su médico o farmacéutico.
+Informe inmediatamente a su médico si está embarazada o cree que puede estarlo, así como si quedase embarazada durante el tratamiento.
+Avise a su médico si tiene algún hijo al que esté dándole el pecho.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="panel-formulario form-group">
+                            <div class="form-group col-xs-12 text-right">
+                                <input type="image" name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$btnEdit" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_btnEdit" src="../img/icnEdit.gif" alt="Editar" style="border-width:0px;" />
+                                <input type="image" name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$btnBorrar" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_btnBorrar" src="../img/icnBorrar.gif" alt="Eliminar" style="border-width:0px;" />
+                            </div>
+                            <div class="col-xs-12 col-md-3">
+                                <div id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_divCaratula" class="datosMedicamento col-sm-5 col-md-12">
+                                    <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_imgCaratula" title="Cantonaje del medicamento seleccionado" oncopy="return false" oncontextmenu="return false" src="../comun/visorCaratulas.aspx?cod=702153" style="border-width:0px;" /><br />
+                                </div>
+                                <div class="datosMedicamentoTexto col-sm-7 col-md-12">
+                                    <ul aria-label="Datos del medicamento" role="contentinfo">
+                                        <li>
+                                            COULDINA INSTANT CON PARACETAMOL 20 sobres efervescentes</li>
+                                        <li><b>Principio activo:</b>
+                                            paracetamol+fenilefrina+clorfenamina</li>
+                                        <li><b>Vía:</b>
+                                            Oral</li>
+                                        <li><b>Forma:</b>
+                                            Sobres</li>
+                                        <li><b>Receta:</b>
+                                            No Seguridad Social</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9">
+                                <fieldset class="col-sm-7 cajasHojaM" role="group">
+                                    <legend class="row col-xs-12">Dosificación:</legend>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <!-- cajaComida -->
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_imgDesayuno" title="Desayuno" src="../img/desayuno_ico.jpg" alt="Desayuno" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtDesayuno" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_labelDesayuno" class="control-label">Desayuno</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$txtDesayuno" type="text" value="1" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtDesayuno" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_imgComida" title="Comida" src="../img/comida_ico.jpg" alt="Comida" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtComida" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_labelComida" class="control-label">Comida</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$txtComida" type="text" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtComida" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_imgCena" title="Cena" src="../img/cena_ico.jpg" alt="Cena" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtCena" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_labelCena" class="control-label">Cena</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$txtCena" type="text" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtCena" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-center">
+                                        <img id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_imgAcostarse" title="Acostarse" src="../img/acostarse_ico.jpg" alt="Acostarse" style="border-width:0px;" />
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtAcostarse" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_labelAcostarse" class="control-label">Acostarse</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$txtAcostarse" type="text" maxlength="3" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtAcostarse" class="form-control" />
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="col-sm-5 cajasHojaMF" role="group">
+                                    <legend class="row col-xs-12">Duración del tratamiento:</legend>
+                                    <div class="col-xs-6 text-center">
+                                        <!-- fichasHorasFecha -->
+                                        <i class="glyphicon glyphicon-calendar"></i>
+
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtFechaInicio" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_labelFechaInicio" class="control-label">Fecha inicio</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$txtFechaInicio" type="text" value="30/12/2019" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtFechaInicio" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-6 text-center">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+
+                                        <label for="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtFechaFin" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_labeltxtFechaFin" class="control-label">Fecha Fin</label>
+                                        <input name="ctl00$ContenedorContenidoSeccion$rptMedicamentos$ctl01$txtFechaFin" type="text" value="27/02/2020" readonly="readonly" id="ctl00_ContenedorContenidoSeccion_rptMedicamentos_ctl01_txtFechaFin" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                <div class="clearfix">
+                                </div>
+                                <div class="">
+                                    <p>
+                                        <b>Recomendaciones:</b>
+                                        Tome los sobres disueltos en un vaso de agua.
+Tome este medicamento con las comidas o con algún alimento para evitar posibles molestias de estómago.
+Siga estrictamente la pauta indicada por su médico en cuanto a dosis y frecuencia de administración.
+NO debe tomar más de 4 gramos de paracetamol al día.
+Este medicamento modifica la acción de otros fármacos, NO tome otros medicamentos sin consultar antes a su médico o farmacéutico.
+Mientras tome este medicamento procure beber gran cantidad de agua y otros líquidos, a no ser que su médico le indique lo contrario.
+NO beba alcohol mientras dure el tratamiento, porque pueden aumentar los efectos adversos.
+Este medicamento puede causar somnolencia y disminuir sus reflejos, por eso se aconseja que tenga cuidado al conducir o al manipular maquinaria peligrosa.
+Informe inmediatamente a su médico si está embarazada o cree que puede estarlo, así como si quedase embarazada durante el tratamiento.
+Avise a su médico si tiene algún hijo al que esté dándole el pecho.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                <div id="ctl00_ContenedorContenidoSeccion_divObservaciones" class="panel-formulario">
+                    <label for="ctl00_ContenedorContenidoSeccion_txtObservaciones" id="ctl00_ContenedorContenidoSeccion_labeltxtObservaciones" class="control-label col-xs-12">Observaciones de la hoja de medicación:</label>
+                    <div class="col-xs-12 form-group">
+                        <textarea name="ctl00$ContenedorContenidoSeccion$txtObservaciones" rows="2" cols="20" id="ctl00_ContenedorContenidoSeccion_txtObservaciones" class="form-control">
+ </textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="ctl00_ContenedorContenidoSeccion_divConfirmar" class="div_confirmar text-center panel-botonera">
+                <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$btnAgregar','')" id="ctl00_ContenedorContenidoSeccion_btnAgregar" type="button" class="btn btn-primary form-group" title="Buscar más medicamentos">
+                    Buscar más medicamentos</button>
+                
+            </div>
+            
+        </div>
+
+        <div class="alert alert-info" role="dialog" aria-label="mensaje informativo">
+            <div class="row">
+                <div class="col-sm-1 hidden-xs">
+                    <img title="Información" src="../img/icono-info.png" alt="Icono con una i latina que acompaña a un texto informativo">
+                </div>
+                <div class="col-sm-11">
+                    <div class="col-md-3">
+                        <p>
+                            Hoja de medicación para:
+                <strong>
+                    MI</strong>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4 col-md-offset-4 col-md-5 col-lg-offset-4 col-lg-5" role="group" aria-label="botones descarga hoja de medicación">
+                        <p class="text-center">Guardar hoja de medicación:</p>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8 col-md-offset-5 col-md-7 col-lg-offset-7 col-lg-5 botonera">
+                        <!-- resumida -->
+                        
+                        <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$Button5','')" id="ctl00_ContenedorContenidoSeccion_Button5" type="button" class="btn btn-gris" title="Guardar hoja de medicación resumida">
+                            Resumida
+                            <i class="glyphicon glyphicon-download-alt" title="Guardar hoja de medicación resumida"></i>
+                        </button>
+
+                        <!-- detallada -->
+                        
+                        <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$Button3','')" id="ctl00_ContenedorContenidoSeccion_Button3" type="button" class="btn btn-gris" title="Guardar hoja de medicación detallada">
+                            Detallada
+                            <i class="glyphicon glyphicon-download-alt" title="Guardar hoja de medicación detallada"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+
+        <div class="col-xs-12 divTableMsg">
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-1">
+                    <img alt="Este icono simboliza un sobre de correo electrónico" src="/img/ico_mail.gif" title="Imagen de contacto">
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-11">
+                    
+<p id="ctl00_CorreoContacto1_pnlPediatria">Para cualquier sugerencia
+    sobre la información que se ofrece en este servicio contactar con <a class="link"
+        href="mailto:sanidadinforma@salud.madrid.org " title="direcci&oacute;n de correo electr&oacute;nico">
+        sanidadinforma@salud.madrid.org</a></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!--Fin de cuerpo-->
+
+    <footer aria-label="Pie de página">
+        <div id="pie" class="row">
+            <div class="col-xs-12 col-sm-7 listapie1">
+                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" rel="noopener">
+                    
+                    <img alt="Icono de conformidad con el Nivel AA de Accesibilidad Web 2.1 del W3C-WAI" src="../img/wcag2.1AA-v.png" title="Explicaci&oacute;n del Nivel AA de Conformidad de la WCAG 2.1 (se abre en nueva pestaña)" /></a>
+                <a title="Consulta la declaración de conformidad" href="/accesibilidad.aspx">Accesibilidad</a>
+                <a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a>
+            </div>
+            <div class="col-xs-12 col-sm-5">Copyright &copy; Comunidad de Madrid </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- JS -->
+
+    <!-- Incluye todos los componentes compilados o archivos individuales según sea necesario -->
+
+    <script src="/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Bootstrap/js/moment-with-locales.js"></script>
+    <script src="/Bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+    <link href="/Bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Otros javascripts -->
+    <script src="/js/js.js"></script>
+
+</body>
+
+</html>
+
+		</form>
+
+	</main>
+
+	
+<div class="container" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-0 col-sm-1">
+					<span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gestión de citas de revisión</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2>Gestión de citas</h2>
+    </div>
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Acceso</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<h3>Formulario <em>online</em></h3>
+
+		<div id="PanelError" class="alert alert-info" role="dialog" aria-label="mensaje informativo">
+			<div class="row">
+				<div class="col-sm-1 hidden-xs">
+					<img id="ImagePanelError" src="img/icono-info.svg" alt="icono de información" title="Mensaje de información" />
+				</div>
+				<div class="col-xs-12 col-sm-11">
+					<p>Si la cita es para un menor, el <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número de identificación de extranjero">NIE</abbr> que debe introducir es el del adulto que se haga responsable de la cita.</p>
+					<p>Recibirá un correo de respuesta automática en su cuenta de correo electrónico indicando que la solicitud ha llegado al Servicio o Área de Admisión.</p>
+					<p>Los datos de contacto son válidos para la gestión de la cita actual.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="PanelError" class="alert alert-warning" role="alert" aria-label="mensaje de aviso">
+			<div class="row">
+				<div class="col-sm-1 hidden-xs">
+					<img id="ImagePanelError" src="img/icono-warning.svg" alt="icono de aviso" title="Mensaje de aviso" />
+				</div>
+				<div class="col-xs-12 col-sm-11">
+					<p>Está solicitando una anulación y no un cambio de cita. Si lo que desea es anular una cita perderá la cita y no se le ofrecerá una cita alternativa.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="PanelError2" class="alert alert-danger" role="dialog" aria-label="mensaje de error" aria-live="assertive">
+			<div class="row">
+				<div class="col-sm-1 hidden-xs"><img id="ImagePanelError" src="img/icono-error.png" alt="icono de Error" title="Mensaje de error" /></div>
+				<div class="col-xs-12 col-sm-11"><p>Compruebe el valor indicado en: No se ha podido validar el Código de identificación personal autonómico.</p></div>
+			</div>
+		</div>
+
+		<form method="GET" action="#">
+
+        <fieldset class="form-horizontal panel-body">
+            <legend class="col-xs-12"><span class="obligatorio">*</span> Tipo de solicitud</legend>
+            <div class="col-xs-12 panel-formulario">
+                <div class="row form-group text-center">
+                    <div class="col-xs-12">
+						<input id="rblTipoSolicitud_0" type="radio" name="rblTipoSolicitud" value="1" onclick="" /><label for="rblTipoSolicitud_0">Cambiar cita</label>
+						<input id="rblTipoSolicitud_1" type="radio" name="rblTipoSolicitud" value="2" onclick="" /><label for="rblTipoSolicitud_1">Anular cita</label>
+					</div>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset class="form-horizontal panel-body">
+            <legend class="col-xs-12">Datos de identificación del paciente</legend>
+            <div class="col-xs-12 panel-formulario">
+                <!-- Nombre -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="imgtxt_nombre" id="imgLabel1" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Nombre:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txt_nombre" type="text" maxlength="100" id="imgtxt_nombre" title="Introduzca su nombre." class="form-control" autoComplete="given-name" />
+                    </div>
+                </div>
+                <!-- Apellidos -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="imgtxtApell1" id="imgLabel2" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Apellidos:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtApell1" type="text" maxlength="50" id="imgtxtApell1" title="Introduzca sus apellidos." class="form-control" />
+                    </div>
+                </div>
+                <!-- Número de Historia Clínica -->
+                <div id="imgdivNumHC" class="col-xs-12 col-md-6 form-group">
+                    <label for="imgtxtNumHC" id="imgLabel3" class="col-sm-6 col-md-5 control-label text-nowrap"><span id="imgspanNumHC" class="hidden">*</span> Número de Historia
+                            Clínica:
+                    </label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtNumHC" type="text" maxlength="100" id="imgtxtNumHC" title="Introduzca el número de su historia clínica." class="form-control" />
+
+                    </div>
+                </div>
+                <!-- DNI/NIE -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="imgtxtDNI" id="imgLabel4" class="col-sm-6 col-md-4 col-md-offset-1 control-label">
+                            <span class="obligatorio">*</span> DNI/NIE:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtDNI" type="text" maxlength="9" id="imgtxtDNI" title="Introduzca los ocho dígitos y la letra de su documento nacional de identidad, o la letra, los siete digitos y el dígito de control de su número de identificación de extranjero." class="form-control" />
+
+                    </div>
+                </div>
+                <!-- Código de identificación personal autonómico -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="txtCipa" id="Label5" class="col-sm-6 col-md-5 control-label label2l">
+                            <span class="obligatorio">*</span> Código de identificación personal autonómico:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <div class="input-group">
+                            <input name="txtCipa" type="text" maxlength="10" id="txtCipa" title="El Código es un número de 10 dígitos que se encuentra situado
+en la tarjeta sanitaria en la mitad superior centro o en la mitad
+superior derecha según el modelo. Consulte en las imágenes
+dónde encontrar el código." class="form-control" />
+                            <span class="input-group-btn"><a href="#modalTarjeta" data-toggle="modal" data-target="#modalTarjeta" class="btn btn-default btnIconoInput waves-effect waves-light"
+                                title="¿Dónde encontrar su Código de Identificación Personal Autonómico?">
+                                <img src="img/icono-tarjeta.png" alt="Este icono simboliza la Tarjeta Sanitaria de la Comunidad de Madrid" />
+                            </a></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fecha nacimiento -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="txtFechaNacimiento" class="col-sm-6 col-md-5 control-label"><span id="span1" class="obligatorio">*</span>Fecha:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <div class="input-group date campoFechaLanza" id="dpFechaNac">
+                            <input name="txtFechaNacimiento" type="text" id="txtFechaNacimiento" title="Introduzca su fecha de nacimiento" class="form-control datepicker" placeholder="dd/mm/aaaa" />
+                        </div>
+                    </div>
+                </div>
+                            
+                <!-- Teléfono de contacto -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="txtTelefConta" id="Label9" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Teléfono de contacto:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtTelefConta" type="text" maxlength="9" id="txtTelefConta" title="Introduzca los nueve dígitos de su teléfono de contacto." class="form-control" />
+                    </div>
+                </div>
+                <!-- Telefono familiar -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="txtTelefFamiliar" id="Label10" class="col-sm-6 col-md-5 control-label">
+                            Teléfono familiar/allegado:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtTelefFamiliar" type="text" maxlength="9" id="txtTelefFamiliar" title="Introduzca los nueve dígitos del teléfono de contacto de un familiar o allegado." class="form-control" />
+                    </div>
+                </div>
+                <!--Domicilio -->
+                <div id="divHospitales" class="col-xs-12 col-md-6 form-group">
+                    <label for="txtDomicilio" id="Label11" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Domicilio:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtDomicilio" type="text" maxlength="300" id="txtDomicilio" title="Introduzca su domicilio." class="form-control" />
+                    </div>
+                </div>
+                <!-- Municipio -->
+                <div id="div2" class="col-xs-12 col-md-6 form-group">
+                    <label for="txtMunicipio" id="Label12" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Municipio:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtMunicipio" type="text" maxlength="100" id="txtMunicipio" title="Introduzca su municipio." class="form-control" />
+                    </div>
+                </div>
+                <!-- Código Postal -->
+                <div class="col-xs-12 col-md-6 form-group">
+                    <label for="txtCP" id="Label13" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Código postal:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtCP" type="text" maxlength="5" id="txtCP" title="Introduzca los cinco dígitos de su código postal." class="form-control" />
+                    </div>
+                </div>
+                <!-- Correo electrónico -->
+                <div id="div3" class="col-xs-12 col-md-6 form-group">
+                    <label for="txtEmail" id="Label14" class="col-sm-6 col-md-5 control-label">
+                            <span class="obligatorio">*</span> Correo electrónico:</label>
+                    <div class="col-sm-6 col-md-7">
+                        <input name="txtEmail" type="text" maxlength="60" id="txtEmail" title="Introduzca su dirección de correo electrónico." class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+    <div id="pnlAnular" class="panel">
+        <fieldset class="form-horizontal panel-body">
+            <legend class="col-xs-12">Anulación de citas</legend>
+            <div class="col-xs-12 panel-formulario">
+                <div class="col-xs-12 form-group">
+                    <label for="txtCuantasAnular" class="control-label col-sm-4 col-md-3">
+                                <span class="obligatorio">*</span> Cuántas citas desea anular:</label>
+                    <div class="col-sm-3 col-md-1">
+                        <input name="txtCuantasAnular" type="text" maxlength="1" id="txtCuantasAnular" title="Introduzca el número de citas que desea anular, máximo cinco." class="form-control" />
+                    </div>
+                </div>
+                <div id="divAnula" class="col-xs-12 form-group">
+                    <label for="txtMotivoAnula" class="control-label col-sm-4 col-md-3">
+                                Motivo de la anulación de la cita:
+                    </label>
+                    <div class="col-sm-8 col-md-9">
+                        <textarea name="txtMotivoAnula" rows="3" cols="20" id="txtMotivoAnula" title="Indique el motivo de la anulación de la cita." class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div id="divBtnAnulacion" class="form-group text-center panel-botonera">
+            <input type="submit" name="ImageButton2" value="Continuar" id="ImageButton2" title="Continuar" class="btn btn-rojo" />
+        </div>
+
+		</form>
+
+	</main>
+
+	
+	
+
+
+	<div class="container" role="region" aria-label="Protección de datos">
+	<div class="contenedorLegal">
+	  <div class="cabeceraLegal">
+		<h4>Información básica sobre Protección de Datos</h4>
+	  </div>
+	  <div class="panel-body">
+			<div class="col-xs-12 col-sm-3"><strong>Responsable</strong></div>
+			<div class="col-xs-12 col-sm-9">
+				HOSPITAL CLINICO SAN CARLOS</div>
+			<div class="col-xs-12 col-sm-3"><strong>Finalidad</strong></div>
+			<div class="col-xs-12 col-sm-9">
+				Planificación y gestión de la asistencia sanitaria pública.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Legitimación</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								Obligación legal (<abbr title="Reglamento General de Protección de Datos">RGPD</abbr> 6.1.c)</div>
+			<div class="col-xs-12 col-sm-3"><strong>Destinatarios</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								No se cederán datos salvo obligación legal.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Derechos</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								Acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad,
+								cuando sean aplicables.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Información adicional</strong></div>
+			<div class="col-xs-12 col-sm-9">
+				Puede consultar la información adicional y detallada sobre Protección de Datos en el siguiente enlace: <a href="../proteccion_de_datos.aspx" title="Ver más detalle">Aquí</a>.</div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container contenedorContacto" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-12 col-sm-2 col-md-1">
+					<img alt="Este icono simboliza un sobre de correo electrónico" src="images/ico_mail.gif" title="Imagen de contacto">
+				</div>
+				<div class="col-xs-12 col-sm-10 col-md-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|<<i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

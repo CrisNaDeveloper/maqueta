@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Medicamentos - Polimedicadas</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Medicamentos - Consultas <em>online</em></h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li>Buscador de farmacias del Programa de Atención al Mayor Polimedicado</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Buscador de farmacias del Programa de Atención al Mayor Polimedicado</h3>
+
+
+
+    <div id="ctl00_ContenedorContenidoSeccion_PanelAvisosOrdenacion_PanelError" class="panel_ alert alert-info" role="dialog" aria-label="mensaje informativo">
+	
+		<div class="row">
+			<div class="col-sm-1 hidden-xs">
+                <img id="ctl00_ContenedorContenidoSeccion_PanelAvisosOrdenacion_ImagePanelError" title="Icono con una i latina que acompaña a un texto informativo" class="alphaPNG" src="../img/icono-info.png" alt="Información" style="border-width:0px;" />
+			</div>
+			<div class="col-xs-12 col-sm-11">
+                <p><span id="ctl00_ContenedorContenidoSeccion_PanelAvisosOrdenacion_LabelPanelError">En el campo 'Dirección' teclee el texto completo o la parte que conozca.</span></p>
+			</div>
+		</div>
+
+</div>
+    <div class="panel">
+        <fieldset class="form-horizontal panel-body">
+            <legend class="col-xs-12">Buscador de farmacias:</legend>
+            <div class="col-xs-12 panel-formulario farmacia">
+                <div class="col-sm-9 col-md-8 col-lg-9 padding0">
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txt_direccion" id="ctl00_ContenedorContenidoSeccion_labeltxt_direccion" class="control-label col-sm-3">Dirección:</label>
+                        <div class="col-sm-7 col-md-8 col-lg-9">
+                            <input name="ctl00$ContenedorContenidoSeccion$txt_direccion" type="text" id="ctl00_ContenedorContenidoSeccion_txt_direccion" title="Itroduzca el texto completo de la dirección o la parte que conozca" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_cbxMunicipio" id="ctl00_ContenedorContenidoSeccion_labelBuscador" class="col-sm-3 control-label">Municipio:</label>
+                        <div class="col-sm-7 col-md-8 col-lg-9">
+                            <select name="ctl00$ContenedorContenidoSeccion$cbxMunicipio" id="ctl00_ContenedorContenidoSeccion_cbxMunicipio" title="Seleccione el municipio" class="form-control">
+	<option selected="selected" value="0">Todos</option>
+	<option value="Acebeda (La)">Acebeda (La)</option>
+	<option value="Ajalvir">Ajalvir</option>
+	<option value="Alameda del Valle">Alameda del Valle</option>
+	<option value="Álamo (El)">&#193;lamo (El)</option>
+	<option value="Alcalá de Henares">Alcal&#225; de Henares</option>
+	<option value="Alcobendas">Alcobendas</option>
+	<option value="Alcorcón">Alcorc&#243;n</option>
+	<option value="Aldea del Fresno">Aldea del Fresno</option>
+	<option value="Algete">Algete</option>
+	<option value="Alpedrete">Alpedrete</option>
+	<option value="Ambite">Ambite</option>
+	<option value="Anchuelo">Anchuelo</option>
+	<option value="Aranjuez">Aranjuez</option>
+	<option value="Arganda del Rey">Arganda del Rey</option>
+	<option value="Arroyomolinos">Arroyomolinos</option>
+	<option value="Atazar (El)">Atazar (El)</option>
+	<option value="Batres">Batres</option>
+	<option value="Becerril de la Sierra">Becerril de la Sierra</option>
+	<option value="Belmonte de Tajo">Belmonte de Tajo</option>
+	<option value="Berrueco (El)">Berrueco (El)</option>
+	<option value="Berzosa del Lozoya">Berzosa del Lozoya</option>
+	<option value="Boadilla del Monte">Boadilla del Monte</option>
+	<option value="Boalo (El)">Boalo (El)</option>
+	<option value="Braojos">Braojos</option>
+	<option value="Brea de Tajo">Brea de Tajo</option>
+	<option value="Brunete">Brunete</option>
+	<option value="Buitrago del Lozoya">Buitrago del Lozoya</option>
+	<option value="Bustarviejo">Bustarviejo</option>
+	<option value="Cabanillas de la Sierra">Cabanillas de la Sierra</option>
+	<option value="Cabrera (La)">Cabrera (La)</option>
+	<option value="Cadalso de los Vidrios">Cadalso de los Vidrios</option>
+	<option value="Camarma de Esteruelas">Camarma de Esteruelas</option>
+	<option value="Campo Real">Campo Real</option>
+	<option value="Canencia">Canencia</option>
+	<option value="Carabaña">Caraba&#241;a</option>
+	<option value="Cardoso de la Sierra (El)">Cardoso de la Sierra (El)</option>
+	<option value="Casarrubuelos">Casarrubuelos</option>
+	<option value="Cenicientos">Cenicientos</option>
+	<option value="Cercedilla">Cercedilla</option>
+	<option value="Cervera de Buitrago">Cervera de Buitrago</option>
+	<option value="Chapinería">Chapiner&#237;a</option>
+	<option value="Chinchón">Chinch&#243;n</option>
+	<option value="Ciempozuelos">Ciempozuelos</option>
+	<option value="Cobeña">Cobe&#241;a</option>
+	<option value="Collado Mediano">Collado Mediano</option>
+	<option value="Collado Villalba">Collado Villalba</option>
+	<option value="Colmenar de Oreja">Colmenar de Oreja</option>
+	<option value="Colmenar del Arroyo">Colmenar del Arroyo</option>
+	<option value="Colmenar Viejo">Colmenar Viejo</option>
+	<option value="Colmenarejo">Colmenarejo</option>
+	<option value="Corpa">Corpa</option>
+	<option value="Coslada">Coslada</option>
+	<option value="Cubas de la Sagra">Cubas de la Sagra</option>
+	<option value="Daganzo de Arriba">Daganzo de Arriba</option>
+	<option value="Escorial (El)">Escorial (El)</option>
+	<option value="Estremera">Estremera</option>
+	<option value="Fresnedillas de la Oliva">Fresnedillas de la Oliva</option>
+	<option value="Fresno de Torote">Fresno de Torote</option>
+	<option value="Fuenlabrada">Fuenlabrada</option>
+	<option value="Fuente el Saz de Jarama">Fuente el Saz de Jarama</option>
+	<option value="Fuente Vaqueros">Fuente Vaqueros</option>
+	<option value="Fuentidueña de Tajo">Fuentidue&#241;a de Tajo</option>
+	<option value="Galapagar">Galapagar</option>
+	<option value="Garganta de los Montes">Garganta de los Montes</option>
+	<option value="Gargantilla del Lozoya y Pinilla de Buitrago">Gargantilla del Lozoya y Pinilla de Buitrago</option>
+	<option value="Gascones">Gascones</option>
+	<option value="Getafe">Getafe</option>
+	<option value="Griñón">Gri&#241;&#243;n</option>
+	<option value="Guadalix de la Sierra">Guadalix de la Sierra</option>
+	<option value="Guadarrama">Guadarrama</option>
+	<option value="Hiruela (La)">Hiruela (La)</option>
+	<option value="Horcajo de la Sierra">Horcajo de la Sierra</option>
+	<option value="Horcajuelo de la Sierra">Horcajuelo de la Sierra</option>
+	<option value="Hoyo de Manzanares">Hoyo de Manzanares</option>
+	<option value="Humanes de Madrid">Humanes de Madrid</option>
+	<option value="Leganés">Legan&#233;s</option>
+	<option value="Loeches">Loeches</option>
+	<option value="Lozoya">Lozoya</option>
+	<option value="Lozoyuela-Navas-Sieteiglesias">Lozoyuela-Navas-Sieteiglesias</option>
+	<option value="Madarcos">Madarcos</option>
+	<option value="Madrid">Madrid</option>
+	<option value="Majadahonda">Majadahonda</option>
+	<option value="Manzanares el Real">Manzanares el Real</option>
+	<option value="Meco">Meco</option>
+	<option value="Mejorada del Campo">Mejorada del Campo</option>
+	<option value="Miraflores de la Sierra">Miraflores de la Sierra</option>
+	<option value="Molar (El)">Molar (El)</option>
+	<option value="Molinos (Los)">Molinos (Los)</option>
+	<option value="Montejo de la Sierra">Montejo de la Sierra</option>
+	<option value="Moraleja de Enmedio">Moraleja de Enmedio</option>
+	<option value="Moralzarzal">Moralzarzal</option>
+	<option value="Morata de Tajuña">Morata de Taju&#241;a</option>
+	<option value="Móstoles">M&#243;stoles</option>
+	<option value="Navacerrada">Navacerrada</option>
+	<option value="Navalafuente">Navalafuente</option>
+	<option value="Navalagamella">Navalagamella</option>
+	<option value="Navalcarnero">Navalcarnero</option>
+	<option value="Navarredonda y San Mamés">Navarredonda y San Mam&#233;s</option>
+	<option value="Navas del Rey">Navas del Rey</option>
+	<option value="Nuevo Baztán">Nuevo Bazt&#225;n</option>
+	<option value="Olmeda de las Fuentes">Olmeda de las Fuentes</option>
+	<option value="Orusco de Tajuña">Orusco de Taju&#241;a</option>
+	<option value="Paracuellos de Jarama">Paracuellos de Jarama</option>
+	<option value="Parla">Parla</option>
+	<option value="Patones">Patones</option>
+	<option value="Pedrezuela">Pedrezuela</option>
+	<option value="Pelayos de la Presa">Pelayos de la Presa</option>
+	<option value="Perales de Tajuña">Perales de Taju&#241;a</option>
+	<option value="Pezuela de las Torres">Pezuela de las Torres</option>
+	<option value="Pinilla del Valle">Pinilla del Valle</option>
+	<option value="Pinto">Pinto</option>
+	<option value="Piñuécar-Gandullas">Pi&#241;u&#233;car-Gandullas</option>
+	<option value="Pozuelo de Alarcón">Pozuelo de Alarc&#243;n</option>
+	<option value="Pozuelo del Rey">Pozuelo del Rey</option>
+	<option value="Prádena del Rincón">Pr&#225;dena del Rinc&#243;n</option>
+	<option value="Puebla de la Sierra">Puebla de la Sierra</option>
+	<option value="Puentes Viejas">Puentes Viejas</option>
+	<option value="Quijorna">Quijorna</option>
+	<option value="Rascafría">Rascafr&#237;a</option>
+	<option value="Redueña">Redue&#241;a</option>
+	<option value="Ribatejada">Ribatejada</option>
+	<option value="Rivas-Vaciamadrid">Rivas-Vaciamadrid</option>
+	<option value="Robledillo de la Jara">Robledillo de la Jara</option>
+	<option value="Robledo de Chavela">Robledo de Chavela</option>
+	<option value="Robregordo">Robregordo</option>
+	<option value="Rozas de Madrid, Las">Rozas de Madrid, Las</option>
+	<option value="Rozas de Puerto Real">Rozas de Puerto Real</option>
+	<option value="San Agustín del Guadalix">San Agust&#237;n del Guadalix</option>
+	<option value="San Fernando de Henares">San Fernando de Henares</option>
+	<option value="San Lorenzo de El Escorial">San Lorenzo de El Escorial</option>
+	<option value="San Martín de la Vega">San Mart&#237;n de la Vega</option>
+	<option value="San Martín de Valdeiglesias">San Mart&#237;n de Valdeiglesias</option>
+	<option value="San Sebastián de los Reyes">San Sebasti&#225;n de los Reyes</option>
+	<option value="Santa María de la Alameda">Santa Mar&#237;a de la Alameda</option>
+	<option value="Santorcaz">Santorcaz</option>
+	<option value="Santos de la Humosa (Los)">Santos de la Humosa (Los)</option>
+	<option value="Serna del Monte (La)">Serna del Monte (La)</option>
+	<option value="Serranillos del Valle">Serranillos del Valle</option>
+	<option value="Sevilla la Nueva">Sevilla la Nueva</option>
+	<option value="Somosierra">Somosierra</option>
+	<option value="Soto del Real">Soto del Real</option>
+	<option value="Talamanca de Jarama">Talamanca de Jarama</option>
+	<option value="Tielmes">Tielmes</option>
+	<option value="Titulcia">Titulcia</option>
+	<option value="Torrejón de Ardoz">Torrej&#243;n de Ardoz</option>
+	<option value="Torrejón de la Calzada">Torrej&#243;n de la Calzada</option>
+	<option value="Torrejón de Velasco">Torrej&#243;n de Velasco</option>
+	<option value="Torrelaguna">Torrelaguna</option>
+	<option value="Torrelodones">Torrelodones</option>
+	<option value="Torremocha de Jarama">Torremocha de Jarama</option>
+	<option value="Torres de la Alameda">Torres de la Alameda</option>
+	<option value="Tres Cantos">Tres Cantos</option>
+	<option value="Valdaracete">Valdaracete</option>
+	<option value="Valdeavero">Valdeavero</option>
+	<option value="Valdelaguna">Valdelaguna</option>
+	<option value="Valdemanco">Valdemanco</option>
+	<option value="Valdemaqueda">Valdemaqueda</option>
+	<option value="Valdemorillo">Valdemorillo</option>
+	<option value="Valdemoro">Valdemoro</option>
+	<option value="Valdeolmos-Alalpardo">Valdeolmos-Alalpardo</option>
+	<option value="Valdepiélagos">Valdepi&#233;lagos</option>
+	<option value="Valdetorres de Jarama">Valdetorres de Jarama</option>
+	<option value="Valdilecha">Valdilecha</option>
+	<option value="Valverde de Alcalá">Valverde de Alcal&#225;</option>
+	<option value="Velilla de San Antonio">Velilla de San Antonio</option>
+	<option value="Vellón (El)">Vell&#243;n (El)</option>
+	<option value="Venturada">Venturada</option>
+	<option value="Villa del Prado">Villa del Prado</option>
+	<option value="Villaconejos">Villaconejos</option>
+	<option value="Villalbilla">Villalbilla</option>
+	<option value="Villamanrique de Tajo">Villamanrique de Tajo</option>
+	<option value="Villamanta">Villamanta</option>
+	<option value="Villamantilla">Villamantilla</option>
+	<option value="Villanueva de la Cañada">Villanueva de la Ca&#241;ada</option>
+	<option value="Villanueva de Perales">Villanueva de Perales</option>
+	<option value="Villanueva del Pardillo">Villanueva del Pardillo</option>
+	<option value="Villar del Olmo">Villar del Olmo</option>
+	<option value="Villarejo de Salvanés">Villarejo de Salvan&#233;s</option>
+	<option value="Villaviciosa de Odón">Villaviciosa de Od&#243;n</option>
+	<option value="Villavieja del Lozoya">Villavieja del Lozoya</option>
+	<option value="Zarzalejo">Zarzalejo</option>
+
+</select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txt_cp" id="ctl00_ContenedorContenidoSeccion_labeltxt_cp" class="control-label col-sm-3">Código postal:</label>
+                        <div class="col-sm-7 col-md-8 col-lg-9">
+                            <input name="ctl00$ContenedorContenidoSeccion$txt_cp" type="text" value="28049" id="ctl00_ContenedorContenidoSeccion_txt_cp" title="Introduzca el código postal" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="panel-botonera text-center">
+            <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnBuscar2" value="Buscar" id="ctl00_ContenedorContenidoSeccion_btnBuscar2" title="Buscar" class="btn btn-primary" />
+        </div>
+    </div>
+    <div id="ctl00_ContenedorContenidoSeccion_pnlResultadoMoviles" class="panel">
+	
+
+            <h4>Relación de farmacias encontradas</h4>
+
+                <div id="ctl00_ContenedorContenidoSeccion_infOrdena">
+		
+                
+	</div>
+                <div class="ListaCentros">
+                    <div>
+		<table class="table table-striped" cellspacing="0" rules="all" border="1" id="ctl00_ContenedorContenidoSeccion_lvPolimedicado" style="border-collapse:collapse;">
+			<thead>
+				<tr>
+					<th title="Pulse para ordenar por titular" scope="col"><a href="javascript:__doPostBack(&#39;ctl00$ContenedorContenidoSeccion$lvPolimedicado&#39;,&#39;Sort$Titular&#39;)">Titular</a></th><th title="Pulse para ordenar por dirección" scope="col"><a href="javascript:__doPostBack(&#39;ctl00$ContenedorContenidoSeccion$lvPolimedicado&#39;,&#39;Sort$Dirección&#39;)">Dirección</a></th><th title="Pulse para ordenar por código postal" scope="col"><a href="javascript:__doPostBack(&#39;ctl00$ContenedorContenidoSeccion$lvPolimedicado&#39;,&#39;Sort$Código postal&#39;)">Código postal</a></th><th title="Pulse para ordenar por municipio" scope="col"><a href="javascript:__doPostBack(&#39;ctl00$ContenedorContenidoSeccion$lvPolimedicado&#39;,&#39;Sort$Municipio&#39;)">Municipio</a></th>
+				</tr>
+			</thead><tbody>
+				<tr>
+					<td data-label="Titular:">
+                                    CRISTINA RUBIDO CRESPO
+                                </td><td data-label="Dirección:">
+                                    C/ MONASTERIO DE CHAVEIRO, 13
+                                </td><td data-label="Código postal:">
+                                    28049
+                                </td><td data-label="Municipio:">
+                                   Madrid 
+                                </td>
+				</tr><tr>
+					<td data-label="Titular:">
+                                    CARMEN BENITEZ-DONOSO MEDIO
+                                </td><td data-label="Dirección:">
+                                    C/ MARÍA DE MAEZTU, 52 PORTAL i local 5
+                                </td><td data-label="Código postal:">
+                                    28049
+                                </td><td data-label="Municipio:">
+                                   Madrid 
+                                </td>
+				</tr><tr>
+					<td data-label="Titular:">
+                                    ALFONSO ARNUNCIO RECHE
+                                </td><td data-label="Dirección:">
+                                    OCHAGAVIA, 18
+                                </td><td data-label="Código postal:">
+                                    28049
+                                </td><td data-label="Municipio:">
+                                   Madrid 
+                                </td>
+				</tr><tr>
+					<td data-label="Titular:">
+                                    MARIA JESUS DE LA VIUDA VILLANUEVA
+                                </td><td data-label="Dirección:">
+                                    C/ DE LOS MONASTERIOS SUSO Y YUSO, 14
+                                </td><td data-label="Código postal:">
+                                    28049
+                                </td><td data-label="Municipio:">
+                                   Madrid 
+                                </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+                </div>
+
+    
+</div>
+</form>
+
+
+
+	</main>
+
+
+<div class="container" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-0 col-sm-1">
+					<span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

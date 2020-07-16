@@ -1,0 +1,24 @@
+﻿{
+  "lang": "es",
+  "dir": "ltr",
+  "name": "Observatorio de Resultados del Servicio Madrileño de Salud - Sugerencias",
+  "short_name": "EncuestaObservatorio",
+  "scope": "/EncuestaObservatorio/",
+  "start_url": "/EncuestaObservatorio/informacion_tecnica.aspx",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "description": "Encuesta de satisfacción sobre el Observatorio de Resultados del Servicio Madrileño de Salud",
+  "icons": [
+        {
+            "src": "../img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "../img/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

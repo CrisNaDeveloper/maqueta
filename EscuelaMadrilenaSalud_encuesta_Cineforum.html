@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Escuela Madrileña de Salud</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2>Escuela Madrileña de Salud</h2>
+    </div>
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><span aria-hidden="true">&lt;</span> Volver</a></li>
+						<li><span aria-hidden="true">|</span></li>
+						<li><strong>Está en:</strong></li>
+						<li>Encuesta sobre la actividad realizada</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <span aria-hidden="true">|</span>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <span aria-hidden="true">|</span>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+			
+	<h3>Formulario de evaluación de jornada/encuentro</h3>
+
+	<div class="divTableMsgInfoRojo">
+        <p>A fin de continuar mejorando las actividades de la Escuela Madrileña de Salud nos interesa conocer su opinión y sus sugerencias sobre las mismas.</p>
+    </div>
+
+	<form method="GET" action="#">
+		<div class="clearfix">
+			<div class="col-xs-12">
+				<div class="botonera">
+					 <button id="btnpdf2" type="button" class="btn btn-gris" title="Descargar archivo en formato PDF (Portable Document Format)">Generar <abbr title="Portable Document Format">PDF</abbr><span class="glyphicon glyphicon-download-alt"></span></button>
+				</div>
+			</div>
+		</div>
+        <div id="pnlFormulario">
+            <div class="alert alert-info">
+                <div class="row">
+                    <div class="col-sm-1 hidden-xs">
+                        <img src="img/icono-info.png" alt="Icono Información" title="Información">
+                    </div>
+                    <div class="col-xs-12 col-sm-11 panel_texto">
+                        <p>Antes de enviar la encuesta debe contestar todas las cuestiones.</p>
+                    </div>
+                </div>
+            </div>
+            <fieldset class="panel-body">
+                <legend class="col-xs-12">Por favor, señale la puntuación que se ajusta más a su opinión personal.</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="col-xs-12 pregunta" id="q1">
+                        Interés y oportunidad de la actividad:
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-xs-4 col-sm-5">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2">
+                            <span role="img" aria-label="Cara indiferente">
+    							<span class="far fa-meh" role="img" aria-hidden="false"></span>
+	    						<span class="fas fa-meh" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-1 col-sm-offset-4 col-sm-1">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="pnlPreg1" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q1">
+		
+                        <span id="dplinteres" class="col-xs-12 form-check"><span id="dplinteres1"><input id="dplinteres_0" type="radio" name="dplinteres" value="1" /><label for="dplinteres_0">1</label></span><span id="dplinteres2"><input id="dplinteres_1" type="radio" name="dplinteres" value="2" /><label for="dplinteres_1">2</label></span><span id="dplinteres3"><input id="dplinteres_2" type="radio" name="dplinteres" value="3" /><label for="dplinteres_2">3</label></span><span id="dplinteres4"><input id="dplinteres_3" type="radio" name="dplinteres" value="4" /><label for="dplinteres_3">4</label></span><span id="dplinteres5"><input id="dplinteres_4" type="radio" name="dplinteres" value="5" /><label for="dplinteres_4">5</label></span><span id="dplinteres6"><input id="dplinteres_5" type="radio" name="dplinteres" value="6" /><label for="dplinteres_5">6</label></span><span id="dplinteres7"><input id="dplinteres_6" type="radio" name="dplinteres" value="7" /><label for="dplinteres_6">7</label></span><span id="dplinteres8"><input id="dplinteres_7" type="radio" name="dplinteres" value="8" /><label for="dplinteres_7">8</label></span><span id="dplinteres9"><input id="dplinteres_8" type="radio" name="dplinteres" value="9" /><label for="dplinteres_8">9</label></span><span id="dplinteres10"><input id="dplinteres_9" type="radio" name="dplinteres" value="10" /><label for="dplinteres_9">10</label></span></span>
+                    
+	</div>
+                    <div class="col-xs-12 pregunta" id="q2">
+                        Contenidos tratados:
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-xs-4 col-sm-5">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2">
+                            <span role="img" aria-label="Cara indiferente">
+    							<span class="far fa-meh" role="img" aria-hidden="false"></span>
+	    						<span class="fas fa-meh" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-1 col-sm-offset-4 col-sm-1">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="pnlPreg2" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q2">
+		
+                        <span id="dplcontenidos" class="col-xs-12 form-check"><span id="dplcontenidos1"><input id="dplcontenidos_0" type="radio" name="dplcontenidos" value="1" /><label for="dplcontenidos_0">1</label></span><span id="dplcontenidos2"><input id="dplcontenidos_1" type="radio" name="dplcontenidos" value="2" /><label for="dplcontenidos_1">2</label></span><span id="dplcontenidos3"><input id="dplcontenidos_2" type="radio" name="dplcontenidos" value="3" /><label for="dplcontenidos_2">3</label></span><span id="dplcontenidos4"><input id="dplcontenidos_3" type="radio" name="dplcontenidos" value="4" /><label for="dplcontenidos_3">4</label></span><span id="dplcontenidos5"><input id="dplcontenidos_4" type="radio" name="dplcontenidos" value="5" /><label for="dplcontenidos_4">5</label></span><span id="dplcontenidos6"><input id="dplcontenidos_5" type="radio" name="dplcontenidos" value="6" /><label for="dplcontenidos_5">6</label></span><span id="dplcontenidos7"><input id="dplcontenidos_6" type="radio" name="dplcontenidos" value="7" /><label for="dplcontenidos_6">7</label></span><span id="dplcontenidos8"><input id="dplcontenidos_7" type="radio" name="dplcontenidos" value="8" /><label for="dplcontenidos_7">8</label></span><span id="dplcontenidos9"><input id="dplcontenidos_8" type="radio" name="dplcontenidos" value="9" /><label for="dplcontenidos_8">9</label></span><span id="dplcontenidos10"><input id="dplcontenidos_9" type="radio" name="dplcontenidos" value="10" /><label for="dplcontenidos_9">10</label></span></span>
+                    
+	</div>
+                    <div class="col-xs-12 pregunta" id="q3">
+                        Ponentes:
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-xs-4 col-sm-5">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2">
+                            <span role="img" aria-label="Cara indiferente">
+    							<span class="far fa-meh" role="img" aria-hidden="false"></span>
+	    						<span class="fas fa-meh" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-1 col-sm-offset-4 col-sm-1">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="pnlPreg3" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q3">
+		
+                        <span id="dplponentes" class="col-xs-12 form-check"><span id="dplponentes1"><input id="dplponentes_0" type="radio" name="dplponentes" value="1" /><label for="dplponentes_0">1</label></span><span id="dplponentes2"><input id="dplponentes_1" type="radio" name="dplponentes" value="2" /><label for="dplponentes_1">2</label></span><span id="dplponentes3"><input id="dplponentes_2" type="radio" name="dplponentes" value="3" /><label for="dplponentes_2">3</label></span><span id="dplponentes4"><input id="dplponentes_3" type="radio" name="dplponentes" value="4" /><label for="dplponentes_3">4</label></span><span id="dplponentes5"><input id="dplponentes_4" type="radio" name="dplponentes" value="5" /><label for="dplponentes_4">5</label></span><span id="dplponentes6"><input id="dplponentes_5" type="radio" name="dplponentes" value="6" /><label for="dplponentes_5">6</label></span><span id="dplponentes7"><input id="dplponentes_6" type="radio" name="dplponentes" value="7" /><label for="dplponentes_6">7</label></span><span id="dplponentes8"><input id="dplponentes_7" type="radio" name="dplponentes" value="8" /><label for="dplponentes_7">8</label></span><span id="dplponentes9"><input id="dplponentes_8" type="radio" name="dplponentes" value="9" /><label for="dplponentes_8">9</label></span><span id="dplponentes10"><input id="dplponentes_9" type="radio" name="dplponentes" value="10" /><label for="dplponentes_9">10</label></span></span>
+                    
+	</div>
+                    <div class="col-xs-12 pregunta" id="q4">
+                        Organización de la actividad:
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-xs-4 col-sm-5">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2">
+                            <span role="img" aria-label="Cara indiferente">
+    							<span class="far fa-meh" role="img" aria-hidden="false"></span>
+	    						<span class="fas fa-meh" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-1 col-sm-offset-4 col-sm-1">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="pnlPreg4" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q4">
+		
+                        <span id="dplorganizacion" class="col-xs-12 form-check"><span id="dplorganizacion1"><input id="dplorganizacion_0" type="radio" name="dplorganizacion" value="1" /><label for="dplorganizacion_0">1</label></span><span id="dplorganizacion2"><input id="dplorganizacion_1" type="radio" name="dplorganizacion" value="2" /><label for="dplorganizacion_1">2</label></span><span id="dplorganizacion3"><input id="dplorganizacion_2" type="radio" name="dplorganizacion" value="3" /><label for="dplorganizacion_2">3</label></span><span id="dplorganizacion4"><input id="dplorganizacion_3" type="radio" name="dplorganizacion" value="4" /><label for="dplorganizacion_3">4</label></span><span id="dplorganizacion5"><input id="dplorganizacion_4" type="radio" name="dplorganizacion" value="5" /><label for="dplorganizacion_4">5</label></span><span id="dplorganizacion6"><input id="dplorganizacion_5" type="radio" name="dplorganizacion" value="6" /><label for="dplorganizacion_5">6</label></span><span id="dplorganizacion7"><input id="dplorganizacion_6" type="radio" name="dplorganizacion" value="7" /><label for="dplorganizacion_6">7</label></span><span id="dplorganizacion8"><input id="dplorganizacion_7" type="radio" name="dplorganizacion" value="8" /><label for="dplorganizacion_7">8</label></span><span id="dplorganizacion9"><input id="dplorganizacion_8" type="radio" name="dplorganizacion" value="9" /><label for="dplorganizacion_8">9</label></span><span id="dplorganizacion10"><input id="dplorganizacion_9" type="radio" name="dplorganizacion" value="10" /><label for="dplorganizacion_9">10</label></span></span>
+                    
+	</div>
+                    <div class="col-xs-12 pregunta" id="q5">
+                        Beneficios aportados, utilidad:
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-xs-4 col-sm-5">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2">
+                            <span role="img" aria-label="Cara indiferente">
+    							<span class="far fa-meh" role="img" aria-hidden="false"></span>
+	    						<span class="fas fa-meh" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-1 col-sm-offset-4 col-sm-1">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="pnlPreg5" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q5">
+		
+                        <span id="dplbeneficios" class="col-xs-12 form-check"><span id="dplbeneficios1"><input id="dplbeneficios_0" type="radio" name="dplbeneficios" value="1" /><label for="dplbeneficios_0">1</label></span><span id="dplbeneficios2"><input id="dplbeneficios_1" type="radio" name="dplbeneficios" value="2" /><label for="dplbeneficios_1">2</label></span><span id="dplbeneficios3"><input id="dplbeneficios_2" type="radio" name="dplbeneficios" value="3" /><label for="dplbeneficios_2">3</label></span><span id="dplbeneficios4"><input id="dplbeneficios_3" type="radio" name="dplbeneficios" value="4" /><label for="dplbeneficios_3">4</label></span><span id="dplbeneficios5"><input id="dplbeneficios_4" type="radio" name="dplbeneficios" value="5" /><label for="dplbeneficios_4">5</label></span><span id="dplbeneficios6"><input id="dplbeneficios_5" type="radio" name="dplbeneficios" value="6" /><label for="dplbeneficios_5">6</label></span><span id="dplbeneficios7"><input id="dplbeneficios_6" type="radio" name="dplbeneficios" value="7" /><label for="dplbeneficios_6">7</label></span><span id="dplbeneficios8"><input id="dplbeneficios_7" type="radio" name="dplbeneficios" value="8" /><label for="dplbeneficios_7">8</label></span><span id="dplbeneficios9"><input id="dplbeneficios_8" type="radio" name="dplbeneficios" value="9" /><label for="dplbeneficios_8">9</label></span><span id="dplbeneficios10"><input id="dplbeneficios_9" type="radio" name="dplbeneficios" value="10" /><label for="dplbeneficios_9">10</label></span></span>
+                    
+	</div>
+                    <div class="row form-group">
+                        <label for="txtComentario" id="q6" class="col-xs-12 pregunta">
+                        Sugerencias y observaciones:
+                        </label>
+                        <div class="col-xs-12">
+                            <textarea name="txtComentario" rows="2" cols="20" id="txtComentario" title="Indique algún comentario o sugerencia para mejorar los curso de escuela de salud" class="form-control col-xs-12">
+</textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="txtTemas" id="q7" class="col-xs-12 pregunta">
+                        ¿Qué temas le gustaría que se trataran en futuras ediciones?
+                        </label>
+                        <div class="col-xs-12">
+                            <textarea name="txtTemas" rows="2" cols="20" id="txtTemas" title="Indique que temas le gustaría tratar en futura ediciones" class="form-control col-xs-12">
+</textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 pregunta" id="q8">
+                        ¿Recomendaría esta actividad a otras personas?
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-sm-offset-4 col-sm-3">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+						</div>
+                        <div class="col-sm-2">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+						</div>
+                    </div>
+                    <div id="pnlPreg7" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q8">
+		
+                        <span id="dplrecomendaria" class="col-xs-12 form-check"><span id="dplrecomendaria1"><input id="dplrecomendaria_0" type="radio" name="dplrecomendaria" value="Sí" /><label for="dplrecomendaria_0">Sí</label></span><span id="dplrecomendaria2"><input id="dplrecomendaria_1" type="radio" name="dplrecomendaria" value="No" /><label for="dplrecomendaria_1">No</label></span></span>
+                    
+	</div>
+                    <div class="col-xs-12 pregunta" id="q9">
+                        Su valoración global del encuentro:
+                    </div>
+                    <div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 emoji" role="presentation">
+                        <div class="col-xs-4 col-sm-5">
+                            <span role="img" aria-label="Cara triste">
+							    <span class="far fa-frown" role="img" aria-hidden="false"></span>
+							    <span class="fas fa-frown" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-sm-2">
+                            <span role="img" aria-label="Cara indiferente">
+    							<span class="far fa-meh" role="img" aria-hidden="false"></span>
+	    						<span class="fas fa-meh" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                        <div class="col-xs-1 col-sm-offset-4 col-sm-1">
+                            <span role="img" aria-label="Cara alegre">
+		    					<span class="far fa-smile" role="img" aria-hidden="false"></span>
+			    				<span class="fas fa-smile" role="img" aria-hidden="false"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="pnlPreg8" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 escala text-center form-group" role="radiogroup" aria-labelledby="q9">
+		
+                        <span id="dplvaloracion" class="col-xs-12 form-check"><span id="dplvaloracion1"><input id="dplvaloracion_0" type="radio" name="dplvaloracion" value="1" /><label for="dplvaloracion_0">1</label></span><span id="dplvaloracion2"><input id="dplvaloracion_1" type="radio" name="dplvaloracion" value="2" /><label for="dplvaloracion_1">2</label></span><span id="dplvaloracion3"><input id="dplvaloracion_2" type="radio" name="dplvaloracion" value="3" /><label for="dplvaloracion_2">3</label></span><span id="dplvaloracion4"><input id="dplvaloracion_3" type="radio" name="dplvaloracion" value="4" /><label for="dplvaloracion_3">4</label></span><span id="dplvaloracion5"><input id="dplvaloracion_4" type="radio" name="dplvaloracion" value="5" /><label for="dplvaloracion_4">5</label></span><span id="dplvaloracion6"><input id="dplvaloracion_5" type="radio" name="dplvaloracion" value="6" /><label for="dplvaloracion_5">6</label></span><span id="dplvaloracion7"><input id="dplvaloracion_6" type="radio" name="dplvaloracion" value="7" /><label for="dplvaloracion_6">7</label></span><span id="dplvaloracion8"><input id="dplvaloracion_7" type="radio" name="dplvaloracion" value="8" /><label for="dplvaloracion_7">8</label></span><span id="dplvaloracion9"><input id="dplvaloracion_8" type="radio" name="dplvaloracion" value="9" /><label for="dplvaloracion_8">9</label></span><span id="dplvaloracion10"><input id="dplvaloracion_9" type="radio" name="dplvaloracion" value="10" /><label for="dplvaloracion_9">10</label></span></span>
+                    
+	</div>
+                </div>
+            </fieldset>
+            <div id="divBtnEnviar" class="div_confirmar panel-botonera text-center">
+                <input type="submit" name="btnEnviar2" value="Enviar" id="btnEnviar2" title="Enviar encuesta" class="btn btn-rojo" />
+            </div>
+            
+        
+</div>
+
+        <div class="alert alert-info" role="dialog" aria-label="mensaje informativo">
+            <div class="row">
+			<div class="col-sm-1 hidden-xs">
+			<span role="img" aria-label="Agradecemos su colaboración" class="agradece">
+			<span class="far fa-comment-alt" role="img" aria-hidden="true"></span>
+			<span class="fas fa-check" role="img" aria-hidden="true"></span>
+			</span>
+			</div>                <div class="col-xs-12 col-sm-11">
+                    <p>Su opinión nos ayuda a mejorar. Muchas gracias por su colaboración.</p>
+                </div>
+            </div>
+        </div>
+	</form>
+
+	</main>
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <span aria-hidden="true">|<span><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <span title="copyright" aria-hidden="true">©</span> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

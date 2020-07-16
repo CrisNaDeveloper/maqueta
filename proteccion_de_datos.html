@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Protección de datos</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Protección de datos</h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Protección de datos</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+
+			
+	<h3>Protección de datos</h3>
+
+
+    <div class="panel-acordeon">
+        <ul>
+            <li>
+                <!--Cabecera acordeón-->
+                <input type="checkbox" checked id="ac1" />
+                <label for="ac1">
+                    <i class="glyphicon glyphicon-menu-down icono-circular"></i><h4 class="titulo_acordeon">
+                        Información detallada sobre Protección de Datos</h4></label>
+                <!--Cuerpo acordeón-->
+                <div class="panel-detalle-acordeon">
+                    <div class="contenidoAcordeon">
+                        <div class="col-xs-12">
+                            <div class="contenedor_comun detalleAcordeon">
+                                <h4>Responsable</h4>
+                                
+                                <h6>Responsable del tratamiento de sus datos</h6>
+                                <p>Viceconsejería de Humanización de la Asistencia Sanitaria.</p>
+                                <h6>Domicilio social</h6>
+                                <p>Consejería de Sanidad. Calle aduana, 29. 28013 Madrid</p>
+                                <h6>Contacto Delegado de protección de Datos</h6>
+                                <p><a href="mailto:protecciondedatos.sanidad@madrid.org">protecciondedatos.sanidad@madrid.org</a></p>
+                                <h4>¿Con qué fines se tratarán mis datos personales?</h4>
+                                
+                                <h6>¿Qué son datos personales?
+                                </h6>
+                                <p>Datos personales es información que directa que le identifica a usted como individuo.</p>
+                                <h6>Tipo de datos personales recopilamos y cómo los utilizamos</h6>
+                                <p>
+                                    Cuando usted se inscribe a un curso o una actividad de la Escuela Madrileña de Salud,
+                                    se le solicitará que cumplimente un cuestionario en el que nos proporciona sus datos
+                                    personales básicos necesarios para formalizar la inscripción al curso y para todos
+                                    los procedimientos de gestión y control de la formación que oferta la escuela:</p>
+                                <ul>
+                                    <li>Nombre, apellidos, sexo, teléfono de contacto, y año de nacimiento.</li>
+                                </ul>
+                                <p>
+                                    En cumplimiento de lo establecido por el Reglamento (<abbr title="Unión Europea">UE</abbr>) 2016/679, del Parlamento
+                                    Europeo y del Consejo, de 27 de abril de 2016, sus datos serán tratados para las
+                                    siguientes finalidades:</p>
+                                <ul>
+                                    <li>Para conformar el grupo de alumnos adaptado a la capacidad del aula o a las condiciones
+                                        de reclutamiento de los alumnos según tipo de curso.</li>
+                                    <li>Para localizarle en el caso de que se cancele un curso.</li>
+                                    <li>Para gestionar el control de asistencia a los cursos.</li>
+                                    <li>Para comunicar a los docentes el perfil de los asistentes al curso.</li>
+                                    <li>Para emitir el certificado del curso.</li>
+                                    <li>Para controles de calidad y evaluación de los cursos.</li>
+                                    <li>También utilizamos sus datos de forma anonimizada como atributos estadísticos. De
+                                        esta forma podemos, por ejemplo, emitir anualmente la memoria de actividad de la
+                                        escuela.</li>
+                                </ul>
+                                <h4>
+                                    ¿Cuál es la base jurídica en la cual se basa el tratamiento?
+                                </h4>
+                                
+                                <p>Consentimiento del interesado: se obtiene a través de las casillas específicas ubicadas
+                                        en el formulario digital o de formato físico, mediante una acción positiva, expresa
+                                        y voluntaria del interesado.</p>
+                                <h4>
+                                    ¿Cómo ejercer sus derechos? ¿Cuáles son sus derechos cuando nos facilita sus datos?</h4>
+                                
+                                <p>
+                                    Puede ejercitar, si lo desea, los derechos de acceso, rectificación y supresión
+                                    de datos, así como solicitar que se limite el tratamiento de sus datos personales,
+                                    oponerse al mismo, solicitar en su caso la portabilidad de sus datos, así como no
+                                    ser objeto de decisiones individuales automatizadas, incluida la elaboración de
+                                    perfiles.</p>
+                                <p>
+                                    Puede ejercitar sus derechos bien enviando un correo electrónico <a href="mailto:protecciondedatos.sanidad@madrid.org">protecciondedatos.sanidad@madrid.org</a>
+                                    adjuntando un documento solicitud firmado digitalmente, o alternativamente a la
+                                    siguiente dirección postal: <b>Consejería de Sanidad. <abbr title="Calle">C/.</abbr> Aduana 29. 28013 Madrid</b>,
+                                    adjuntando una solicitud firmada manualmente. En ambos casos haciendo constar la
+                                    referencia “Ejercicio de derechos de protección de datos” y el número del Documento
+                                    Nacional de Identidad o del documento acreditativo alternativo.</p>
+                                <h4>
+                                    Perfiles y Decisiones Automatizadas</h4>
+                                
+                                <p>
+                                    Tiene derecho a no ser objeto de una decisión basada únicamente en el tratamiento
+                                    automatizado, incluida la elaboración de perfiles, que produzca efectos jurídicos
+                                    en él o le afecte significativamente de modo similar.</p>
+                                <h4>
+                                    ¿Por cuánto tiempo conservaremos sus datos personales?
+                                </h4>
+                                
+                                <p>
+                                    Los datos personales proporcionados se conservarán durante el tiempo necesario para
+                                    cumplir con la finalidad para la que se recabaron y para determinar las posibles
+                                    responsabilidades que se pudieran producir de dicha finalidad y del tratamiento
+                                    de los datos. Además de los periodos establecidos en la normativa de archivos y
+                                    documentación.</p>
+                                <h4>
+                                    Derecho a retirar el consentimiento prestado para el tratamiento en cualquier momento.
+                                </h4>
+                                
+                                <p>
+                                    Tiene derecho a presentar una reclamación ante la Agencia Española de Protección
+                                    de Datos si no está conforme con el tratamiento que se hace de sus datos personales.</p>
+                                <h4>
+                                    Derecho a presentar una reclamación ante la Autoridad de Control.
+                                </h4>
+                                
+                                <p>
+                                    Tiene derecho a presentar una reclamación ante la Agencia Española de Protección
+                                    de Datos si no está conforme con el tratamiento que se hace de sus datos personales.</p>
+                                <h4>
+                                    Categoría de datos objeto de tratamiento.</h4>
+                                
+                                <p>
+                                    Datos de carácter identificativo de profesores y alumnos: nombre y apellidos, <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número identificación fiscal">NIF</abbr>/documento
+                                    identificativo, teléfono, año de nacimiento. Profesores: datos académicos y profesionales:
+                                </p>
+                                <p>Datos académicos y profesionales de los profesores: formación y titulación</p>
+                                <h4>
+                                    Fuente de la que procedan los datos.
+                                </h4>
+                                
+                                <p>Gestor de expedientes de formación <abbr title="Escuela Madrileña de Salud">EMS</abbr></p>
+                                <h4>
+                                    Información adicional.</h4>
+                                
+                                <p>
+                                    Pueden consultar la información adicional y detallada de la información y de la
+                                    normativa aplicable en materia de protección de datos en la web de la Agencia Española
+                                    de Protección de Datos <a href="http://www.agpd.es" title="Web de la Agencia Española de Protección de Datos (se abre en nueva ventana)" target="_blank">
+                                        http://www.agpd.es.</a></p>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+            </li>
+            <li>
+                <!--Cabecera acordeón-->
+                <input type="checkbox" checked id="ac2" />
+                <label for="ac2">
+                    <i class="glyphicon glyphicon-menu-down icono-circular"></i><h4 class="titulo_acordeon">
+                        Condiciones de uso y política de privacidad</h4></label>
+                <!--Cuerpo acordeón-->
+                <div class="panel-detalle-acordeon">
+                    <div class="contenidoAcordeon">
+                        <div class="col-xs-12">
+                            <div class="contenedor_comun detalleAcordeon">
+                                <p class="solo_parrafo">
+                                    El acceso y uso de la aplicación le atribuye la condición de usuario, lo que implica
+                                    la observancia y cumplimiento de las disposiciones que aquí se contienen, así como
+                                    de cualquier otra disposición legal que fuera de aplicación.</p>
+                                <h4>
+                                    Normas de seguridad en relación con los datos de usuario</h4>
+                                
+                                <ul>
+                                    <li>Es responsabilidad del usuario hacer buen uso de la aplicación. </li>
+                                    <li>El acceso a la información será personal y sus datos de acceso, intransferibles.
+                                        Se han de tomar las diligencias oportunas a fin de evitar accesos no autorizados.</li>
+                                    <li>Los usuarios únicamente revelarán sus datos de acceso a aquellas personas a las
+                                        que autoricen.</li>
+                                    <li>Los usuarios no deben utilizar datos, ni suplantar la identidad de otro usuario.
+                                        En el caso en el que se usen datos de otra persona para utilizar algunas de las
+                                        funciones de la aplicación, el usuario deberá encontrarse en condiciones de acreditar
+                                        que cuenta con el consentimiento de esta persona para su uso.</li>
+                                    <li>Si un usuario tiene sospechas de que sus datos están siendo utilizadas por otra
+                                        persona, debe proceder inmediatamente a comunicar esta incidencia de seguridad a
+                                        la Viceconsejería de Humanización de la Asistencia Sanitaria.</li>
+                                </ul>
+                                <h4>
+                                    Condiciones de uso y limitaciones de los mapas de situación</h4>
+                                
+                                <ul>
+                                    <li>Con el fin de proporcionar un valor añadido al ciudadano a la hora de facilitar
+                                        la búsqueda y ubicación de Centros Sanitarios, se utiliza la tecnología de mapas
+                                        de "Google Maps", dada su amplia difusión y familiaridad de los usuarios con dicha
+                                        tecnología.<br />
+                                      
+                                        Al tratarse de tecnología proporcionada por terceras partes, la Consejería de Sanidad
+                                        de la Comunidad de Madrid no puede garantizar la exactitud, fiabilidad o veracidad
+                                        de la información proporcionada por Google, así como tampoco puede garantizar el
+                                        correcto funcionamiento de los mapas o la continuidad del servicio de "Google Maps".
+                                        De igual modo, la Consejería de Sanidad no puede ser responsable frente a errores
+                                        ocasionados por la utilización de la información proporcionada por "Google Maps".</li>
+                                    <li>La utilización de los mapas proporcionados por Google, bien de manera directa, o
+                                        mediante la aplicación Mi Carpeta de Salud, implican el conocimiento y aceptación
+                                        de las normas y condiciones de uso de Google, las cuales pueden ser consultadas
+                                        en el siguiente enlace: <a href="https://www.google.com/intl/es/help/terms_maps.html"
+                                            title="Ver las condiciones de servicio de Google Maps (se abre en nueva ventana)" target="_blank">Condiciones
+                                            de servicio de Google Maps.</a></li>
+                                </ul>
+                                <h4>
+                                    Queda prohibido</h4>
+                                
+                                <ul>
+                                    <li>El uso inadecuado de la información contenida en esta aplicación, y en concreto,
+                                        aquellos usos que vulneren o transgredan el honor, la intimidad o la imagen de terceros,
+                                        así como aquellos que sean ilícitos o atenten contra la moralidad. Asimismo, queda
+                                        prohibida la utilización de dicha información para incurrir en actividades contrarias
+                                        a la buena fe y el ordenamiento jurídico.</li>
+                                    <li>El diseño y sus códigos fuente, así como los logos, marcas y demás signos distintivos
+                                        que aparecen en la aplicación están protegidos por los correspondientes derechos
+                                        de propiedad intelectual e industrial.</li>
+                                    <li>El uso de esta aplicación para propósitos que puedan influir negativamente en la
+                                        imagen de la Viceconsejería de Humanización de la Asistencia Sanitaria.</li>
+                                    <li>La realización de cualquier actividad que pueda comprometer la seguridad de los
+                                        sistemas y recursos electrónicos de la Dirección General de Planificación, Investigación
+                                        y Formación.</li>
+                                    <li>Congestionar, afectar, interferir o paralizar el uso del servicio.</li>
+                                </ul>
+                                <p>
+                                    La Viceconsejería de Humanización de la Asistencia Sanitaria se reserva el derecho a bloquear
+                                    el acceso de cualquier usuario si detecta un uso contrario a la legalidad, la buena
+                                    fe, o a las presentes condiciones generales.</p>
+                                <p>
+                                    Así mismo, la Viceconsejería de Humanización de la Asistencia Sanitaria se reserva el derecho
+                                    a realizar cambios en el aplicativo sin previo aviso, al objeto de mantener actualizada
+                                    su información, añadiendo, modificando, corrigiendo o eliminando contenidos.</p>
+                                <h4>
+                                    La Viceconsejería de Humanización de la Asistencia Sanitaria no será responsable de</h4>
+                                
+                                <ul>
+                                    <li>Los daños que genere al usuario en caso de imposibilidad de prestar el servicio
+                                        objeto de las presentes Condiciones de Uso, debida a supuestos de caso fortuito,
+                                        fuerza mayor u otras causas no imputables a los responsables.</li>
+                                    <li>Del inadecuado funcionamiento del presente servicio si ello obedece a labores de
+                                        mantenimiento y similares, a incidencias que afecten a sistemas u operadores externos,
+                                        así como al no cumplimiento de los requisitos técnicos necesarios para el funcionamiento
+                                        de la aplicación.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    </main>
+
+
+
+<div id="ctl00_ctl00_panelContacto" class="container" role="region" aria-label="contacte con nosotros">
+    <div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-12 col-sm-2 col-md-1">
+                    <span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-10 col-sm-11">
+                     <p>Para más información, envié un correo electrónico a <a href="mailto:escuela@salud.madrid.org">escuela@salud.madrid.org</a></p>
+                </div>
+			</div>
+	</div>
+</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|<i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

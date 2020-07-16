@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Servicios</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+	<link href="css/all.min.css" rel="Stylesheet" media="all" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="webfonts/fontawesome.css">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"  />
+
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="favicon32.png">
+
+
+<style>
+
+.btn-gris img {
+    height: 1em;
+    vertical-align: text-top;
+}
+
+input + i {
+color: #0071a9;
+font-size: 2em;
+position: absolute;
+left: -2.7em;
+}
+
+input.btn-gris {
+	padding-right: 3em;
+}
+</style>
+
+</head>
+
+<body>
+
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h2>Nombre del Servicio</h2>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!--li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consulta de Indicadores<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid" aria-label="Migas de pan">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver">&lt; Volver</a></li>
+						<li>|</li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Acceso</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> |
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> |
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+	    <!--Botonera-->
+	<div class="panel">
+		<div class="form-group text-center panel-botonera">
+			<input type="submit" name="Anular" value="Anular" onclick="waitingDialog.show();" id="Anular" class="btn btn-gris" title="Acceder al servicio">
+			<input type="submit" name="Buscar" value="Buscar" onclick="waitingDialog.show();" id="Buscar" class="btn btn-primary" title="Acceder al servicio">
+			<input type="submit" name="TipoAcceso" value="Acceder" onclick="waitingDialog.show();" id="TipoAcceso" class="btn btn-rojo" title="Acceder al servicio">
+		</div>
+	</div>
+    <!--Fin Botonera-->
+ <h3>Volver</h3>
+<!-- botones volver -->
+<div class="col-xs-12 panel form-group">
+	<div class="form-group col-xs-12">
+		<div class="botonera">
+
+			<a class="btn btn-gris" href="ConsultaCita.aspx" title="Volver a la consulta de citas pendientes"><i class="fas fa-angle-double-left"></i> Volver</a>
+
+			<a class="btn btn-gris" href="ConsultaCita.aspx" title="Volver a la consulta de citas pendientes"><i class="fas fa-angle-double-left"></i> Volver</a>
+
+			<a href="ConsultaCita.aspx" class="btn btn-gris" title="Volver a la consulta de citas pendientes"><img src="images/volver.svg"> Volver</a>
+
+			<button class="btn btn-volver" id="Button1" type="button">Volver</button>
+
+		</div>
+	</div>
+</div>
+<!-- fin botones volver -->
+	 <h3>Acción</h3>
+
+<!-- botones especiales -->
+<div class="col-xs-12 panel form-group">
+	<div class="form-group col-xs-12">
+		<div class="botonera">
+			<button class="btn btn-gris" id="Button1" type="button">Imprimir resguardo<i class="glyphicon glyphicon-print"></i></button>
+			<button class="btn btn-gris" id="Button1" type="button">Guardar copia<i class="glyphicon glyphicon-download-alt"></i></button>
+			<a  class="btn btn-gris" title="Pulse este botón para pedir cita" href="#">Pedir cita<span class="btn-icono"><img src="images/icono-pedirCita.png" alt="Icono compuesto por un calendario y una lupa que simboliza la acción de pedir cita"></span></a>
+
+			<input class="btn btn-gris" type="submit" name="ImageButton1" value="Descarga PDF" onclick="#" id="ImageButton1" title="Volver"><i class="glyphicon glyphicon-download-alt"></i>
+
+
+		</div>
+	</div>
+</div>
+<!-- fin botones especiales -->
+
+
+<h3>Detalle de cita</h3>
+	<!-- modificación / anulación cita unidad del viajero y medicamentos extranjeros -->
+<div class="panel">
+	<div class="panel-body">
+        <div id="panelCitas">
+            <h4>Tiene confirmada cita en la agenda:</h4>
+			<div id="divContenedorCita" class="panelDetalle">
+				<div class="panel-heading">
+					<strong>Doctor/a: </strong>
+					<span id="lblEspecialidad" class="titularMedico">Fernandez Ibañez, Manuel</span>
+				</div>
+				<!-- panel azul detalle cita -->
+				<div class="panel-body">
+				<div class="row panelAzul">
+					<div class="col-xs-1 text-right hidden-xs">
+						<span class="glyphicon glyphicon-info-sign" title="Información detallada de la cita"></span>
+					</div>
+					<div class="col-xs-12 col-sm-11">
+						<span class="destacadoDatos">Jueves, 31 de octubre de 2019, a las 15:00 horas</span> <br>HOSPITAL CARLOS III <br>Medicina Interna<br>Sección de Medicina Tropical y del Viajero - 1ª planta<br>Sala: C31002 <br> CALLE DE SINESIO DELGADO, 8 - 28029 MADRID
+					</div>
+				</div></div>
+
+
+				<!--Datos del hospital-->
+				<div id="divDatosHospital" class="panel-footer panel-acordeon">
+					
+							<!--Cabecera acordeón-->
+							<input name="ckbAcordeon" type="checkbox" id="ckbAcordeon" checked="checked" title="pulse para descolapsar/colapsar">
+							<label for="ckbAcordeon" id="lblAcordeon"><i class="glyphicon glyphicon-menu-down icono-circular" role="button" aria-label="colapsador" title="pulse para descolapsar/colapsar el panel con la información del centro"></i>
+							<span id="ctl00_ContenedorContenidoSeccion_citaDetalle1_lblHospital" class="titulo_acordeon">HOSPITAL CARLOS III</span></label>
+						   
+							<!-- Cuerpo acordeón -->
+							<div id="panelInfoHospital" class="panel-detalle-acordeon">
+								<div class="panel-body">
+								<div class="row col-xs-12">
+									<div class="col-sm-4 text-sm-right">Dirección: </div>
+									<div class="col-sm-8 negrita">
+										CALLE DE SINESIO DELGADO, 8
+									</div>
+								</div><div class="row col-xs-12">
+									<div class="col-sm-4 text-sm-right">Código postal: </div>
+									<div class="col-sm-8 negrita">
+										28029
+									</div>
+								</div><div class="row col-xs-12">
+									<div class="col-sm-4 text-sm-right">Municipio: </div>
+									<div class="col-sm-8 negrita">
+										MADRID
+									</div>
+								</div><div class="row col-xs-12">
+									<div class="col-sm-4 text-sm-right">Teléfono cita previa: </div>
+									<div class="col-sm-4 negrita">
+										914532780 y 914532672
+									</div>
+									<div class="col-sm-4 negrita location"><i class="glyphicon glyphicon-map-marker" title="Ver mapa de situación"></i>
+										<a id="ctl00_ContenedorContenidoSeccion_citaDetalle1_hlSituacion" href="https://www.google.com/maps/search/?api=1&amp;query=40.47474200,-3.69483900" target="_blank">Ver mapa de situación</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<div class="text-center" style="padding: 0 1em 15px 1em; background-color: #f5f5f5;">
+<div class="btn-group btn-group-justified " role="group" aria-label="bla bla"><!--  btn-group-justified -->
+  <button type="button" class="btn btn-gris">Descargar <i class="glyphicon glyphicon-download-alt"></i></button>
+  <button type="button" class="btn btn-gris">Incorporar a la agenda <i class="glyphicon glyphicon-qrcode"></i></button>
+  <button type="button" class="btn btn-gris">Deseo recibir confirmación de la cita en el correo electrónico <i class="glyphicon glyphicon-envelope"></i></button>
+</div>
+</div>
+
+
+        <div class="panel-botonera text-center">
+                <!--Botones para la pantalla-->
+                <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnCambiar" value="Cambiar" id="ctl00_ContenedorContenidoSeccion_btnCambiar" class="btn btn-rojo" title="Pulse este botón para cambiar la cita">
+                <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnAnular" value="Anular" id="ctl00_ContenedorContenidoSeccion_btnAnular" class="btn btn-rojo" title="Pulse este botón para anular la cita">
+        </div>
+</div>
+
+</form>
+</main>
+
+	
+
+	
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+</html>

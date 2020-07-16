@@ -1,0 +1,459 @@
+﻿<!doctype html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Cita para Vacunación Internacional - Acceso</title>
+
+
+	<meta name="description" content="Servicio online para solicitar una cita para vacunación internacional. Se puede consultar, cambiar o anular la cita para la vacuna." />
+	<meta name="keywords" content="vacuna,vacunación internacional, unidad del viajero" />
+	<meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+ 
+    
+    <!-- FAVICON -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    
+    <!-- Configuración de inicio -->
+    <link rel="manifest" href="/site_webmanifest.json" />
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+	
+	<meta name="apple-mobile-web-app-title" content="Vacunación Internacional" />
+	<meta name="application-name" content="Vacunación Internacional" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="theme-color" content="#ffffff" />
+    
+    
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/sanidad.css" rel="stylesheet" media="screen" />
+	<link href="css/all.min.css" rel="Stylesheet" media="all" />
+	<link href="webfonts/fontawesome.css" rel="stylesheet" type="text/css" />
+	<link href="css/datepicker.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="Bootstrap/js/modernizr.js"></script>
+    
+    <!-- jQuery (necesario para los plugins de Bootstrap's y otros) -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Incluye todos los componentes compilados o archivos individuales según sea necesario -->
+
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <script src="Bootstrap/js/moment-with-locales.js"></script>
+    <script src="Bootstrap/js/bootstrap-datetimepicker.min.js" ></script>
+    <script src="Bootstrap/js/bootstrap-waiting.js" ></script>
+    
+         
+   
+    <!--Otros javascripts -->
+    
+    <script src="js/locales/es.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/js.js"></script>
+
+<style>
+
+.btn-block {
+	text-align: left;
+	position: relative;
+	margin-left: 0px;
+	padding-right: 4em;
+	white-space: normal;
+	min-height: 2.6em;
+	height: auto;
+}
+
+.btn-block i {
+	color: #ffffff;
+	position: absolute;
+	font-size: 1.3em;
+	top: 0.1em;
+	color: #ffffff;
+	right: 1.2em;
+}
+
+.btn-block:last-child {
+	margin-bottom: 15px;
+}
+
+.btn-gris img{
+	height:1em;
+	vertical-align:text-top;
+} 
+</style> 
+</head>
+<body>
+
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h2>Vacunación Internacional</h2>
+			</div>
+		  </div>
+		</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid" aria-label="Migas de pan">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver">&lt; Volver</a></li>
+						<li>|</li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Acceso</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> |
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> |
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+        <!--Cuerpo-->
+        <main id="seccion" class="container contenidoAccesible seccion" aria-label="Contenido principal">
+            <header>
+                <h3><span id="ctl00_ContenedorTituloSeccion_ctl00_lblTituloSeccion">Pedir cita</span></h3>
+            </header>
+            
+            <!--Contenedor dinámico-->        
+            <div id="ctl00_contenedorPrincipal">
+
+<form name="aspnetForm" method="post" action="./PedirCita.aspx" id="aspnetForm">
+
+    <div class="panelDatosPaciente" role="region">
+        <div class="panel panel-heading">
+            <!--Datos del paciente-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">ALMUDENA MADROÑO DEL OSO</div>
+            <div class="col-xs-12 col-sm-6 numCIPA text-sm-right">
+               Su código de identificación personal autonómico: <strong><span id="ctl00_ContenedorContenidoSeccion_TitularTarjeta_NSS">1724979086</span></strong>
+            </div>
+        </div>
+            <!--Fin de datos del paciente-->
+        </div>
+    </div>
+
+            <div id="PanelError" class="alert alert-info" role="dialog">
+	    <div class="row">
+        <div class="col-sm-1 hidden-xs">
+            <img id="ImagePanelError" title="Información para acceder" class="alphaPNG" src="images/icono-info.png" alt="Icono con una i latina que acompaña a un texto informativo" style="border-width:0px;" />
+        </div>
+        <div class="col-xs-12 col-sm-11">
+            <p><a data-toggle='modal' href='#infoTlfs' title='Pulse aquí para ver los horarios y disponibilidad.' >Consulte horarios y disponibilidad de cita en los centros.</a></p>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="pnlBuscador" class="panel" aria-label="Busqueda de citas disponibles" role="search">
+    <fieldset class="panel-body">
+        <legend id="tituloPagina" class="row col-xs-12">
+            Para<span id="lblTipoSolicitud"> pedir </span>cita, seleccione el centro, a continuación el día y hora:
+        </legend>
+
+        <div id="panelFormulario" class="panel-formulario">
+            <div class="row form-group">
+                <div class="form-group col-sm-7 col-xs-12">
+                    <label for="drpHospital" id="lblHospital">Centro:</label>
+                    <select name="ctl00$ContenedorContenidoSeccion$ucPedirCita$drpHospital" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$ucPedirCita$drpHospital\&#39;,\&#39;\&#39;)&#39;, 0)" id="drpHospital" class="form-control">
+	<option value="0">Seleccione una opci&#243;n</option>
+	<option selected="selected" value="1">HOSPITAL CARLOS III</option>
+	<option value="5">CENTRO DE VACUNACION</option>
+	<option value="14">HOSPITAL UNIVERSITARIO 12 DE OCTUBRE</option>
+
+</select>
+                </div>
+                <div class="form-group col-sm-3 col-xs-6 form100">
+                    <label for="txtFechaDesde" class="control-label">
+                        Día:</label>
+                    <div class="">
+                        <input name="ctl00$ContenedorContenidoSeccion$ucPedirCita$txtFechaDesde" type="text" id="txtFechaDesde" class="form-control datepicker" onchange="ValidarFechaCita(this.value)" onkeyup="ValidarFechaCita(this.value)" placeholder="10/03/2020" value="10/03/2020" />
+                    </div>
+                </div>
+                <div class="form-group col-sm-2 col-xs-6 form100">
+                    <label for="lst_fdesde" id="lblHora">Hora:</label>
+                    <select name="ctl00$ContenedorContenidoSeccion$ucPedirCita$lst_fdesde" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$ucPedirCita$lst_fdesde\&#39;,\&#39;\&#39;)&#39;, 0)" id="lst_fdesde" class="form-control">
+	<option value="Desde">Desde</option>
+	<option selected="selected" value="8:30">8:30</option>
+	<option value="9:00">9:00</option>
+	<option value="9:30">9:30</option>
+	<option value="10:00">10:00</option>
+	<option value="10:30">10:30</option>
+	<option value="11:00">11:00</option>
+	<option value="11:30">11:30</option>
+	<option value="12:00">12:00</option>
+	<option value="12:30">12:30</option>
+	<option value="13:00">13:00</option>
+	<option value="13:30">13:30</option>
+	<option value="14:00">14:00</option>
+	<option value="14:30">14:30</option>
+	<option value="15:00">15:00</option>
+	<option value="15:30">15:30</option>
+	<option value="16:00">16:00</option>
+	<option value="16:30">16:30</option>
+	<option value="17:00">17:00</option>
+	<option value="17:30">17:30</option>
+	<option value="18:00">18:00</option>
+	<option value="18:30">18:30</option>
+	<option value="19:00">19:00</option>
+	<option value="19:30">19:30</option>
+	<option value="20:00">20:00</option>
+
+</select>
+                </div>
+
+                
+            </div>
+        </div>
+    </fieldset>
+
+    <!--Botonera-->
+    <div id="panelBotonera" class="col-xs-12 panel-botonera">
+        <div class="text-center">
+            <input type="submit" name="tnBuscar" value="Buscar" onclick="waitingDialog.show();" id="btnBuscar" class="btn btn-rojo" title="Buscar cita" />
+        </div>
+    </div>
+</div>
+
+<!--Resultado de la búsqueda-->
+<div id="pnlResultados">
+	
+    
+    <p class="negrita">
+        Citas libres más próximas disponibles:
+    </p>
+    <!--Listado de huecos-->
+    <div class="panel-formulario">
+        <div class="row">
+			<div class="col-xs-12">
+                <button class='btn btn-primary btn-block' onclick='__doPostBack("LkbHuecoSeleccionado_Click", "48396~10/03/2020_08:30:00");'
+                    data-toggle="tooltip" title='Pulse aquí para seleccionar una cita el Martes, 10 de marzo de 2020, a las 8:30 horas' id='HuecoId_1'>
+                        <span id="CitasRepeater_ctl01_lblCitaDatos"><span class='destacadoDatos'>Martes, 10 de marzo de 2020, a las 8:30 horas</span>
+                        <i class="fas fa-angle-double-right"></i>
+                </button>
+            
+                <button class='btn btn-primary btn-block' onclick='__doPostBack("LkbHuecoSeleccionado_Click", "67166~10/03/2020_08:30:00");'
+                    data-toggle="tooltip" title='Pulse aquí para seleccionar una cita el Martes, 10 de marzo de 2020, a las 8:30 horas' id='HuecoId_2'>
+                        <span id="CitasRepeater_ctl02_lblCitaDatos"><span class='destacadoDatos'>Martes, 10 de marzo de 2020, a las 8:30 horas</span>
+                        <i class="fas fa-angle-double-right"></i>
+                </button>
+            
+                <button class='btn btn-primary btn-block' onclick='__doPostBack("LkbHuecoSeleccionado_Click", "67136~10/03/2020_08:30:00");'
+                    data-toggle="tooltip" title='Pulse aquí para seleccionar una cita el Martes, 10 de marzo de 2020, a las 8:30 horas' id='HuecoId_3'>
+                        <span id="CitasRepeater_ctl03_lblCitaDatos"><span class='destacadoDatos'>Martes, 10 de marzo de 2020, a las 8:30 horas</span>
+                        <i class="fas fa-angle-double-right"></i>
+                    </span>
+                </button>
+            
+                <button class='btn btn-primary btn-block' onclick='__doPostBack("LkbHuecoSeleccionado_Click", "67136~10/03/2020_08:45:00");'
+                    data-toggle="tooltip" title='Pulse aquí para seleccionar una cita el Martes, 10 de marzo de 2020, a las 8:45 horas' id='HuecoId_4'>
+                        <span id="CitasRepeater_ctl04_lblCitaDatos"><span class='destacadoDatos'>Martes, 10 de marzo de 2020, a las 8:45 horas</span>
+                        <i class="fas fa-angle-double-right"></i>
+                </button>
+			</div>
+		</div>
+    </div>
+    <p>
+        Si las citas ofrecidas no se acomodan a su disponibilidad horaria realice de nuevo
+        la búsqueda.
+    </p>
+
+</div>
+<!--Fin de resultado de la búsqueda-->
+<!--Paso 2 - Confirmación de la cita-->
+
+
+<div class="modal fade" id="infoTlfs" role="dialog" aria-label="Centros de vacunación internacional"
+    aria-modal="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="cerrar">
+                    &times;</button>
+                <h4 class="modal-title">Información de los centros de Vacunación Internacional:</h4>
+            </div>
+            <div class="modal-body">
+                
+                <p>
+                    <span class="negrita">Centro de Vacunación:</span> Citas en horario de mañana y tarde.
+                </p>
+                <p>
+                    <span class="negrita">Hospital Carlos III:</span> citas para personas de 16 o más años en horario de mañana y
+                    tarde.
+                </p>
+                <p>
+                    <span class="negrita">Hospital Universitario 12 de Octubre:</span> citas para personas de 16 o más años en horario
+                    de mañana.
+                </p>
+                <p>
+                    <span class="negrita">Hospital Universitario La Paz:</span> Citas solo para menores de 16 años en horario de
+                    mañana.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input name="ctl00$ContenedorContenidoSeccion$ucPedirCita$diasDesactivados" type="hidden" id="diasDesactivados" value="0, 6" />
+    
+    <!--Botonera-->
+    <div class="col-xs-12 botonera">
+        <div class="btn-group">
+		<a href="ConsultaCita.aspx" class="btn btn-gris" title="Volver a la consulta de citas pendientes"><img src="images/volver.svg"> Volver</a>
+            <!--a href="ConsultaCita.aspx" class="btn btn-gris" title="Volver a la consulta de citas">
+                <span class="btn-icono"><img src="images/icono-volver.png" alt="Icono con dos flechas hacia la izquierda" /></span>Volver
+            </a-->
+        </div>
+    </div>
+    <!--Fin de botonera-->
+
+                    
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+                SetDatePicker();
+
+                if ( $('#HuecoId_1' ).length ) {                
+                    $('#HuecoId_1').focus();
+                }
+
+                $("input[id$='txtFechaDesde']").attr('placeholder', 'dd/mm/aaaa');
+            });
+
+            function SetDatePicker() 
+            {
+                (function($) {
+                    $(function() {
+                        $('.datepicker')
+                            .filter(function() {
+                                return !this.disabled && !this.readOnly;
+                            })
+                            .datepicker({
+                                markup: 'bootstrap3',
+                                gainFocusOnConstruction: false
+                            });
+                    });
+                })(jQuery);
+
+                $("input[id$='txtFechaDesde']").datepicker({
+                    theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+                    modal: true,
+                    min: '09/03/2020',
+                    daysOfWeekDisabled: [0, 6]
+                });
+            }window.scrollTo(0, document.body.clientHeight);//]]>
+</script>
+</form><!-- Se cierra en cada aspx para evitar problemas en IE u Opera-->
+                    
+               
+            </div>
+            <!--Fin contenedor dinámico-->
+            
+            
+
+    </main>
+        <!-- Pie-->
+        <footer class="container-fluid">
+	      <div class="row">
+	          <div class="col-xs-12 col-sm-7">
+	            <a title="Explicación del Nivel Doble A de Conformidad" href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank">
+		            <img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble-A del W3C-WAI">
+		        </a>
+		        |
+		        <a title="Consulta la declaración de conformidad" href="/accesibilidad.aspx" >Accesibilidad</a>
+		        |
+		        <a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a>
+		        |
+		        <a title="Consulta la lista de las páginas del sitio web" href="/mapa_web.aspx" >Mapa web</a>
+	         </div>
+	         <div class="col-xs-12 col-sm-5">Copyright &copy; Comunidad de Madrid </div>
+	      </div>
+        </footer>
+        <!--Fin del pie-->
+
+
+    <!-- Modal información Tarjeta Sanitaria-->
+    <div id="modalTarjeta" class="modal fade" role="dialog" aria-hidden="true" aria-modal="true" aria-label="Identifica el código de identificación personal autonómico en tu tarjeta">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Cabecera-->
+                <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="cerrar">&times;</button>
+                    <h4 class="modal-title">
+                        ¿Dónde encontrar su código de identificación personal autonómico?
+                    </h4>
+                </div>
+                <!--Cuerpo-->
+                <div class="modal-body">
+					<p>
+						El Código de Identificación Personal Autonómico se encuentra situado en la tarjeta sanitaria en la mitad superior centro o en la
+						mitad superior derecha según el modelo.
+					</p>
+					<div class="text-center">
+						<img src="images/TSI_nueva.png" title="En este modelo de Tarjeta Sanitaria el 
+Código de Identificación Personal Autonómico
+se encuentra en la mitad superior centro"
+                                class="form-group" />
+                            <img src="images/TSI_vieja.png" title="En este modelo de Tarjeta Sanitaria
+el Código de Identificación Personal Autonómico
+se encuentra en la mitad superior derecha"
+                                class="form-group" />
+                        </div>
+            </div>
+				<!--Pie-->
+				<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>            </div>
+			</div>
+		</div>
+    </div>
+	    
+    <!-- JS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-waiting.js" type="text/javascript"></script>
+
+</body>
+</html>

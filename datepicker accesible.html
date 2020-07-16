@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Servicios - datepicker</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/sanidad.css" rel="stylesheet" />
+    <link href="css/datepicker.css" rel="stylesheet" />
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h2>Nombre del Servicio</h2>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!--li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consulta de Indicadores<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid" aria-label="Migas de pan">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver">&lt; Volver</a></li>
+						<li>|</li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Datepicker</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> |
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> |
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+	<h3>Datepicker</h3>
+			<form method="GET" action="#">
+<div class="panel">
+    <fieldset class="form-horizontal panel-body">
+        <legend class="col-xs-12">Seleccione una fecha:</legend>
+<div class="col-xs-12 panel-formulario">
+	<div class="col-xs-12 col-sm-6 form-group">
+						<label for="date12" class="control-label col-xs-4">Fecha:</label>
+						<div class="col-xs-8">
+							<input name="fecha" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control datepicker" placeholder="dd/mm/aaaa">
+						</div>
+</div></div>
+						</fieldset>	
+</div>
+
+				</form>
+
+</main>
+
+
+<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6"><a title="Explicación del Nivel Doble A de Conformidad" href="http://www.w3.org/WAI/WCAG1AA-Conformance">
+		<img src="http://www.w3.org/WAI/wcag1AA" alt="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 1.0 del W3C-WAI"></a> <a title="Accesibilidad (en ventana nueva)" href="./Accesibilidad.aspx" target="_blank">Accesibilidad</a> | <a title="Privacidad (en ventana nueva)" href="./Privacidad.aspx" target="_blank">Privacidad</a> | <a title="Privacidad (en ventana nueva)" href="./Privacidad.aspx" target="_blank">Privacidad</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright © Comunidad de Madrid </div>
+	  </div>
+</footer>
+	
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+// Máscara input
+function IsNumeric(valor) 
+{ 
+var log=valor.length; var sw="S"; 
+for (x=0; x<log; x++) 
+{ v1=valor.substr(x,1); 
+v2 = parseInt(v1); 
+//Compruebo si es un valor numérico 
+if (isNaN(v2)) { sw= "N";} 
+} 
+if (sw=="S") {return true;} else {return false; } 
+} 
+var primerslap=false; 
+var segundoslap=false; 
+function formateafecha(fecha) 
+{ 
+var long = fecha.length; 
+var dia; 
+var mes; 
+var ano; 
+if ((long>=2) && (primerslap==false)) { dia=fecha.substr(0,2); 
+if ((IsNumeric(dia)==true) && (dia<=31) && (dia!="00")) { fecha=fecha.substr(0,2)+"/"+fecha.substr(3,7); primerslap=true; } 
+else { fecha=""; primerslap=false;} 
+} 
+else 
+{ dia=fecha.substr(0,1); 
+if (IsNumeric(dia)==false) 
+{fecha="";} 
+if ((long<=2) && (primerslap=true)) {fecha=fecha.substr(0,1); primerslap=false; } 
+} 
+if ((long>=5) && (segundoslap==false)) 
+{ mes=fecha.substr(3,2); 
+if ((IsNumeric(mes)==true) &&(mes<=12) && (mes!="00")) { fecha=fecha.substr(0,5)+"/"+fecha.substr(6,4); segundoslap=true; } 
+else { fecha=fecha.substr(0,3);; segundoslap=false;} 
+} 
+else { if ((long<=5) && (segundoslap=true)) { fecha=fecha.substr(0,4); segundoslap=false; } } 
+if (long>=7) 
+{ ano=fecha.substr(6,4); 
+if (IsNumeric(ano)==false) { fecha=fecha.substr(0,6); } 
+else { if (long==10){ if ((ano==0) || (ano<1900) || (ano>2100)) { fecha=fecha.substr(0,6); } } } 
+} 
+if (long>=10) 
+{ 
+fecha=fecha.substr(0,10); 
+dia=fecha.substr(0,2); 
+mes=fecha.substr(3,2); 
+ano=fecha.substr(6,4); 
+// Año no viciesto y es febrero y el dia es mayor a 28 
+if ( (ano%4 != 0) && (mes ==02) && (dia > 28) ) { fecha=fecha.substr(0,2)+"/"; } 
+} 
+return (fecha); 
+}
+</script>
+
+</body>
+
+</html>

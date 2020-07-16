@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Medicamentos - Hoja de medicación personalizada</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Medicamentos - Consultas <em>online</em></h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">Hoja de medicación personalizada</a></li>
+						<li>Inicio hoja</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Hoja de medicación personalizada</h3>
+	
+          
+
+    <div class="alert alert-info" role="dialog" aria-label="mensaje informativo">
+        <div class="row">
+            <div class="col-sm-1 hidden-xs">
+                <img title="Información" src="../img/ico_information.gif" alt="Icono con una i latina que acompaña a un texto informativo">
+            </div>
+            <div class="col-xs-12 col-sm-11">
+                <p>ASEGURESE DE QUE:</p>
+                <ul>
+                    <li>Incluye la misma posología que la pautada por su médico.</li>
+                    <li>La frecuencia de adminsitración que le ha indicado el profesional sanitario correspondiente
+                    es la única válida.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <h4>Información para: mi</h4>        
+
+
+        <div id="ctl00_ContenedorContenidoSeccion_pnlMedicamento" class="panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ContenedorContenidoSeccion_btnBuscar3&#39;)">
+	
+
+            <fieldset class="panel-body">
+                <legend class="col-xs-12">Casillas la pauta que le ha indicado su profesional sanitario.</legend>
+                <div class="col-xs-12 panel-formulario">
+
+                    <div class="col-xs-12 col-md-3">
+                        <div id="ctl00_ContenedorContenidoSeccion_divCaratula" class="datosMedicamento col-sm-5 col-md-12">
+                            <!-- datosMedicamentoCaratula -->
+                            <img id="ctl00_ContenedorContenidoSeccion_imgCaratula" title="Cantonaje del medicamento seleccionado" oncopy="return false" oncontextmenu="return false" src="../comun/visorCaratulas.aspx?cod=654732" style="border-width:0px;" />
+                        </div>
+                        <div class="datosMedicamentoTexto col-sm-7 col-md-12">
+                            <ul aria-label="Datos del medicamento" role="contentinfo">
+                                <li>
+                                    XARELTO 10 mg 10 comprimidos recubiertos</li>
+                                <li><b>Principio activo:</b>
+                                    rivaroxaban</li>
+                                <li><b>Vía:</b>
+                                    Oral</li>
+                                <li><b>Forma:</b>
+                                    Comprimidos</li>
+                                <li><b>Receta:</b>
+                                    Seguridad Social y validación</li>
+                                <li>
+                                    <div id="ctl00_ContenedorContenidoSeccion_divPrecio">
+                                        <b>Precio:</b>
+                                        30,29 €
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <fieldset class="col-sm-6 cajasHojaM" role="group">
+                            <legend class="row col-xs-12">Dosificación:</legend>
+                            <div class="col-xs-6 col-sm-3 text-center">
+                                <!-- cajaComida -->
+                                <img id="ctl00_ContenedorContenidoSeccion_imgDesayuno" title="Desayuno" src="img/desayuno_ico.jpg" style="border-width:0px;" />
+                                <label for="ctl00_ContenedorContenidoSeccion_txtDesayuno" id="ctl00_ContenedorContenidoSeccion_labelDesayuno" class="control-label">Desayuno</label>
+                                <input name="ctl00$ContenedorContenidoSeccion$txtDesayuno" type="text" maxlength="6" id="ctl00_ContenedorContenidoSeccion_txtDesayuno" class="form-control" />
+                            </div>
+                            <div class="col-xs-6 col-sm-3 text-center">
+                                <img id="ctl00_ContenedorContenidoSeccion_imgComida" title="Comida" src="img/comida_ico.jpg" style="border-width:0px;" />
+                                <label for="ctl00_ContenedorContenidoSeccion_txtComida" id="ctl00_ContenedorContenidoSeccion_labelComida" class="control-label">Comida</label>
+                                <input name="ctl00$ContenedorContenidoSeccion$txtComida" type="text" maxlength="6" id="ctl00_ContenedorContenidoSeccion_txtComida" class="form-control" />
+                            </div>
+                            <div class="col-xs-6 col-sm-3 text-center">
+                                <img id="ctl00_ContenedorContenidoSeccion_imgCena" title="Cena" src="img/cena_ico.jpg" style="border-width:0px;" />
+                                <label for="ctl00_ContenedorContenidoSeccion_txtCena" id="ctl00_ContenedorContenidoSeccion_labelCena" class="control-label">Cena</label>
+                                <input name="ctl00$ContenedorContenidoSeccion$txtCena" type="text" maxlength="6" id="ctl00_ContenedorContenidoSeccion_txtCena" class="form-control" />
+                            </div>
+                            <div class="col-xs-6 col-sm-3 text-center">
+                                <img id="ctl00_ContenedorContenidoSeccion_imgAcostarse" title="Acostarse" src="img/acostarse_ico.jpg" style="border-width:0px;" />
+                                <label for="ctl00_ContenedorContenidoSeccion_txtAcostarse" id="ctl00_ContenedorContenidoSeccion_labelAcostarse" class="control-label">Acostarse</label>
+                                <input name="ctl00$ContenedorContenidoSeccion$txtAcostarse" type="text" maxlength="6" id="ctl00_ContenedorContenidoSeccion_txtAcostarse" class="form-control" />
+                            </div>
+                            
+                        </fieldset>
+                        <fieldset class="col-sm-6 cajasHojaMF" role="group">
+                            <legend class="row col-xs-12">Duración del tratamiento:</legend>
+                            <div class="col-xs-12 col-sm-6">
+                                <label for="ctl00_ContenedorContenidoSeccion_txtFechaInicio" id="ctl00_ContenedorContenidoSeccion_labelFechaInicio" class="control-label">Fecha inicio:</label>
+
+                                <div class="input-group">
+                                    <input name="ctl00$ContenedorContenidoSeccion$txtFechaInicio" type="text" maxlength="10" id="ctl00_ContenedorContenidoSeccion_txtFechaInicio" class="form-control" placeholder="dd/mm/aaaa" />
+
+                                    <span class="input-group-addon" title="Mostrar/ocultar calendario"><span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <label for="ctl00_ContenedorContenidoSeccion_txtFechaFin" id="ctl00_ContenedorContenidoSeccion_labeltxtFechaFin" class="control-label">Fecha Fin:</label>
+                                <div class="input-group">
+                                    <input name="ctl00$ContenedorContenidoSeccion$txtFechaFin" type="text" maxlength="10" id="ctl00_ContenedorContenidoSeccion_txtFechaFin" class="form-control" placeholder="dd/mm/aaaa" />
+                                    <span class="input-group-addon" title="Mostrar/ocultar calendario"><span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+
+
+                                
+                                
+                            </div>
+                            <div class="col-xs-12 col-sm-12 text-center">
+                                <label for="ctl00_ContenedorContenidoSeccion_chkCronico" class="checkbox-inline cronico"><span><input id="ctl00_ContenedorContenidoSeccion_chkCronico" type="checkbox" name="ctl00$ContenedorContenidoSeccion$chkCronico" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$chkCronico\&#39;,\&#39;\&#39;)&#39;, 0)" /></span>
+                                    Tratamiento crónico</label>
+                            </div>
+                        </fieldset>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-md-9">
+                        <p>
+                            <b>Acción:</b>
+                            <span id="ctl00_ContenedorContenidoSeccion_lblAccion">Medicamento utilizado para prevenir la formación de obstrucciones (COÁGULOS) de sangre (ANTICOAGULANTE).</span>
+                        </p>
+                        <p>
+                            <b>Dosificación más habitual. Siga siempre la dosis y pauta indicada por su médico:</b><br />
+                            <span id="ctl00_ContenedorContenidoSeccion_lblDosis">ORAL. TOME ESTE MEDICAMENTO HASTA EL DÍA QUE LE INDIQUE SU MÉDICO.</span>
+                        </p>
+                        <p>
+                            <b>Recomendaciones:</b>
+                            <span id="ctl00_ContenedorContenidoSeccion_lblRecomendaciones">Tome los comprimidos enteros, sin partir ni masticar, tragándolos con ayuda de un vaso de agua.
+Puede tomar este medicamento con o sin alimentos; si tiene molestias de estómago, tómelo con algún alimento.
+Siga estrictamente la pauta indicada por su médico en cuanto a dosis y frecuencia de administración.
+Avise a su médico si padece o ha padecido problemas de riñón o problemas de hígado.
+Este medicamento modifica la acción de otros fármacos, NO tome otros medicamentos sin consultar antes a su médico o farmacéutico.
+Informe inmediatamente a su médico si está embarazada o cree que puede estarlo, así como si quedase embarazada durante el tratamiento.
+Avise a su médico si tiene algún hijo al que esté dándole el pecho.</span>
+                        </p>
+                        <p>
+                            <b>Efectos adversos:</b>
+                            <span id="ctl00_ContenedorContenidoSeccion_lblEfectos">Avise a su médico si durante el tratamiento aparece algún sangrado (nariz, encías) por pequeño que sea o algún hematoma.
+Si notase cualquier otro síntoma que cree que puede ser causado por este medicamento, dígaselo a su médico.</span>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-group cantonaje">
+                        <span id="ctl00_ContenedorContenidoSeccion_rblCartonaje" class="floatLeft"><input id="ctl00_ContenedorContenidoSeccion_rblCartonaje_0" type="radio" name="ctl00$ContenedorContenidoSeccion$rblCartonaje" value="1" checked="checked" /><label for="ctl00_ContenedorContenidoSeccion_rblCartonaje_0">Con cartonaje</label><input id="ctl00_ContenedorContenidoSeccion_rblCartonaje_1" type="radio" name="ctl00$ContenedorContenidoSeccion$rblCartonaje" value="0" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$rblCartonaje$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContenedorContenidoSeccion_rblCartonaje_1">Sin cartonaje</label></span>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group text-center panel-botonera">
+                
+                <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnCancelar3" value="Cancelar" id="ctl00_ContenedorContenidoSeccion_btnCancelar3" class="btn btn-gris" />
+                
+                <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnBuscar3" value="Añadir medicamento" id="ctl00_ContenedorContenidoSeccion_btnBuscar3" title="Agregar medicamento a la hoja de medicación" class="btn btn-rojo" />
+            </div>
+        
+</div>
+		</form>
+
+	</main>
+
+	
+<div class="container" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-0 col-sm-1">
+					<span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

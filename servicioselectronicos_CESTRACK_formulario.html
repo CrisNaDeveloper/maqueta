@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CESTRACK</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Reclamaciones, sugerencias y agradecimientos sobre asistencia sanitaria</h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li>Formulario online</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+			
+	<h3>Formulario online</h3>
+<form>
+    <div id="ContenedorContenidoSeccion_PanelAvisosOrdenacion_PanelError" class="panel_ alert alert-info">
+	
+    <div class="row" role="alert" aria-label="Aviso de errores" aria-live="assertive">
+    <div class="col-sm-1 hidden-xs"><img id="ContenedorContenidoSeccion_PanelAvisosOrdenacion_ImagePanelError" title="Icono de información" class="alphaPNG" src="../img/ico_information.gif" alt="Información" /></div>
+    <div  class="col-xs-12 col-sm-11 panel_texto">
+     <span id="ContenedorContenidoSeccion_PanelAvisosOrdenacion_LabelPanelError">Los campos precedidos de * son obligatorios y deberá rellenarlos en su totalidad antes de pulsar el botón Enviar.</span>
+            </div>
+        </div>
+
+</div>
+    <div id="ContenedorContenidoSeccion_PanelAvisosError_PanelError" class="panel_error alert alert-danger">
+	
+    <div class="row" role="alert" aria-label="Aviso de errores" aria-live="assertive">
+    <div class="col-sm-1 hidden-xs"><img id="ContenedorContenidoSeccion_PanelAvisosError_ImagePanelError" title="Icono de error" class="alphaPNG" src="../img/icono-error.png" alt="¡Errror!" /></div>
+    <div  class="col-xs-12 col-sm-11 panel_texto">
+     <span id="ContenedorContenidoSeccion_PanelAvisosError_LabelPanelError">No se ha podido cargar el listado de países..</p></span>
+            </div>
+        </div>
+
+</div>
+    <input type="hidden" name="ctl00$ContenedorContenidoSeccion$txtcentroaux" id="ContenedorContenidoSeccion_txtcentroaux" />
+    <div id="ContenedorContenidoSeccion_divMensaje">
+        <div class="panel">
+            <fieldset class="form-horizontal panel-body" aria-required="true" role="radiogroup" aria-label="Seleccione reclamación, sugerencia o agradecimiento">
+                <legend class="row col-xs-12"><span class="obligatorio">*</span> Seleccione una de las
+                    siguientes opciones:</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="row form-group text-center">
+                        <div class="col-xs-12">
+                            <span id="ContenedorContenidoSeccion_rb_tipo" class="rb_cab"><input id="ContenedorContenidoSeccion_rb_tipo_0" type="radio" name="ctl00$ContenedorContenidoSeccion$rb_tipo" value="1" /><label for="ContenedorContenidoSeccion_rb_tipo_0">Reclamación</label><input id="ContenedorContenidoSeccion_rb_tipo_1" type="radio" name="ctl00$ContenedorContenidoSeccion$rb_tipo" value="3" /><label for="ContenedorContenidoSeccion_rb_tipo_1">Sugerencia</label><input id="ContenedorContenidoSeccion_rb_tipo_2" type="radio" name="ctl00$ContenedorContenidoSeccion$rb_tipo" value="5" /><label for="ContenedorContenidoSeccion_rb_tipo_2">Agradecimiento</label></span>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos del reclamante</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="row form-group">
+                        <div class="col-sm-5 col-md-5 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_rec_txt_nombre" id="ContenedorContenidoSeccion_lbl_rec_txt_nombre" class="control-label col-sm-5 col-md-5 col-lg-5">
+                                <span class="obligatorio">*</span> Nombre:</label>
+                            <div class="col-sm-7 col-md-7 col-lg-7">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_nombre" type="text" id="ContenedorContenidoSeccion_rec_txt_nombre" title="Introduzca el nombre del reclamante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs form-group">
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_rec_txt_apellidos" id="ContenedorContenidoSeccion_lbl_rec_txt_apellidos" class="control-label col-sm-3 col-md-4 col-lg-4">
+                                <span class="obligatorio">*</span> Apellidos:</label>
+                            <div class="col-sm-9 col-md-8 col-lg-8">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_apellidos" type="text" id="ContenedorContenidoSeccion_rec_txt_apellidos" title="Introduzca los apellidos del reclamante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-5 col-md-5 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_rec_txt_documento" id="ContenedorContenidoSeccion_lbl_rec_txt_documento" class="control-label col-sm-5 col-md-5 col-lg-5">
+                                <span class="obligatorio">*</span> <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número de identificación de extranjero">NIE</abbr></label>
+                            <div class="col-sm-7 col-md-6 col-lg-4">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_documento" type="text" maxlength="9" id="ContenedorContenidoSeccion_rec_txt_documento" title="Introduzca los ocho dígitos y la letra del documento nacional de identidad, o la letra, los siete digitos y el dígito de control del número de identificación de extranjero del reclamante" class="form-control" onblur="javascript:deshabilitaPas();" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs form-group">
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_rec_txt_pasaporte" id="ContenedorContenidoSeccion_lbl_rec_txt_pasaporte" class="control-label col-sm-6 col-md-4 col-lg-4 labelWrap-sm labelWrap-md">
+                                <span class="obligatorio">*</span> Pasaporte: <span class="text_nowrap">(Si no tiene
+                                    <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número de identificación de extranjero">NIE</abbr>)</span></label>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_pasaporte" type="text" maxlength="9" id="ContenedorContenidoSeccion_rec_txt_pasaporte" title="Introduzca el pasaporte del reclamante, si no tiene documento nacional de identidad o número de identificación de extranjero" class="form-control" onblur="javascript:deshabilitaDNI();" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div id="ContenedorContenidoSeccion_divHospitales" class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_rec_txt_domicilio" id="ContenedorContenidoSeccion_lblrec_txt_domicilio" class="control-label col-sm-2 col-md-2 col-lg-2"><span class="obligatorio">*</span> Domicilio:</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_domicilio" type="text" id="ContenedorContenidoSeccion_rec_txt_domicilio" title="introduzca el domicilio del reclamante" class="form-control" aria-required="true" /></div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-5 col-md-5 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_rec_txt_localidad" id="ContenedorContenidoSeccion_lbl_rec_txt_localidad" class="control-label col-sm-5 col-md-5 col-lg-5">
+                                <span class="obligatorio">*</span> Localidad:</label>
+                            <div class="col-sm-7 col-md-7 col-lg-7">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_localidad" type="text" id="ContenedorContenidoSeccion_rec_txt_localidad" title="Introduzca la localidad del domicilio del reclamante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs form-group">
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_rec_txt_cp" id="ContenedorContenidoSeccion_lbl_rec_txt_cp" class="control-label col-sm-6 col-md-4 col-lg-4">
+                                <span class="obligatorio">*</span> Código postal:</label>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_cp" type="text" maxlength="5" id="ContenedorContenidoSeccion_rec_txt_cp" title="Introduzca los cinco dígitos del código postal del domicilio del reclamante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-5 col-md-5 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_cbx_rec_Pais" id="ContenedorContenidoSeccion_lbl_cbx_rec_Pais" class="control-label col-sm-5 col-md-5 col-lg-5">
+                                País:</label>
+                            <div class="col-sm-7 col-md-7 col-lg-7">
+                                <select name="ctl00$ContenedorContenidoSeccion$cbx_rec_Pais" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$cbx_rec_Pais\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContenedorContenidoSeccion_cbx_rec_Pais" title="Seleccione el pais del domicilio del reclamante" class="form-control">
+
+</select>
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs form-group">
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_cbx_rec_Provincia" id="ContenedorContenidoSeccion_lbl_cbx_rec_Provincia" class="control-label col-sm-6 col-md-4 col-lg-4">
+                                <span class="obligatorio">*</span> Provincia:</label>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <select name="ctl00$ContenedorContenidoSeccion$cbx_rec_Provincia" id="ContenedorContenidoSeccion_cbx_rec_Provincia" title="Seleccione la provincia del domicilio del reclamante" class="form-control" aria-required="true">
+
+</select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-5 col-md-5 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_rec_txt_tlf1" id="ContenedorContenidoSeccion_lbl_rec_txt_tlf1" class="control-label col-sm-5 col-md-5 col-lg-5">
+                                <span class="obligatorio">*</span> Teléfono (1):</label>
+                            <div class="col-sm-7 col-md-6 col-lg-4">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_tlf1" type="text" maxlength="9" id="ContenedorContenidoSeccion_rec_txt_tlf1" title="Introduzca el teléfono principal del reclamante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs form-group">
+                        </div>
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_rec_txt_tlf2" id="ContenedorContenidoSeccion_lbl_rec_txt_tlf2" class="control-label col-sm-6 col-md-4 col-lg-4">
+                                Teléfono (2):</label>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_tlf2" type="text" maxlength="9" id="ContenedorContenidoSeccion_rec_txt_tlf2" title="Introduzca el teléfono secundario del reclamante" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_rec_txt_email" id="ContenedorContenidoSeccion_lblrec_txt_email" class="control-label col-sm-2 col-md-2 col-lg-2 labelWrap-sm labelWrap-md">Correo electrónico:</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <input name="ctl00$ContenedorContenidoSeccion$rec_txt_email" type="text" id="ContenedorContenidoSeccion_rec_txt_email" title="Introduzca el correo electrónico del reclamante" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_rec_txt_parenteso" id="ContenedorContenidoSeccion_lbl_rec_txt_parenteso" class="control-label col-sm-2 col-md-2 col-lg-2 labelWrap-sm labelWrap-md">
+                                Relación o parentesco con el paciente:</label>
+                            <div class="col-sm-10 col-md-10 col-lg-10">
+                                <textarea name="ctl00$ContenedorContenidoSeccion$rec_txt_parenteso" id="ContenedorContenidoSeccion_rec_txt_parenteso" class="form-control" cols="68" rows="3" title="Introduzca la relación o parentesco del reclamante con el paciente"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos del paciente</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="row form-group">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_pac_txt_cip" id="ContenedorContenidoSeccion_lbl_pac_txt_cip" class="control-label col-xs-12 col-sm-3 col-md-5 col-lg-5 labelWrap">
+                                Código de identificación personal autonómico:</label>
+                            <div class="col-xs-8 col-sm-4 col-md-7 col-lg-7">
+                                <div class="input-group">
+                                    <input name="ctl00$ContenedorContenidoSeccion$pac_txt_cip" type="text" maxlength="10" id="ContenedorContenidoSeccion_pac_txt_cip" title="Introduzca los diez dígitos del código de identificación personal autonómico del paciente" class="form-control" />
+                                    <span class="input-group-btn"><a href="#modalTarjeta" class="btn btn-default btnIconoInput waves-effect waves-light"
+                                        title="El Código es un número de 10 dígitos que se encuentra situado
+en la tarjeta sanitaria en la mitad superior centro o en la mitad
+superior derecha según el modelo. Consulte en las imágenes
+donde encontrar el código.">
+                                        <img src="../img/icono-tarjeta.png" id="ContenedorContenidoSeccion_Img1" alt="Tarjeta Sanitaria de la Comunidad de Madrid" title="icono de la Tarjeta Sanitaria de la Comunidad de Madrid" />
+                                    </a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs visible-sm form-group">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_txtFechaNacimiento" id="ContenedorContenidoSeccion_lbl_txtFechaNacimiento" class="control-label col-xs-12 col-sm-3 col-md-4 col-lg-4">
+                            <span class="obligatorio">*</span> Fecha de nacimiento:</label>
+                            <div class="col-xs-8 col-sm-9 col-md-5 col-lg-4">
+                                <!-- datepicker -->
+                                <div class="input-group date campoFechaLanza" id="datetimepicker1">
+                                    <input name="ctl00$ContenedorContenidoSeccion$txtFechaNacimiento" type="text" id="ContenedorContenidoSeccion_txtFechaNacimiento" title="Introduzca la fecha de nacimiento del paciente" class="form-control datepicker" value="" placeholder="dd/mm/aaaa" aria-required="true" />
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                <!-- fin datepicker -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-12 col-md-6 col-lg-5">
+                            <label for="ContenedorContenidoSeccion_pac_txt_nombre" id="ContenedorContenidoSeccion_lbl_pac_txt_nombre" class="control-label col-sm-3 col-md-5 col-lg-5">
+                                <span class="obligatorio">*</span> Nombre:</label>
+                            <div class="col-sm-7 col-md-5 col-lg-7">
+                                <input name="ctl00$ContenedorContenidoSeccion$pac_txt_nombre" type="text" id="ContenedorContenidoSeccion_pac_txt_nombre" title="Introduzca el nombre del paciente" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="clearfix hidden visible-xs visible-sm form-group">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-7">
+                            <label for="ContenedorContenidoSeccion_pac_txt_apellidos" id="ContenedorContenidoSeccion_lbl_pac_txt_apellidos" class="control-label col-sm-3 col-md-4 col-lg-4">
+                                <span class="obligatorio">*</span> Apellidos:</label>
+                            <div class="col-sm-9 col-md-8 col-lg-8">
+                                <input name="ctl00$ContenedorContenidoSeccion$pac_txt_apellidos" type="text" id="ContenedorContenidoSeccion_pac_txt_apellidos" title="Introduzca los apellidos del paciente" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-12 col-md-6 col-lg-5">
+                            <div class="control-label col-sm-3 col-md-5 col-lg-5">
+                                Sexo:</div>
+                            <div class="col-sm-7 col-md-7 col-lg-7 paddingT3">
+                                <span id="ContenedorContenidoSeccion_pac_rb_sexo"><input id="ContenedorContenidoSeccion_pac_rb_sexo_0" type="radio" name="ctl00$ContenedorContenidoSeccion$pac_rb_sexo" value="M" /><label for="ContenedorContenidoSeccion_pac_rb_sexo_0"> Mujer</label><input id="ContenedorContenidoSeccion_pac_rb_sexo_1" type="radio" name="ctl00$ContenedorContenidoSeccion$pac_rb_sexo" value="H" /><label for="ContenedorContenidoSeccion_pac_rb_sexo_1"> Hombre</label></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos de la reclamación</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_txtcentro" id="ContenedorContenidoSeccion_lbl_txtcentro" class="control-label col-sm-3 col-md-3 col-lg-3">
+                                <span class="obligatorio">*</span> Centro implicado:</label>
+                            <div id="ContenedorContenidoSeccion_div_centro_auto" class="col-sm-9 col-md-9 col-lg-9">
+                                <input name="ctl00$ContenedorContenidoSeccion$txtcentro" type="text" id="ContenedorContenidoSeccion_txtcentro" class="form-control" aria-required="true" onchange="javascript:Guardar();" onblur="javascript:conservaCentro();" title="Introduzca el nombre del centro implicado, empiece a escribir y elija entre las opciones que detectará el sistema, en el caso de que no lo encuentre, marque o escriba OTROS" /></div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <div class="campo campo_siguiente_con_nota">
+                                
+                                <div id="ContenedorContenidoSeccion_div_txt_escribir" class="col-sm-offset-3 col-sm-9 col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9">
+                                    (Empiece a escribir el nombre del centro u hospital y elija entre las opciones que
+                                    detectará el sistema, en el caso de que no lo encuentre, marque o escriba OTROS)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <div id="ContenedorContenidoSeccion_div_txt_otros" class="col-sm-3 col-md-3 col-lg-3 padding0">
+                                <label for="ContenedorContenidoSeccion_txt_otros" id="ContenedorContenidoSeccion_lbl_txt_otros" class="control-label col-xs-12 labelWrap">
+                                    Si existe más de un centro implicado, especifique el nombre:</label>
+                            </div>
+                            <div id="ContenedorContenidoSeccion_div_otros" class="col-sm-9 col-md-9 col-lg-9">
+                                <input name="ctl00$ContenedorContenidoSeccion$txt_otros" type="text" id="ContenedorContenidoSeccion_txt_otros" class="form-control" title="Si existe más de un centro implicado, especifique el nombre" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_txtAdjunto" id="ContenedorContenidoSeccion_lbl_txtAdjunto" class="control-label col-sm-3 col-md-3 col-lg-3 labelWrap-sm">
+                                Fichero adjunto: <span class="text-nowrap">(Tamaño máximo 10MB)</span></label>
+                            <div class="col-sm-9 col-md-5 col-lg-6">
+                                <input name="ctl00$ContenedorContenidoSeccion$txtAdjunto" type="text" id="ContenedorContenidoSeccion_txtAdjunto" onclick="showBrowseDialog()" class="form-control" />
+                            </div>
+                            <div class="clearfix hidden-md hidden-lg form-group">
+                            </div>
+                            <div class="col-sm-offset-3 col-sm-9 col-md-offset-0 col-md-4 col-lg-3">
+                                <input type="file" name="ctl00$ContenedorContenidoSeccion$fileAdjunto" id="ContenedorContenidoSeccion_fileAdjunto" title="Pulse sobre el botón examinar para seleccionar un archivo" onchange="showFileName(this)" style="display: none;" />
+                                <input type="button" value="Examinar" onclick="showBrowseDialog()" class="btn btn-primary"
+                                    title="Examinar en busca de archivo" />
+                                <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnBorrarAdjunto" value="Borrar" id="ContenedorContenidoSeccion_btnBorrarAdjunto" title="Borrar archivo adjunto" class="oculto btn btn-gris" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_txt_servicio" id="ContenedorContenidoSeccion_lbl_txt_servicio" class="control-label col-sm-3 col-md-3 col-lg-3 labelWrap-sm">
+                                Servicio o unidad reclamada:</label>
+                            <div class="col-sm-9 col-md-9 col-lg-9">
+                                <input name="ctl00$ContenedorContenidoSeccion$txt_servicio" type="text" id="ContenedorContenidoSeccion_txt_servicio" title="Introduzca el nombre del servicio o de la unidad reclamada" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_txt_lugar" id="ContenedorContenidoSeccion_lbl_txt_lugar" class="control-label col-sm-3 col-md-3 col-lg-3">
+                                Lugar y fecha del suceso:</label>
+                            <div class="col-sm-9 col-md-9 col-lg-9">
+                                <textarea name="ctl00$ContenedorContenidoSeccion$txt_lugar" id="ContenedorContenidoSeccion_txt_lugar" class="form-control" title="Introduzca el lugar y fecha del suceso"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_txt_expone" id="ContenedorContenidoSeccion_lbl_txt_expone" class="control-label col-sm-3 col-md-3 col-lg-3">
+                                <span class="obligatorio">*</span> Expone:</label>
+                            <div class="col-sm-9 col-md-9 col-lg-9">
+                                <textarea name="ctl00$ContenedorContenidoSeccion$txt_expone" id="ContenedorContenidoSeccion_txt_expone" class="form-control" title="Introduzca su exposición" aria-required="true"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <label for="ContenedorContenidoSeccion_txt_solicita" id="ContenedorContenidoSeccion_lbl_txt_solicita" class="control-label col-sm-3 col-md-3 col-lg-3">
+                                <span class="obligatorio">*</span> Solicita:</label>
+                            <div class="col-sm-9 col-md-9 col-lg-9">
+                                <textarea name="ctl00$ContenedorContenidoSeccion$txt_solicita" id="ContenedorContenidoSeccion_txt_solicita" class="form-control" title="Introduzca su solicitud" aria-required="true"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="div_confirmar form-group text-center panel-botonera">
+                <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$btnGuardar','')" id="ContenedorContenidoSeccion_btnGuardar" type="button" class="btn btn-rojo" title="Enviar formulario" disabled="disabled">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+    </main>
+
+	
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

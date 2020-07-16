@@ -1,0 +1,1725 @@
+﻿/*** Tamaño de fuentes ****/
+
+html {
+    font-size: 0.625em !important; /* equivale a los 10px que pone de base bootstrap en esta etiqueta */
+}
+
+body {
+    font-size: 1em;
+}
+
+
+/**************** HEADER ********************/
+
+header h1 { /* Servicio Madrileño de Salud */
+    font-size: 1.5em;
+}
+
+header h1 span { /* Conserjeria de Sanidad*/
+    font-size: 0.9em;
+}
+
+header h2 { /* Nombre del servicio */
+    font-size: 2em;
+}
+
+ul.nav, .barraAcceso, .barraMigas { /* menú de navegación principal, Barra de acceso, Migas de pan */
+    font-size: 1.3em;
+}
+
+.barraAcceso .btn-default { /* botón de inicio en la barra de acceso */
+    font-size: 1em;
+}
+
+
+/**************** MAIN y FOOTER ********************/
+
+main, footer, .contenedorLegal, .divTableMsg, .contenedorContacto, .modal-content {
+    font-size: 1.3em;
+}
+
+.form-control, .input-group-addon, .panel-acordeon, .panelDetalle .panel-acordeon .titulo_acordeon, .detalleAcordeon ul li a, th a, td a, button i, button span {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.panel-footer > span.titulo_acordeon, th a:after {
+    font-size: 1.2em;
+}
+
+th, td { /* Estaba en 1.3 y lo he bajado para que se vea bien donar sangre */
+    font-size: 1em;
+}
+
+[data-toggle="collapse"]:after, button.collapsed.titulo_acordeon:after, button.titulo_acordeon:after {
+    font-size: 1.4em;
+}
+
+.panel-footer > i, .panel-acordeon label > i, .panel-footer > span, .panel-acordeon label > span {
+    font-size: 0.8em;
+}
+
+legend, .panel-body > h4, .panel-acordeon label > span.titulo_acordeon, .detalleAcordeon h5, .cabeceraLegal h4 { /* 1.3em > 1.076923076923077em --> 14px */
+    font-size: 1.076923076923077em;
+}
+
+h4, .paginadorNoActivo, .paginadorActivo, .paginadorNoActivo:hover, .paginadorNoActivo:focus { /* 1.3em > 1.15384615em  --> 15px */
+    font-size: 1.15384615em;
+}
+
+/* 1.3em > 1.230769230769231em --> 16px */
+
+.escuela > div i, .panel-heading > div i, .escuela > div span, .panel-heading > div span { /* 1.3em > 1.307692307692308em --> 17px */
+    font-size: 1.307692307692308em;
+}
+
+.btn-rojo, .btn-gris, .btn-primary, .btn-volver, .btn-default { /* 1.3em > 1.384615384615385em ---> 18px */
+    font-size: 1.384615384615385em;
+}
+
+/* 1.3em > 1.461538461538462em ---> 19px */
+
+h3 { /* 1.3em > 1.538461538461538em ---> 20px */
+    font-size: 1.538461538461538em;
+}
+
+.panelAzul .glyphicon {
+    font-size: 2.8em;
+}
+
+.medicamentos > thead > tr > th > i, .medicamentos > thead > tr > th > span {
+    font-size: 3em;
+}
+
+
+
+
+/*** Body ***/
+body {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/**** Header ****/
+
+header {
+    margin-bottom: 0;
+}
+
+    header div.row:first-child {
+        min-height: 6.2em;
+        background-color: #f5f5f5;
+    }
+
+    header div.row:nth-child(2) {
+        min-height: 2.846em; /*3.7em;*/
+        padding: 0.7em 0;
+        border: 0.1em solid #ffffff;
+        border-width: 0 0.2em 0 0.2em;
+        background-color: #005c8d;
+    }
+
+    header img {
+        min-width: 6em;
+        width: 60%;
+        margin-top: 1em;
+    }
+
+    header h1 { /* Servicio Madrileño de Salud */
+        color: #0072a9;
+        font-weight: bold;
+        margin-top: 1.1em;
+    }
+
+        header h1 span { /* Conserjeria de Sanidad*/
+            display: block;
+            color: #4d4948;
+        }
+
+    header h2 { /* Nombre del servicio */
+        color: #ffffff;
+        font-weight: normal;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+/**** Nav ****/
+
+nav {
+    margin-bottom: 1.5em;
+}
+
+/*** barra de navegación horizontal ***/
+
+.navbar {
+    min-height: 3.7em;
+    border-radius: 0;
+}
+
+.navbar-default {
+    margin: 0 -1.5em;
+    background-color: #005c8d;
+    border: 0;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+
+.sangre { /* Donación de sangre */
+        background-color: #AE0B09;
+    }
+
+.navbar h2 {
+    /*padding: 1.2em 0 1.2em 1.2em;  ESTO ES PARA CUANDO TENGA MENÚ DE NAVEGACIÓN   */
+    padding: 0.4em 0 0 0;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0.8em;
+    padding-bottom: 0.7em;
+}
+
+.navbar-nav .open .dropdown-menu {
+    background-color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #ffffff;
+    background-color: #0098d7;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #0098d7;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+.navbar [data-toggle="collapse"]:after {
+    display: none;
+}
+
+.navbar-toggle .icon-bar {
+    font-size: 1px;
+}
+
+/* zona barra de acceso */
+
+.barraAcceso {
+    height: 2.4em;
+    border: 0.1em solid #ffffff;
+    margin-bottom: 0.6em;
+    background-color: #F5F5F5;
+}
+
+.fechaActual {
+    padding-top: 0.3em;
+    display: inline-block;
+}
+
+.barraAcceso .btn-default { /* botón de inicio en la barra de acceso */
+    padding: 0.6em 1.6em;
+    color: #000;
+    background-color: #F5F5F6;
+    border-color: #d0d1d2;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 0 0.6em 0.6em;
+    box-shadow: 0 0.2em 0.4em 0.1em rgba(224, 225, 225, 1);
+    -moz-box-shadow: 0 0.2em 0.4em 0.1em rgba(224, 225, 225, 1);
+    -webkit-box-shadow: 0 0.2em 0.4em 0.1em rgba(224, 225, 225, 1);
+    height: 2.6em;
+}
+
+.barraAcceso .btn:last-child {
+    margin-right: -1.1em;
+}
+
+.barraAcceso .btn-default:hover {
+    background-color: #FFFFFF;
+}
+
+.barraMigas {
+    border-bottom: 0.1em dashed #b3b3b3;
+    /*margin-bottom: 15px;*/
+}
+
+.barraMigas > nav {
+    margin-bottom: auto;
+}
+
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        padding-top: 0.4em;
+        margin-bottom: 0;
+    }
+
+    .breadcrumb > li + li:before {
+        padding: 0em 0.3em 0 0.3em;
+        color: #333;
+        content: ">\00a0";
+    }
+
+    .breadcrumb > li {
+        padding: 0;
+    }
+
+        .breadcrumb > li:nth-child(-n+3) + li:before {
+            content: "";
+        }
+
+/* incrementa/reduce tamaño fuente */
+
+.jfontsize-button {
+    color: #337ab7;
+    font-weight: 700;
+    width: 2.1em;
+    display: inline-block;
+    text-align: center;
+    padding: 0.4em;
+}
+
+    .jfontsize-button:hover {
+        color: #ffffff;
+        background-color: #337ab7;
+        text-decoration: none;
+    }
+
+/**** main ****/
+
+.container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+section {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5em;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+    color: #005c8d;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #005c8d;
+    font-weight: 600;
+}
+
+    h4 + hr {
+        width: 2.8em;
+        height: 0.2em;
+        background-color: #00729a;
+        border: none;
+        margin: 0.3em 0 0.9em 0;
+        text-align: left;
+    }
+
+    p a {
+        text-decoration: underline;
+    }
+
+
+/* Mensajes */
+.divTableMsgInfoRojo {
+    border: 0.1em dashed #CA040D;
+    width: 100%;
+    padding: 1.5em 1.5em 0.5em 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.divTableMsg {
+    border: 0.1em solid #c4c6c7;
+    width: 100%;
+    padding: 15px 15px 15px 20px;
+    margin-bottom: 1.5em;
+}
+
+.divTableMsg div > div:first-child {
+	margin-bottom: 0.6em;
+}
+
+.divTableMsg div > div:last-child {
+    text-align: center;
+}
+
+.divTableMsg .control-label {
+	font-weight: 700;
+}
+
+.divTableMsg > span {
+	margin-bottom: 0.5em;
+}
+
+.alert div > div:first-child {
+    text-align: center;
+}
+
+.alert img {
+    width: 100%;
+}
+
+.alert p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* modales */
+
+.close, button.close span {
+	color: #ff0000;
+	opacity: 1;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 0.2em;
+}
+
+.close:focus, .close:hover, button.close:focus span, button.close:hover span {
+		color: #ffffff;
+		background-color: #ff0000;
+		opacity: 1;
+		font-weight: 400;
+		padding: 0;
+		vertical-align: top;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+/* Antiestress */
+.modalLoading .modal-header {
+    border-bottom: 0px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.modalLoading .modal-header, .modalLoading .modal-body {
+    text-align: center;
+    color: #D10002;
+}
+
+.modalLoading .fas {
+    margin-right: 0em;
+}
+
+/* Formularios */
+
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.panel-formulario > div {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+    .panel-formulario div .input-group {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+.input-group-addon {
+	padding: 0.2em 12px;
+}
+
+.input-group-addon i, .input-group-addon span {
+    width: 1em;
+}
+
+span.input-group-btn img {
+    height: 2.4em;
+}
+
+.input-group-btn  {
+    font-size: 0.776em;
+}
+
+legend, .panel-body > h4 { /* comprobar uso .panel-body h4 */
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1;
+    color: #005c8d;
+    border-bottom: 0;
+    font-weight: 700;
+    background-color: #f5f5f5;
+}
+
+.panel h4 {
+	margin-top: 0;
+}
+
+.paginadorNoActivo {
+    color: #005c8d;
+    font-weight: 700;
+    padding: 0.3em 0.6em;
+}
+
+    .paginadorActivo, .paginadorNoActivo:hover, .paginadorNoActivo:focus {
+        color: #ffffff !important;
+        background-color: #005c8d;
+        font-weight: 700;
+        padding: 0.3em 0.6em;
+        text-decoration: underline;
+    }
+
+fieldset {
+    background-color: #f5f5f5;
+    padding-top: 1.5em;
+}
+
+    fieldset fieldset {
+        background-color: transparent;
+        padding-top: 0;
+    }
+
+        fieldset fieldset > legend {
+            background-color: transparent;
+            padding-top: 0;
+            color: #000000;
+        }
+
+        fieldset fieldset > div {
+            margin-top: 0.3em;
+        }
+
+.form-control {
+    height: 2.769230769230769em; /* 1.3em > 2.769230769230769em ---> 36px */
+    padding: 0.2em 0.6em; 
+}
+
+label {
+    color: #4e4b49;
+}
+
+    label + div > input[type=radio] {
+        margin-top: 0.7em;
+    }
+
+input[type=checkbox], input[type=radio] {
+    margin: 0.4em 0.4em 0 0.8em;
+}
+
+input[type="radio"] + label {
+    margin-right: 10%;
+}
+
+input[type="radio"]:focus + label {
+    outline: thin dotted blue;
+}
+
+span:first-child input[type=radio] {
+    margin-left: 0;
+}
+
+.obligatorio {
+    color: #aa0000;
+    font-weight: bold;
+}
+
+.label2l { /* labels que ocupan dos lineas*/
+    padding-top: 0 !important;
+    line-height: 1.3em;
+}
+
+.form-control[readonly] {
+    background-color: #fff;
+    opacity: 1;
+    border: 0;
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0);
+}
+
+/*** Error ***/
+
+.ErrorControl {
+    background-color: #FBE3E4;
+    border: solid 0.1em Red;
+}
+
+.input_error {
+    background-color: #fff6f6;
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075);
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075);
+}
+
+    .input_error:focus {
+        border-color: #843534;
+        -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075), 0 0 0.6em #ce8483;
+        box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075), 0 0 0.6em #ce8483;
+    }
+
+span.input_error {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.0);
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.0);
+}
+
+label.input_error, label.control-label.input_error {
+    background-color: #ffeeee !important;
+    color: #a94442;
+    border: 0;
+    padding: 0.4em;
+    -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.0);
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.0);
+}
+
+.input_error input[type=radio] + label, .input_error input[type=checkbox] ~ label {
+    background-color: #ffeeee;
+    color: #a94442;
+    padding: 0.4em;
+}
+
+.input_error + span.input-group-addon {
+    background-color: #a94442;
+    border-color: #a94442;
+    color: #ffffff;
+    -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075);
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075);
+}
+
+/*** Paneles ***/
+
+.panel {
+    border: 0;
+    -webkit-box-shadow: 0;
+    border-radius: 0.4em;
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,.0);
+    box-shadow: 0 0 0 rgba(0,0,0,.0);
+}
+
+.panel.panel-heading {
+	padding: 1.5em 1.5em 1.2em 1.5em;
+	border: 0.1em solid #c4c6c7;
+	background: #ffffff;
+	width: 100%;
+    }
+
+.panel.panel-heading div.row div:first-child {
+	color: #005c8d;
+	font-weight: 700;
+}
+
+.panel-body {
+    background-color: #f5f5f5;
+    padding: 15px; /*1.15384615em;*/
+}
+
+.panel-body > h4 {
+    padding-left: 1.5em;
+}
+
+.panel-formulario {
+    background-color: #ffffff;
+    border: 0.1em solid #c3c3c3;
+    padding: 15px 0 0 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.panel-botonera {
+    background-color: #f5f5f5;
+    margin: 0 0 15px 0;
+    padding-bottom: 15px;
+}
+
+.panelDetalle {
+    border: 0.1em solid #c3c3c3;
+    background-color: #ffffff;
+}
+
+    .panelDetalle .panel-body {
+        background-color: #f5f5f5;
+        padding: 0 15px;
+    }
+
+.panelAzul {
+    background: #0072A9;
+    color: #ffffff;
+    padding: 1.5em 0;
+}
+
+    .panelAzul .glyphicon {
+        padding-top: 4em;
+    }
+
+.panelAcciones {
+    background: #e7e8ea;
+    color: #0072A9;
+    font-weight: bold;
+    padding: 1.5em 0;
+}
+
+    .panelAcciones .col-vAlign {
+        flex-direction: column !important;
+    }
+
+
+.panelDetalle .panelEmail {
+    padding: 1.5em 1.5em 0 1.5em;
+}
+
+.panel-location {
+    display: table;
+    background-color: #fafeff;
+    border: 0.1em solid #e0eeee;
+    padding: 1.5em 0;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+    .panel-location img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .panel-location a {
+        color: #000066;
+    }
+
+    .panel-location div div div:first-child {
+        padding-top: 1em;
+    }
+
+    .panel-location div div div:last-child {
+        padding-bottom: 1em;
+    }
+
+/* Acordeón */
+
+
+
+.panelDetalle .panel-acordeon {
+    padding: 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.panel-detalle-acordeon .panel-body {
+    padding: 1.5em 0em;
+}
+
+.panel-detalle-acordeon .panel-body div div:first-child {
+    text-align: right;
+}
+
+.panelDetalle .panel-acordeon .titulo_acordeon {
+    margin: 0;
+    background-color: #ffffff;
+    padding: 0.9em 1.5em;
+}
+
+.titulo_acordeon {
+    margin: 0.8em 0;
+    font-weight: 700;
+    color: #464646;
+    transition: 0.4s;
+    background: #f1f4f6;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    display: block;
+    padding: .7em 1.4em .7em 1.2em;
+    text-align: left;
+    width: 100%;
+    z-index: 2;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+
+.titulo_acordeon:hover, .panelDetalle .panel-acordeon .titulo_acordeon: hover {
+    color: #00729a;
+    text-decoration: none;
+}
+
+.panel-acordeon ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .panel-acordeon ul li {
+        position: relative;
+        margin: 0;
+    }
+
+.panel-acordeon label {
+    display: inline;
+}
+
+.panel-acordeon ul li i:before, .panel-acordeon ul li i:after, .panel-acordeon ul li span:before, .panel-acordeon ul li span:after {
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    background-color: transparent;
+    width: 1.6em;
+    height: 1.6em;
+    transform: rotate(180deg);
+}
+
+.icono-circular {
+    width: 2em;
+    height: 2em;
+    background: #0072a9;
+    -moz-border-radius: 7em;
+    -webkit-border-radius: 7em;
+    border-radius: 7em;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5em;
+    right: 1em;
+    top: 0.9em;
+    position: absolute;
+}
+
+
+ul li .icono-circular:before, ul li .icono-circular:after {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    transform: rotate(180deg);
+}
+
+.panel-acordeon ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 4em;
+    z-index: 1;
+    opacity: 0;
+    margin: 0;
+}
+
+    .panel-acordeon ul li input[type=checkbox]:checked ~ div {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        line-height: 2.6em;
+        position: relative;
+        overflow: hidden;
+    }
+
+.panel-acordeon .contenedor_comun ul {
+    padding-left: 2.5em;
+    margin: 0;
+}
+
+.contenedor_comun hr {
+    width: 28px;
+    height: 2px;
+    background-color: #00729a;
+    border: none;
+    margin: 3px 0px 9px 0px;
+    text-align: left;
+}
+
+.modal-body .content div {
+    margin-bottom: 1.5em;
+}
+
+.panelDetalle .panel-footer .contenidoAcordeon {
+    margin-top: 1em;
+}
+
+    .panelDetalle .panel-footer .contenidoAcordeon .panel-body {
+        padding: 1em 1.5em;
+    }
+
+[data-toggle="collapse"].collapsed:after {
+    transform: rotate(180deg);
+    color: #464646;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+[data-toggle="collapse"]:after {
+    display: inline-block;
+    font-family:"Glyphicons Halflings";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e260";
+    transform: rotate(0deg);
+    transition: all linear 0.25s;
+    float: right;
+    color: #464646;
+    background-color: transparent;
+    text-decoration: none !important;
+    padding: 0.3em;
+    font-weight: bold;
+}
+
+[data-toggle="collapse"].collapsedBoton:after {
+    content: "";
+}
+
+.panel-acordeon input[type=checkbox]:checked ~ label i:before, .panel-acordeon input[type=checkbox]:checked ~ label i:after,
+.panel-acordeon input[type=checkbox]:checked ~ label span:before, .panel-acordeon input[type=checkbox]:checked ~ label span:after,
+.panel-acordeon ul li input[type=checkbox]:checked ~ label i:before, .panel-acordeon ul li input[type=checkbox]:checked ~ label i:after,
+.panel-acordeon ul li input[type=checkbox]:checked ~ label span:before, .panel-acordeon ul li input[type=checkbox]:checked ~ label span:after {
+    transform: rotate(0deg);
+}
+
+.panelDetalle .contenidoAcordeon .panelFieldset div.row {
+    display: block;
+}
+
+/* Acordeón protección de datos */
+
+button.collapsed.titulo_acordeon:after {
+    transform: rotate(180deg);
+    color: #00729a;
+    background-color: transparent;
+    font-weight: bold;
+    content: "\e081";
+    padding: 0;
+}
+
+button:hover .collapsed.titulo_acordeon {
+    color: #00729a;
+}
+
+button.titulo_acordeon:after {
+    transform: rotate(180deg);
+    color: #00729a;
+    background-color: transparent;
+    font-weight: bold;
+    content: "\e082";
+    padding: 0;
+}
+
+.panel-acordeon input:focus + label span, .panel-acordeon input:hover + label span {
+    background-color: #0072a9 !important;
+    color: #ffffff;
+}
+
+.panel-acordeon ul li input:focus + label span {
+    background-color: #0072a9;
+    color: #ffffff;
+}
+
+.panel-acordeon ul li i:before, .panel-acordeon ul li i:after, .panel-acordeon i:before, .panel-acordeon i:after,
+.panel-acordeon ul li span:before, .panel-acordeon ul li span:after, .panel-acordeon span:before, .panel-acordeon span:after {
+    transition: all 0.25s ease-in-out;
+}
+
+.panel-acordeon label i:before, .panel-acordeon label i:after,
+.panel-acordeon label span:before, .panel-acordeon label span:after {
+    position: absolute;
+    background-color: transparent;
+    transform: rotate(180deg);
+}
+
+.panel-acordeon ul li i:before, .panel-acordeon ul li i:after,
+.panel-acordeon ul li span:before, .panel-acordeon ul li span:after {
+    background-color: transparent;
+    width: 1.6em;
+    height: 1.6em;
+    transform: rotate(180deg);
+}
+
+.panel-acordeon input[type=checkbox], .panel-acordeon ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    margin: 0;
+}
+
+    .panel-acordeon input[type=checkbox]:checked ~ div, .panel-acordeon ul li input[type=checkbox]:checked ~ div {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        line-height: 2.6em;
+        position: relative;
+        overflow: hidden;
+    }
+
+.panel-acordeon ul li .icono-circular:before, .panel-acordeon ul li .icono-circular:after {
+    position: absolute;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    transform: rotate(180deg);
+}
+
+.detalleAcordeon h5 {
+    color: #00729a;
+    font-weight: 700;
+    padding: 0.5em 1em 0.5em 0;
+    margin: 0;
+}
+
+.detalleAcordeon h6 {
+    color: #4e4b49;
+    font-weight: bold;
+    padding: 0 1em 0.5em 0;
+    margin: 0 0 0 0;
+}
+
+.detalleAcordeon ul, .detalleAcordeon ol {
+    list-style: square;
+    padding: 0;
+    margin: 0; /*0 0 1.5em 0;*/
+    line-height: 1.5;
+}
+
+.detalleAcordeon ul li, .detalleAcordeon ol li {
+    padding-bottom: 1em;
+}
+
+
+
+
+    /*** Tablas ****/
+    .table, .table tr th, .table tr td {
+        border: 0;
+    }
+
+    .table > thead > tr > th {
+        padding: 0;
+        border-right: 0.1em solid #ddd;
+    }
+
+        .table > thead > tr > th:last-child {
+            border-right: 0;
+        }
+
+.medicamentos > thead > tr > th {
+    padding: 0.8em;
+    border-right: 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.medicamentos > thead > tr > th > i,
+.medicamentos > thead > tr > th > span {
+	vertical-align: bottom;
+}
+
+.medicamentos > tbody > tr > td {
+    text-align: center;
+}
+
+    .medicamentos > tbody > tr > td:first-child {
+        text-align: left;
+    }
+
+
+
+th {
+    color: #000000;
+    background-color: #f0f0f0;
+    /*height: 3em;*/
+}
+
+
+
+td a {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+    td a:hover {
+        color: #46a1ec;
+        text-decoration: underline;
+    }
+
+/* ordenar cabecera tabla */
+
+th a {
+    display: block;
+    background-color: #ffffff;
+    padding: 0.7em;
+}
+
+    th a:after {
+        content: "\e156";
+        font-family: "Glyphicons Halflings";
+        font-weight: 100;
+        float: right;
+    }
+
+th.SortA a:after {
+    content: "\e151";
+}
+
+th.SortD a:after {
+    content: "\e152";
+}
+
+th.SortA:nth-child(4) a:after {
+    content: "\e153";
+}
+
+th.SortD:nth-child(4) a:after {
+    content: "\e154";
+}
+
+.table > thead > tr > th.nolink {
+    padding: 0.7em;
+}
+
+th a:focus, th a:hover {
+    text-decoration: none;
+    background-color: #e9e9e9;
+}
+
+th a:active {
+    color: #e9e9e9;
+    background-color: #23527c;
+}
+
+th.SortA a, th.SortD a {
+    color: #ffffff;
+    background-color: #337ab7;
+    min-width: 8em;
+}
+
+/*** Botones ***/
+
+.botonera {
+    text-align: right;
+}
+
+.btn {
+    margin: 0 0.7em;
+    line-height: 1.5;
+}
+
+.botonera .btn {
+    margin-bottom: 0.8333em;
+}
+
+.btn:first-child {
+    margin-left: 0;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+.btn-rojo, .btn-gris, .btn-primary, .btn-volver, .btn-default {
+    border-radius: 0.4em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -0.2em 0 0 inset;
+    box-sizing: border-box;
+    padding: 0.5em 1.2em;
+    font-weight: bold;
+    letter-spacing: normal;
+    min-height: 2.6em;
+    white-space:normal;
+}
+
+.btn-gris {
+    color: #0071a9;
+    background-color: #F5F5F5;
+    border-color: #e2e2e2;
+}
+
+.btn.btn-gris:hover, .btn.btn-gris:focus {
+    color: #0071a9;
+    background-color: #fff;
+    border-color: #d5d5d5 #d5d5d5 #d5d5d5;
+}
+
+.btn.btn-gris .btn-icono img {
+    padding-left: 0.5em;
+}
+
+.btn-icono {
+    padding-right: 2em;
+}
+
+input + i, input + span {
+    color: #0071a9;
+    font-size: 1.6em;
+    position: absolute;
+    left: -2.2em;
+}
+
+.btnIconoInput {
+    padding: 0;
+    border: 0;
+}
+
+    .btnIconoInput:hover {
+        background: #ffffff;
+        border-color: #ccc;
+    }
+
+.btn-rojo {
+    background-color: #D10002;
+    color: rgb(255, 255, 255);
+}
+
+    .btn-rojo:hover, .btn-rojo:focus {
+        color: rgb(255, 255, 255);
+        background-color: rgb(255,39,36);
+        border-color: #D10002;
+    }
+
+.btn-volver {
+    color: #0071a9;
+    background-color: #F5F5F5;
+    padding: 0.6em 1.2em;
+    border: 1px solid #e2e2e2;
+}
+
+    .btn-volver img {
+        height: 1em;
+        vertical-align: text-top;
+    }
+
+    .btn-volver:hover, .btn-volver:focus {
+        color: #0071a9;
+        background-color: #fff;
+        border-color: #d5d5d5 #d5d5d5 #d5d5d5;
+    }
+
+button i, button span {
+    vertical-align: middle;
+    color: #3880D2;
+    padding: 0.3em 0 0.4em 0.5em;
+}
+
+
+/* Mensajes */
+
+.fas .fa-check-circle, .fas .fa-info-circle, .fas .fa-exclamation-triangle, .fas .fa-times-circle,
+div.alert div div:first-child span  {
+	font-size: 2.4em;
+	position: relative;
+}
+
+.alert-warning span.fas.fa-exclamation-triangle{
+	color: #ffaa00;
+}
+
+div.divTableMsg div:first-child > span {
+	margin-left: 1em;
+}
+
+div.divTableMsg div:first-child span > span:first-child {
+	font-size: 3em;
+	color: #cccccc;
+}
+
+div.divTableMsg div:first-child span > span:last-child {
+	position: absolute;
+	bottom: -0.2em;
+	left: 0.9em;
+	font-size: 2em;
+	color: #0071a9;
+	transform: rotate(180deg);
+}
+
+div.alert div div:first-child span.agradece {
+		position: relative;
+}
+
+.agradece span.far.fa-comment-alt {
+	position: absolute;
+	top: 0;
+	left: -0.4em;
+	font-size: 1.2em;
+}
+
+.agradece span.fas.fa-check {
+	position: absolute;
+	top: 0.14em;
+	left: -0.34em;
+	font-size: 0.8em;
+}
+
+/* Contenido e información legal */
+
+.contenedorLegal {
+    border: 0.1em solid #eeeeee;
+    margin-bottom: 2em;
+	/* font-size: 1em; */
+}
+
+.cabeceraLegal {
+    background-color: #F1F4F6;
+}
+
+    .cabeceraLegal h4 {
+        color: #4e4b49;
+        font-weight: bold;
+        padding: 0.6em 0.9em;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+.contenedorLegal .panel-body {
+    background-color: #ffffff;
+}
+
+/* iframe google maps*/
+
+.gIframe {
+    width: 100%;
+    height: 22em;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+/*** Encuestas ***/
+
+.pregunta, .emoji {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.emoji > div {
+	min-height: 3em;
+}
+
+.emoji i, .emoji span {
+	position: absolute;
+	top: 0;
+	font-size: 1.58em;
+	padding-left: 0.3em;
+}
+
+.emoji .fas {
+	color: #ffcc00;
+}
+
+.emoji .far {
+	color: #000000;
+}
+
+.fa-smile {
+	right: 0;
+}
+
+
+
+/**** Escuela Madrileña de Salud****/
+
+.escuela > div > div, .escuela > div > div > div {
+    padding: 0;
+}
+
+
+.escala .input_error input[type=radio] + label {
+    background-color: #ffeeee;
+    color: #a94442;
+    border-color: #a94442;
+    padding: 0.8em 1em;
+}
+
+.escala label {
+    border: 0.1em solid #0079bd;
+    color: #0079bd;
+    padding: 0.8em 0em;
+    margin: 0 0.4em 0.4em !important;
+    width: 3em;
+}
+
+.mayusculas {
+	text-transform: uppercase;
+}
+
+
+div.location {
+    display: table-cell;
+    padding-right: 6px !important;
+}
+
+.escala input[type=radio] {
+    opacity: 0;
+    position: absolute;
+}
+
+.escala input[type=radio]:focus ~ label, .escala input[type=radio]:checked ~ label, .escala input[type=radio]:hover ~ label {
+    background-color: #0079bd;
+    color: #ffffff;
+}
+
+
+
+/**** página acceso ****/
+
+.imgAccess {
+    max-height: 100px;
+    width: auto;
+}
+
+/*** iconos ***/
+
+.llaves {position:relative; font-size: 1em;}
+.llaves span:first-child {color: #cccccc; transform: rotate(-45deg); left: -0.2em;}
+.llaves span:last-child {position: absolute; color: #f0c000; transform: rotate(-60deg); left: 0.4em; top: 0;}
+
+/**** footer ****/
+
+footer {
+    margin-top: 1.5em;
+    color: #4e4b49;
+    padding: 0.6em 1.5em;
+    border-top: 0.1em solid #ccc;
+}
+
+    footer img {
+        width: 5.7em;
+        height: auto;
+        position: relative;
+    }
+
+    footer a {
+        color: #4e4b49;
+        text-decoration: underline;
+        padding: 0 0.4em;
+    }
+
+        footer a:hover {
+            color: #337ab7;
+            text-decoration: underline;
+            padding: 0 0.4em;
+        }
+
+        footer a:first-child {
+            text-decoration: none;
+        }
+
+    footer div {
+        text-align: center;
+    }
+
+/*** Comunes ***/
+
+.vAlign {
+    display: block;
+}
+
+.col-vAlign, .vAlign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+/*** Servicios Electrónicos ***/
+
+.resultadoBuscador {
+    border: 1px dashed #000;
+    padding: 15px;
+    color: #4e4b49;
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+
+
+	/******************************/
+	/******** Media querys ********/
+	/*****************************/
+
+
+@media only screen and (max-width: 639px) {
+
+    /*** Tabla responsive ***/
+
+    .table-striped thead tr {
+        display: none;
+    }
+
+    .table-striped tr + tr {
+        margin-top: 1.5em;
+    }
+
+    .table-striped tr {
+        border: 0.1em solid #b0b0b0;
+    }
+
+    .table-striped tr, .table-striped td, lista_form li span {
+        display: block;
+    }
+
+    .table-striped td {
+        padding-left: 50% !important;
+        text-align: left;
+    }
+
+        .table-striped td:first-child {
+            border-top: 0;
+        }
+
+        .table-striped td:empty {
+            display: none;
+        }
+
+        .table-striped td:before {
+            content: attr(data-label);
+            display: inline-block;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-left: -100%;
+            width: 100%;
+        }
+
+    .medicamentos > tbody > tr > td {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width : 479px) {
+
+    /*** Tabla responsive ***/
+
+    .table-striped td {
+        padding-left: 0.75em !important;
+    }
+
+        .table-striped td:nth-child(n):before {
+            display: block;
+            margin-bottom: 0.75em;
+            margin-left: 0;
+        }
+
+    .lista_form li span:before {
+        display: block;
+        width: 9em;
+    }
+}
+
+@media only screen and (min-width : 640px) {
+
+    /*** Tablas ***/
+
+    .table {
+        border-bottom: 0.2em solid #d0d0d0;
+    }
+}
+
+@media only screen and (min-width : 768px) {
+
+
+
+    /**** Header ***/
+
+    header div.row:first-child {
+        height: 8.8em;
+    }
+
+    header img {
+        margin: 1em 0 0 0;
+        height: 6.8em;
+        width: auto;
+    }
+
+    header h1 {
+        margin-top: 2.2em;
+        margin-right: 0.4em;
+    }
+
+    .navbar h2 {
+        padding: 0.4em 0 0 0;
+    }
+
+
+    /**** main ****/
+
+    .container { /* ensancha el contenedor eliminando padding */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .divTableMsg p {
+        text-align: left;
+        padding-top: 1.2em;
+    }
+
+    /* Formularios */
+
+    .form-horizontal .control-label {
+        padding: 0;
+        padding-top: 0.7em;
+    }
+
+    .panel-formulario div {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    /* Contenido e información legal */
+    .contenedorLegal .col-sm-3 {
+        text-align: right;
+    }
+
+    /**** footer ****/
+    footer div:first-child {
+        text-align: left;
+    }
+
+    footer div:last-child {
+        text-align: right;
+    }
+
+    /*** Paneles ***/
+    .panel.panel-heading div.row div:last-child {
+        text-align: right;
+    }
+
+    .donar-bg_fijos {
+        background-image: url(../img/fondo_fijo.png);
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .donar-bg_moviles {
+        background-image: url(../img/fondo_moviles.png);
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /*** Acceso ***/
+
+    .imgAccess {
+        width: auto;
+        height: auto;
+    }
+
+    /*** Comunes ***/
+
+    .vAlign {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .panelAcciones .col-vAlign {
+        flex-direction: row !important;
+    }
+
+    .divTableMsg .control-label {
+        text-align: right;
+    }
+	
+	/*** Servicios electronicos - LEQ ***/
+	
+    .fondoLEQ {
+        background-image: url(../img/imgQuirofano.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
+    }
+
+/**** Medicamentos Internet ****/
+
+        .datosMedicamentoTexto {
+            padding-left: 15px !important;
+        }
+
+        .cajasHojaM, .cajasHojaMF {
+            margin: 0 0 15px -1px;
+            min-height: 140px;
+        }
+        .cajasHojaMF i {
+            display: contents;
+        }
+
+        .cajasHojaM input[type=text] {
+            margin: 2px auto;
+        }
+
+        .inicioHmujer {
+            background-image: url(../img/paciente_adulta_v3.png);
+            height: 100px;
+        }
+
+        .pastillas {
+            background-image: url(../img/pastillas_v3.jpg);
+        }
+
+        .farmacia {
+            background-image: url(../img/fondo_polimedicada.jpg);
+            background-color: rgb(244, 249, 242);
+        }
+
+        .calculadoradosis {
+            background-image: url(../img/imgMujerCalculadora.png);
+        }
+
+        .pastillas, .farmacia, .calculadoradosis, .inicioHmujer {
+            background-repeat: no-repeat;
+            overflow: hidden;
+            background-position: right;
+            background-size: contain;
+        }
+    }
+}
+
+@media only screen and (min-width : 992px) {
+     .alert img {
+        width: 50%;
+    }
+
+
+    /* Formularios */
+    .panel-formulario div {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+
+@media only screen and (min-width : 992px) {
+    .navbar-default {
+        margin: 0 -1.4em;
+    }
+}
+
+
+@media only screen and (min-width : 1200px) {
+    body {
+/*        font-size: 1.04em;*/
+    }
+	
+}

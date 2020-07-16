@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Servicios</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+<!--nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+
+<div class="collapse navbar-collapse" id="example-1">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Link 1 <span class="sr-only">(current)</span></a></li>
+<li><a href="#">Link 2</a></li>
+<li><a href="#">Link 3</a></li>
+</ul>
+</div>
+
+</div>
+</nav-->
+
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h2>Nombre del Servicio</h2>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!--li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consulta de Indicadores<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver">&lt; Volver</a></li>
+						<li>|</li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Acceso</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> |
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> |
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Protección de datos</h3>
+
+
+<!-- inicio acordeón protección de datos -->
+
+<div class="panel">
+ <div class="panel-acordeon">
+        <ul>
+            <li>
+                <!--Cabecera acordeón-->
+                <input type="checkbox" checked id="ac1" title="despliega/colapsa" />
+                <label for="ac1">
+                    <i class="glyphicon glyphicon-menu-down icono-circular"></i><span class="titulo_acordeon">
+                        Información detallada sobre Protección de Datos</span></label>
+                <!--Cuerpo acordeón-->
+                <div class="panel-detalle-acordeon">
+                    <div class="contenidoAcordeon">
+                        <div class="col-xs-12">
+                            <div class="detalleAcordeon">
+                                <h4>
+                                    Responsable</h4>
+                                <hr />
+                                <h5>
+                                    Responsable del tratamiento</h5>
+                                <p>
+                                    Hospital de referencia de la Consejería de Sanidad de la Comunidad de Madrid.</p>
+                                <h5>
+                                    Domicilio</h5>
+                                <p>
+                                    Puede consultarse la dirección física e información adicional de cada uno de los
+                                    centros en la siguiente url: <a href="http://www.comunidad.madrid/servicios/salud/hospitales-red-servicio-madrileno-salud"
+                                        target="_blank" title="Buscador de hospitales de la red del Servicio Madrileño de Salud">
+                                        http://www.comunidad.madrid/servicios/salud/hospitales-red-servicio-madrileno-salud</a>
+                                </p>
+                                <h5>
+                                    Delegado de protección de datos</h5>
+                                <ul>
+                                    <li>Comité Delegado de Protección de Datos de la Consejería de Sanidad de la Comunidad
+                                        de Madrid, en Plaza Carlos Trías Bertrán <abbr title="número">n.º</abbr> 7 (Edificio Sollube) Madrid 28020.</li>
+                                </ul>
+                                <h4>
+                                    Finalidad</h4>
+                                <hr />
+                                <p>
+                                    Le informamos que sus datos personales serán tratados con la finalidad de prestarle
+                                    el servicio de acompañamiento solicitado, y serán conservados durante los años necesarios
+                                    para garantizar una adecuada asistencia, así como para cumplir con la normativa
+                                    vigente aplicable.</p>
+                                <h4>
+                                    Legitimación</h4>
+                                <hr />
+                                <p>
+                                    Base jurídica que legitima el tratamiento:</p>
+                                <ul>
+                                    <li>REGLAMENTO (<abbr title="Unión Europea">UE</abbr>) 2016/679 DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 27 de abril de
+                                        2016, artículo 6.1. a) y c): el tratamiento es necesario para el cumplimiento de
+                                        una obligación legal aplicable al responsable del tratamiento.</li>
+                                    <li>Ley 14/1986, de 25 de abril, General de Sanidad.</li>
+                                    <li>Ley 41/2002, de 14 de noviembre, de autonomía del paciente, y demás legislación
+                                        vigente en materia sanitaria, y demás legislación vigente en materia sanitaria.</li>
+                                    <li>Real Decreto 1030/2006, de 15 de septiembre, por el que se establece la cartera
+                                        de servicios comunes del Sistema Nacional de Salud y el procedimiento para su actualización
+                                        y demás legislación vigente en materia sanitaria.</li>
+                                    <li>Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones
+                                        Públicas. </li>
+                                </ul>
+                                <h4>
+                                    Destinatarios</h4>
+                                <hr />
+                                <p>
+                                    Sus datos no serán cedidos, salvo en los casos obligados por Ley.</p>
+                                <h4>
+                                    Derechos</h4>
+                                <hr />
+                                <p>
+                                    Podrá ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación
+                                    del tratamiento y portabilidad, en la medida que sean aplicables, a través de comunicación
+                                    escrita al domicilio arriba descrito del Responsable del Tratamiento, concretando
+                                    su solicitud, junto con su <abbr title="Documento nacional de identidad">DNI</abbr> o documento equivalente.
+                                </p>
+                                <p>
+                                    Le informamos de la posibilidad de presentar una reclamación ante la Agencia Española
+                                    de Protección de Datos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+            </li>
+            <li>
+                <!--Cabecera acordeón-->
+                <input type="checkbox" checked id="ac2" title="despliega/colapsa" />
+                <label for="ac2">
+                    <i class="glyphicon glyphicon-menu-down icono-circular"></i><span class="titulo_acordeon">
+                        Condiciones de uso y política de privacidad</span></label>
+                <!--Cuerpo acordeón-->
+                <div class="panel-detalle-acordeon">
+                    <div class="contenidoAcordeon">
+                        <div class="col-xs-12">
+                            <div class="detalleAcordeon">
+                                <p class="solo_parrafo">
+                                    El acceso y uso de la aplicación le atribuye la condición de usuario, lo que implica
+                                    la observancia y cumplimiento de las disposiciones que aquí se contienen, así como
+                                    de cualquier otra disposición legal que fuera de aplicación.</p>
+                                <h4>
+                                    Normas de seguridad en relación con los datos de usuario</h4>
+                                <hr />
+                                <ul>
+                                    <li>Es responsabilidad del usuario hacer buen uso de la aplicación. </li>
+                                    <li>El acceso a la información será personal y sus datos de acceso, intransferibles.
+                                        Se han de tomar las diligencias oportunas a fin de evitar accesos no autorizados.</li>
+                                    <li>Los usuarios únicamente revelarán sus datos de acceso a aquellas personas a las
+                                        que autoricen.</li>
+                                    <li>Los usuarios no deben utilizar datos, ni suplantar la identidad de otro usuario.
+                                        En el caso en el que se usen datos de otra persona para utilizar algunas de las
+                                        funciones de la aplicación, el usuario deberá encontrarse en condiciones de acreditar
+                                        que cuenta con el consentimiento de esta persona para su uso.</li>
+                                    <li>Si un usuario tiene sospechas de que sus datos están siendo utilizadas por otra
+                                        persona, debe proceder inmediatamente a comunicar esta incidencia de seguridad al
+                                        Hospital de referencia de la Consejería de Sanidad de la Comunidad de Madrid.</li>
+                                </ul>
+                                <h4>
+                                    Queda prohibido</h4>
+                                <hr />
+                                <ul>
+                                    <li>El uso inadecuado de la información contenida en esta aplicación, y en concreto,
+                                        aquellos usos que vulneren o transgredan el honor, la intimidad o la imagen de terceros,
+                                        así como aquellos que sean ilícitos o atenten contra la moralidad. Asimismo, queda
+                                        prohibida la utilización de dicha información para incurrir en actividades contrarias
+                                        a la buena fe y el ordenamiento jurídico.</li>
+                                    <li>El diseño y sus códigos fuente, así como los logos, marcas y demás signos distintivos
+                                        que aparecen en la aplicación están protegidos por los correspondientes derechos
+                                        de propiedad intelectual e industrial.</li>
+                                    <li>El uso de esta aplicación para propósitos que puedan influir negativamente en la
+                                        imagen del Hospital de referencia de la Consejería de Sanidad de la Comunidad de
+                                        Madrid.</li>
+                                    <li>La realización de cualquier actividad que pueda comprometer la seguridad de los
+                                        sistemas y recursos electrónicos de la Dirección General de Planificación, Investigación
+                                        y Formación.</li>
+                                    <li>Congestionar, afectar, interferir o paralizar el uso del servicio.</li>
+                                </ul>
+                                <p>
+                                    El Hospital de referencia de la Consejería de Sanidad de la Comunidad de Madrid
+                                    se reserva el derecho a bloquear el acceso de cualquier usuario si detecta un uso
+                                    contrario a la legalidad, la buena fe, o a las presentes condiciones generales.</p>
+                                <p>
+                                    Así mismo, el Hospital de referencia de la Consejería de Sanidad de la Comunidad
+                                    de Madrid se reserva el derecho a realizar cambios en el aplicativo sin previo aviso,
+                                    al objeto de mantener actualizada su información, añadiendo, modificando, corrigiendo
+                                    o eliminando contenidos.</p>
+                                <h4>
+                                    El Hospital de referencia de la Consejería de Sanidad de la Comunidad de Madrid
+                                    no será responsable de</h4>
+                                <hr />
+                                <ul>
+                                    <li>Los daños que genere al usuario en caso de imposibilidad de prestar el servicio
+                                        objeto de las presentes Condiciones de Uso, debida a supuestos de caso fortuito,
+                                        fuerza mayor u otras causas no imputables a los responsables.</li>
+                                    <li>Del inadecuado funcionamiento del presente servicio si ello obedece a labores de
+                                        mantenimiento y similares, a incidencias que afecten a sistemas u operadores externos,
+                                        así como al no cumplimiento de los requisitos técnicos necesarios para el funcionamiento
+                                        de la aplicación.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- fin acordeón protección de datos -->
+
+		</form>
+	</main>
+
+	
+	
+
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> |<a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright © Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+
+    <!-- Modal información Tarjeta Sanitaria-->
+    <div id="modalTarjeta" class="modal fade" role="dialog" aria-hidden="true" aria-modal="true" aria-label="Identifica el código de identificación personal autonómico en tu tarjeta">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Cabecera-->
+                <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="cerrar">&times;</button>
+                    <h4 class="modal-title">
+                        ¿Dónde encontrar su código de identificación personal autonómico?
+                    </h4>
+                </div>
+                <!--Cuerpo-->
+                <div class="modal-body">
+					<p>
+						El Código de Identificación Personal Autonómico se encuentra situado en la tarjeta sanitaria en la mitad superior centro o en la
+						mitad superior derecha según el modelo.
+					</p>
+					<div class="text-center">
+						<img src="images/TSI_nueva.png" title="En este modelo de Tarjeta Sanitaria el 
+Código de Identificación Personal Autonómico
+se encuentra en la mitad superior centro"
+                                class="form-group" />
+                            <img src="images/TSI_vieja.png" title="En este modelo de Tarjeta Sanitaria
+el Código de Identificación Personal Autonómico
+se encuentra en la mitad superior derecha"
+                                class="form-group" />
+                        </div>
+            </div>
+				<!--Pie-->
+				<div class="modal-footer">
+                <a href="#" data-dismiss="modal" class="btn btn-rojo" title="Cerrar ventana">Cerrar</a>
+            </div>
+			</div>
+		</div>
+    </div>
+	
+<!-- Modal QR-->
+<div id="modalQR" class="modal fade" role="dialog" aria-label="Incorporar cita en la agenda mediante código QR" aria-modal="true" aria-hidden="true">
+    
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--Cabecera-->
+            <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="cerrar">&times;</button>
+                <h4 class="modal-title">Incorporar cita en la agenda</h4>
+            </div>
+            <!--Cuerpo-->
+            <div class="modal-body">
+                <div class="content">
+                    <p>
+                        Utilice un lector de código QR para añadir los datos de su cita al calendario de
+                        su dispositivo móvil.</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAADu4SURBVHhe7ZTRijRJziz/93/pc1bsLBiBW7arImtmPmgDu3G5FNl9Uf/3/3755Zdf/hB+f7B++eWXP4bfH6xffvnlj+H3B+uXX375Y/j9wfrll1/+GH5/sH755Zc/ht8frF9++eWP4fcH65dffvlj+P3B+uWXX/4Yfn+wfvnllz+G+gfr//7v/16XWE7YoQ1pbySWb+EdaqTuJxpNh1ifOd2SbpwaqTsaqXtK0vwTG5q+dSw3mv6285Yb6nZ66FZiOWGHNqS9kVi+hXeokbqfaDQdYn3mdEu6cWqk7mik7ilJ809saPrWsdxo+tvOW26o2+mhW4nlhB3akPZGYvkW3qFG6n6i0XSI9ZnTLenGqZG6o5G6pyTNP7Gh6VvHcqPpbztvuaFuf/rAid1hTo3UfdJI3Tclaf6JRuqOJM1HwzrMKUnzViN1Tw3rMKeGdSwnb3UM7jaSNB+J5Vs+vVO3P33gxO4wp0bqPmmk7puSNP9EI3VHkuajYR3mlKR5q5G6p4Z1mFPDOpaTtzoGdxtJmo/E8i2f3qnbnz5wYneYUyN1nzRS901Jmn+ikbojSfPRsA5zStK81UjdU8M6zKlhHcvJWx2Du40kzUdi+ZZP79Rte4C5SbY5YcckTU6J5WTbudGwDnNK0nw0tp1Gkuanxjc6jQ1p70kjdT+xwfpNbhLLf6Ju2wPMTbLNCTsmaXJKLCfbzo2GdZhTkuajse00kjQ/Nb7RaWxIe08aqfuJDdZvcpNY/hN12x5gbpJtTtgxSZNTYjnZdm40rMOckjQfjW2nkaT5qfGNTmND2nvSSN1PbLB+k5vE8p+o2/YAc5M0OSVpPpImbzSaToPdaXKTWG6wb5ImN0man5I0f9JI3Vvfwm4yp2Sbk5sOc5NY/hN12x5gbpImpyTNR9LkjUbTabA7TW4Syw32TdLkJknzU5LmTxqpe+tb2E3mlGxzctNhbhLLf6Ju2wPMTdLklKT5SJq80Wg6DXanyU1iucG+SZrcJGl+StL8SSN1b30Lu8mckm1ObjrMTWL5T9Rte4C5SSwn7FAjdVtJmo/EcsLOtzWaDmn67JhG6o4kzUcjdT+RpPn4b6D5HnaokbqjYR3mJrH8J+q2PcDcJJYTdqiRuq0kzUdiOWHn2xpNhzR9dkwjdUeS5qORup9I0nz8N9B8DzvUSN3RsA5zk1j+E3XbHmBuEssJO9RI3VaS5iOxnLDzbY2mQ5o+O6aRuiNJ89FI3U8kaT7+G2i+hx1qpO5oWIe5SSz/ibr96QMndoc5JWl+Siw3bvomSfOxIe2NJM1bSZqPxHLD+pYTdiix3GCfGqk7km3esN1ln5JtTppOw6d36vanD5zYHeaUpPkpsdy46ZskzceGtDeSNG8laT4Syw3rW07YocRyg31qpO5ItnnDdpd9SrY5aToNn96p258+cGJ3mFOS5qfEcuOmb5I0HxvS3kjSvJWk+UgsN6xvOWGHEssN9qmRuiPZ5g3bXfYp2eak6TR8eqdu84G3JL/5f/nN/8tv/l/+zflbbqjb6aFbyW/+X37z//Kb/5d/c/6WG+p2euhW8pv/l9/8v/zm/+XfnL/lhl37Hyb9saORuqORuiNJ85Gk+UgsN6xvObGO5Qb7lKT5SLa5wT5taPrWsZywQ0maj1vSjZGk+ZP/Vv69XxZI/9jRSN3RSN2RpPlI0nwklhvWt5xYx3KDfUrSfCTb3GCfNjR961hO2KEkzcct6cZI0vzJfyv/3i8LpH/saKTuaKTuSNJ8JGk+EssN61tOrGO5wT4laT6SbW6wTxuavnUsJ+xQkubjlnRjJGn+5L+V+svSHzUaqXtqWIf5WxLLiXWYmyTN37Qh7b0pSfORpPlopO4nGtaxnLBjkianDWnvlFhuWJ9544a6nR4ajdQ9NazD/C2J5cQ6zE2S5m/akPbelKT5SNJ8NFL3Ew3rWE7YMUmT04a0d0osN6zPvHFD3U4PjUbqnhrWYf6WxHJiHeYmSfM3bUh7b0rSfCRpPhqp+4mGdSwn7JikyWlD2jsllhvWZ964Ydf+i/ToaFiHOTVS9/Qt0u3RSN3RsI7lW+yO5YQd+hbp9kjSvJWk+SnZ5sa238CbjVvSjVYjdU83fPTfTI+OhnWYUyN1T98i3R6N1B0N61i+xe5YTtihb5FujyTNW0man5Jtbmz7DbzZuCXdaDVS93TDR//N9OhoWIc5NVL39C3S7dFI3dGwjuVb7I7lhB36Fun2SNK8laT5KdnmxrbfwJuNW9KNViN1TzfU7fTQaFinyamRuqcNaW8kljdw1yTbvKHZZcckaT6SJqfE8gbuUmI5sQ5zStL8E4nlZNuhpMkp2eYb6k0+Rg3rNDk1Uve0Ie2NxPIG7ppkmzc0u+yYJM1H0uSUWN7AXUosJ9ZhTkmafyKxnGw7lDQ5Jdt8Q73Jx6hhnSanRuqeNqS9kVjewF2TbPOGZpcdk6T5SJqcEssbuEuJ5cQ6zClJ808klpNth5Imp2Sbb6g37bEmp+Qmp8a2Qxusf5ObhnWYU5Lmp4Z1mpySND8laT6SND8laf6kkbojSfPRSN0nSZp/4g3p3rihbtsDTU7JTU6NbYc2WP8mNw3rMKckzU8N6zQ5JWl+StJ8JGl+StL8SSN1R5Lmo5G6T5I0/8Qb0r1xQ922B5qckpucGtsObbD+TW4a1mFOSZqfGtZpckrS/JSk+UjS/JSk+ZNG6o4kzUcjdZ8kaf6JN6R744a6nR4aieWEHdqQ9kayzQk7ptF0jG/sNjklTU4b0t4psZywY5I0PyU3uWlYhzkl25ywY5Jv5z9Rt/kAJZYTdmhD2hvJNifsmEbTMb6x2+SUNDltSHunxHLCjknS/JTc5KZhHeaUbHPCjkm+nf9E3eYDlFhO2KENaW8k25ywYxpNx/jGbpNT0uS0Ie2dEssJOyZJ81Nyk5uGdZhTss0JOyb5dv4TddseYE4b0t5pQ9o7NbYdk6T52LDtE+5uNaxjudH02TFJmo/EcsIOJWl++hZ2k/nWG+yO5YQdc0PdtgeY04a0d9qQ9k6NbcckaT42bPuEu1sN61huNH12TJLmI7GcsENJmp++hd1kvvUGu2M5YcfcULftAea0Ie2dNqS9U2PbMUmajw3bPuHuVsM6lhtNnx2TpPlILCfsUJLmp29hN5lvvcHuWE7YMTfUbXvAcsLOjUbTMWyXuXnD33mHHUosJzcd5pSk+bjlrV2zIe21Gql72mB95iZJ85Gk+fgp9aY9Zjlh50aj6Ri2y9y84e+8ww4llpObDnNK0nzc8tau2ZD2Wo3UPW2wPnOTpPlI0nz8lHrTHrOcsHOj0XQM22Vu3vB33uE3U2I5uenwPiVpPm55a9dsSHutRuqeNlifuUnSfCRpPn7KR5vpA540UnckaT4aqTuSND81UnckaT4Sy8lNhzklaT5uaXa3HdqQ9kaS5iNJ85FYbrBvNqS9Jw3rMDeN1B3f5qOL6cOeNFJ3JGk+Gqk7kjQ/NVJ3JGk+EsvJTYc5JWk+bml2tx3akPZGkuYjSfORWG6wbzakvScN6zA3jdQd3+aji+nDnjRSdyRpPhqpO5I0PzVSdyRpPhLLyU2HOSVpPm5pdrcd2pD2RpLmI0nzkVhusG82pL0nDeswN43UHd+mvpg+ZtySbrSSNB+J5aTpGNy9kWxzwg69Id1rJZbfwJsm2eYG+1tJmo8NTd86ljdwlxrWsfwn6jYfoFvSjVaS5iOxnDQdg7s3km1O2KE3pHutxPIbeNMk29xgfytJ87Gh6VvH8gbuUsM6lv9E3eYDdEu60UrSfCSWk6ZjcPdGss0JO/SGdK+VWH4Db5pkmxvsbyVpPjY0fetY3sBdaljH8p/Yf/F/aB5rOgZ337Ih7Y1btrtN3zqWE3YoSfPxLexmk281UvdJss1v4E3TaDqE/RtJmp9+ykebzcNNx+DuWzakvXHLdrfpW8dywg4laT6+hd1s8q1G6j5JtvkNvGkaTYewfyNJ89NP+WizebjpGNx9y4a0N27Z7jZ961hO2KEkzce3sJtNvtVI3SfJNr+BN02j6RD2byRpfvop9WZ6dDRS95Sk+Ugs39LcYcckad7aYH3LDfYbv0F658kttsuckjR/0kjdTyRpfmqkbqthHeaNG+p2emg0UveUpPlILN/S3GHHJGne2mB9yw32G79BeufJLbbLnJI0f9JI3U8kaX5qpG6rYR3mjRvqdnpoNFL3lKT5SCzf0txhxyRp3tpgfcsN9hu/QXrnyS22y5ySNH/SSN1PJGl+aqRuq2Ed5o0b6nZ66JRYTpoOsf42JzedJn9L46bDnBpvdRp4hxrWYU4brG+5wb5pbDvUSN1TYrnR9JtOom7zAZNYTpoOsf42JzedJn9L46bDnBpvdRp4hxrWYU4brG+5wb5pbDvUSN1TYrnR9JtOom7zAZNYTpoOsf42JzedJn9L46bDnBpvdRp4hxrWYU4brG+5wb5pbDvUSN1TYrnR9JtOYtcObB+2vuUN3KXEcnLTaXJK0vxJYjlhp7HB+pYT69zktGHbJ9ylpMlNwzqWE3be0nirk9i1A9uHrW95A3cpsZzcdJqckjR/klhO2GlssL7lxDo3OW3Y9gl3KWly07CO5YSdtzTe6iR27cD2Yetb3sBdSiwnN50mpyTNnySWE3YaG6xvObHOTU4btn3CXUqa3DSsYzlh5y2NtzqJur19gH1qNJ0beN8kaT42bPvEdpnTLc2udZibDWlvJE1uNqS9VmJ5g+0yp6TJ6Tdo7lvH8p+o29sH2KdG07mB902S5mPDtk9slznd0uxah7nZkPZG0uRmQ9prJZY32C5zSpqcfoPmvnUs/4m6vX2AfWo0nRt43yRpPjZs+8R2mdMtza51mJsNaW8kTW42pL1WYnmD7TKnpMnpN2juW8fyn/joL+FjjSTNR9LklDQ5Jdt8i93Z5qTpNPBOI0nz8YZ0byRNThvS3pPGNzrmlpvdBt6nxPKf+OiL+VgjSfORNDklTU7JNt9id7Y5aToNvNNI0ny8Id0bSZPThrT3pPGNjrnlZreB9ymx/Cc++mI+1kjSfCRNTkmTU7LNt9idbU6aTgPvNJI0H29I90bS5LQh7T1pfKNjbrnZbeB9Siz/ibrNByjZ5oQdkzQ5NazT5I2kyU2S5qekyekNN3e4S43UHY1tp9FI3ZFYTradraTJt5I0HzfU7fTQSLY5YcckTU4N6zR5I2lyk6T5KWlyesPNHe5SI3VHY9tpNFJ3JJaTbWcrafKtJM3HDXU7PTSSbU7YMUmTU8M6Td5ImtwkaX5KmpzecHOHu9RI3dHYdhqN1B2J5WTb2UqafCtJ83FD3d4+wL5JmryRpPloWIc5JWk+kjQfSZqfkjQfSZo/Sbb5DTc3t7vWb3JK0nwk25w0HcN2LSfs0Ia0d7qhbm8fYN8kTd5I0nw0rMOckjQfSZqPJM1PSZqPJM2fJNv8hpub213rNzklaT6SbU6ajmG7lhN2aEPaO91Qt7cPsG+SJm8kaT4a1mFOSZqPJM1HkuanJM1HkuZPkm1+w83N7a71m5ySNB/JNidNx7Bdywk7tCHtnW6o2/YAc9pgfcsJOyax3Nj2DbvT5GZD2jvdYruWE3bMBuszN0majyTNR6PpEPZvJJY3cJcaNx3Lf6Ju2wPMaYP1LSfsmMRyY9s37E6Tmw1p73SL7VpO2DEbrM/cJGk+kjQfjaZD2L+RWN7AXWrcdCz/ibptDzCnDda3nLBjEsuNbd+wO01uNqS90y22azlhx2ywPnOTpPlI0nw0mg5h/0ZieQN3qXHTsfwn6jYfMEma/x2SJqfEctJ0vgHfpTc0d97qEOtbTthp3PLWbqORuq2kyU1iOWHH/JR6Mz16StL875A0OSWWk6bzDfguvaG581aHWN9ywk7jlrd2G43UbSVNbhLLCTvmp9Sb6dFTkuZ/h6TJKbGcNJ1vwHfpDc2dtzrE+pYTdhq3vLXbaKRuK2lyk1hO2DE/pd60x7a5YX3mtCHtjcRyYp2bvNFI3fGG5o51mJvEcqPpf7vDnDZY3/IG7jaSbU7YaTSaTqJu2wPb3LA+c9qQ9kZiObHOTd5opO54Q3PHOsxNYrnR9L/dYU4brG95A3cbyTYn7DQaTSdRt+2BbW5YnzltSHsjsZxY5yZvNFJ3vKG5Yx3mJrHcaPrf7jCnDda3vIG7jWSbE3YajaaTqNv2QJN/Q5Lmb9qQ9k5JmreSJqeGdZibxHLCDjWsw/zGb5DeOSVpPho3HebfkGzzn6jb9kCTf0OS5m/akPZOSZq3kianhnWYm8Rywg41rMP8xm+Q3jklaT4aNx3m35Bs85+o2/ZAk39DkuZv2pD2Tkmat5Imp4Z1mJvEcsIONazD/MZvkN45JWk+Gjcd5t+QbPOfqNt8gBpNh7BPyU1OSZo/aaRua8O2T7hLDesw30q2OWHHbLA+c5Ok+diQ9kayzY1/qs/c3FC300Oj0XQI+5Tc5JSk+ZNG6rY2bPuEu9SwDvOtZJsTdswG6zM3SZqPDWlvJNvc+Kf6zM0NdTs9NBpNh7BPyU1OSZo/aaRua8O2T7hLDesw30q2OWHHbLA+c5Ok+diQ9kayzY1/qs/c3LBrB+zhm5xuSTc+kaT5uCXdGEmTmzekeyOxnLBDieWEHZPc5I0kzUeS5iNJ81aS5qORuk+SJjff4PqKfdBNTrekG59I0nzckm6MpMnNG9K9kVhO2KHEcsKOSW7yRpLmI0nzkaR5K0nz0UjdJ0mTm29wfcU+6CanW9KNTyRpPm5JN0bS5OYN6d5ILCfsUGI5YcckN3kjSfORpPlI0ryVpPlopO6TpMnNN3jnSmD7odZvctqQ9k5Jmp8aqXvaYH3LiXWY0xvSvZE0uWk0HdL0rcN8K0nzkaT5k2Sbk6ZDrM/c3LBrL9h+kPWbnDakvVOS5qdG6p42WN9yYh3m9IZ0byRNbhpNhzR96zDfStJ8JGn+JNnmpOkQ6zM3N+zaC7YfZP0mpw1p75Sk+amRuqcN1recWIc5vSHdG0mTm0bTIU3fOsy3kjQfSZo/SbY5aTrE+szNDXXbHmjyt7wh3Ru32C7zb7sl3ThtSHujkbrjFttlfqPRdAj7N5I0byVN/pZG6o4b6rY90ORveUO6N26xXebfdku6cdqQ9kYjdccttsv8RqPpEPZvJGneSpr8LY3UHTfUbXugyd/yhnRv3GK7zL/tlnTjtCHtjUbqjltsl/mNRtMh7N9I0ryVNPlbGqk7bqjbzQPsmCTNP9FI3ZFs8wbbZU5Jk5vkGzndkm60Gqk7GtZhbhpvdQj7jSTNnzSsYzlhh75BfaV5mB2TpPknGqk7km3eYLvMKWlyk3wjp1vSjVYjdUfDOsxN460OYb+RpPmThnUsJ+zQN6ivNA+zY5I0/0QjdUeyzRtslzklTW6Sb+R0S7rRaqTuaFiHuWm81SHsN5I0f9KwjuWEHfoG9ZWbh7lLDeswpyTNR5LmI0nz8YbtHetbbjR961hu3PQbSZPTLenGk0bqnjZY33KD/caGtHf6BvWVm4e5Sw3rMKckzUeS5iNJ8/GG7R3rW240fetYbtz0G0mT0y3pxpNG6p42WN9yg/3GhrR3+gb1lZuHuUsN6zCnJM1HkuYjSfPxhu0d61tuNH3rWG7c9BtJk9Mt6caTRuqeNljfcoP9xoa0d/oGH11pPoIdamw7JknzJ0mTbyWWG9ZnTonlZNuhJM2fNJqO0exah/lWo+k02J2bnJI0H43UHd/mo4vNB7FDjW3HJGn+JGnyrcRyw/rMKbGcbDuUpPmTRtMxml3rMN9qNJ0Gu3OTU5Lmo5G649t8dLH5IHaose2YJM2fJE2+lVhuWJ85JZaTbYeSNH/SaDpGs2sd5luNptNgd25yStJ8NFJ3fJv6YvMR7HxDI3VP36K52XQM22VukjQfieWEHZOk+Ujeygk7JrG8wXaZN5Jt3mC7lhPrMH/LDXW7eYCdb2ik7ulbNDebjmG7zE2S5iOxnLBjkjQfyVs5YcckljfYLvNGss0bbNdyYh3mb7mhbjcPsPMNjdQ9fYvmZtMxbJe5SdJ8JJYTdkyS5iN5KyfsmMTyBttl3ki2eYPtWk6sw/wtN+z/Cw98+hEDdymxnFiHOb0h3RtJmo8kzUej6RjNLjtbG9LeSJqcbkk3njSsw5w2WJ95o2Ed5o1G6p5+yuebgZsP4i4llhPrMKc3pHsjSfORpPloNB2j2WVna0PaG0mT0y3pxpOGdZjTBuszbzSsw7zRSN3TT/l8M3DzQdylxHJiHeb0hnRvJGk+kjQfjaZjNLvsbG1IeyNpcrol3XjSsA5z2mB95o2GdZg3Gql7+in1Znr0W96Q7o1G6j75Fun2SCwn7FCS5iOxnLBDieWEHUrS/O+QbPMG7lLS5JQ0Od1iu8wpSfNxQ91OD33LG9K90UjdJ98i3R6J5YQdStJ8JJYTdiixnLBDSZr/HZJt3sBdSpqckianW2yXOSVpPm6o2+mhb3lDujcaqfvkW6TbI7GcsENJmo/EcsIOJZYTdihJ879Dss0buEtJk1PS5HSL7TKnJM3HDXXbHtjmhB2TpPmp0XS22E3LCTt0S7oxkianxrc7zE0jdUfDOswpSfORpHmrkbqnDdZnTg3rWE6aTqJu2wPbnLBjkjQ/NZrOFrtpOWGHbkk3RtLk1Ph2h7lppO5oWIc5JWk+kjRvNVL3tMH6zKlhHctJ00nUbXtgmxN2TJLmp0bT2WI3LSfs0C3pxkianBrf7jA3jdQdDeswpyTNR5LmrUbqnjZYnzk1rGM5aTqJXTvQPMwOJWk+kjQfjdQ9fYt0+/SGdO+UpPnplnTjtCHtnTakvSeNbYeSND8laX5qpO5oWMdywg694dM7d6/+h+ZhdihJ85Gk+Wik7ulbpNunN6R7pyTNT7ekG6cNae+0Ie09aWw7lKT5KUnzUyN1R8M6lhN26A2f3rl79T80D7NDSZqPJM1HI3VP3yLdPr0h3TslaX66Jd04bUh7pw1p70lj26EkzU9Jmp8aqTsa1rGcsENv+PRO3eYDlFhusE9JmreSND+9Id1rJdu8odm1DnNzS7rxJEnzcYvtvpWTptPAO5Sk+UianJI0Hw3rWP4TdZsPUGK5wT4lad5K0vz0hnSvlWzzhmbXOszNLenGkyTNxy22+1ZOmk4D71CS5iNpckrSfDSsY/lP1G0+QInlBvuUpHkrSfPTG9K9VrLNG5pd6zA3t6QbT5I0H7fY7ls5aToNvENJmo+kySlJ89GwjuU/sWv/BR8zSZqfkibf2pD2Tm+wO5YTdii5yalhHcsN6zM3yTZv4O5WkuYjSfNTkuZjw7a/xe5v85/46Ov5mEnS/JQ0+daGtHd6g92xnLBDyU1ODetYblifuUm2eQN3t5I0H0man5I0Hxu2/S12f5v/xEdfz8dMkuanpMm3NqS90xvsjuWEHUpucmpYx3LD+sxNss0buLuVpPlI0vyUpPnYsO1vsfvb/CfqNh8wb7A7TU6N1B2J5YSdrcZNx3LyVqeBd+iW7S771Nh2Gg3rWG6w/w2NpkO2/Q31RX6EeYPdaXJqpO5ILCfsbDVuOpaTtzoNvEO3bHfZp8a202hYx3KD/W9oNB2y7W+oL/IjzBvsTpNTI3VHYjlhZ6tx07GcvNVp4B26ZbvLPjW2nUbDOpYb7H9Do+mQbX/DRxf5QdRI3dFI3U8kaT6SNB+32G6TU2I5YccklhPrvJUbTZ8d07CO5VvsDnOz4aZPjdQ9bbC+5T+xa/8FH6NG6o5G6n4iSfORpPm4xXabnBLLCTsmsZxY563caPrsmIZ1LN9id5ibDTd9aqTuaYP1Lf+JXfsv+Bg1Unc0UvcTSZqPJM3HLbbb5JRYTtgxieXEOm/lRtNnxzSsY/kWu8PcbLjpUyN1Txusb/lP7NofYh/H3GxIe6dG6p42WN9yw/rMG2/Y3mGfGtZhbpI0H9/CbjKnb5Fun5I0HxvS3ilJ89Y3eO+//IB9NHOzIe2dGql72mB9yw3rM2+8YXuHfWpYh7lJ0nx8C7vJnL5Fun1K0nxsSHunJM1b3+C9//ID9tHMzYa0d2qk7mmD9S03rM+88YbtHfapYR3mJknz8S3sJnP6Fun2KUnzsSHtnZI0b32D+kr6gCeNb3SokbqnRuqOxHLSdAzu0oa0N5JtTqxjucH+tyU3OSVpPhLLDeszp0bqnhqpO5I0H9+gvpI+4EnjGx1qpO6pkbojsZw0HYO7tCHtjWSbE+tYbrD/bclNTkmaj8Ryw/rMqZG6p0bqjiTNxzeor6QPeNL4RocaqXtqpO5ILCdNx+AubUh7I9nmxDqWG+x/W3KTU5LmI7HcsD5zaqTuqZG6I0nz8Q3qK+kDniSWGzd900jdUyN1x4Zt37A7lhN2TMM6zCmx3Gj67JjEcmId5iZJ85Fsc7LtUHKTmyTNxw11Oz30JLHcuOmbRuqeGqk7Nmz7ht2xnLBjGtZhTonlRtNnxySWE+swN0maj2Sbk22HkpvcJGk+bqjb6aEnieXGTd80UvfUSN2xYds37I7lhB3TsA5zSiw3mj47JrGcWIe5SdJ8JNucbDuU3OQmSfNxQ93+9IGBu+YNdmebk6ZD2KcNaW8kb+UNza51mG81rMO8kVjewN1GYrnBPiU3OTVS95Rs8w315s1j3DVvsDvbnDQdwj5tSHsjeStvaHatw3yrYR3mjcTyBu42EssN9im5yamRuqdkm2+oN28e4655g93Z5qTpEPZpQ9obyVt5Q7NrHeZbDeswbySWN3C3kVhusE/JTU6N1D0l23xDvcnHzC3pxkianJImpw1Nn50bSZqPDU2/6RD2qZG6I7GcsNPYkPaeNKxjucE+JU1Ot9iu5YQd81PqzfTo6ZZ0YyRNTkmT04amz86NJM3HhqbfdAj71EjdkVhO2GlsSHtPGtax3GCfkianW2zXcsKO+Sn1Znr0dEu6MZImp6TJaUPTZ+dGkuZjQ9NvOoR9aqTuSCwn7DQ2pL0nDetYbrBPSZPTLbZrOWHH/JTPNz/EPtpyg33TSN3RaDoGdylp8saGtPeJRtNp4J2txrbT2JD2njSajsFdStL81Ejd8W3ev/gD9sdYbrBvGqk7Gk3H4C4lTd7YkPY+0Wg6Dbyz1dh2GhvS3pNG0zG4S0manxqpO77N+xd/wP4Yyw32TSN1R6PpGNylpMkbG9LeJxpNp4F3thrbTmND2nvSaDoGdylJ81Mjdce3qS+mjxnfornJjkksJ9ZpckqanN7Q3PmnOrTh3Ek2pL1Wkua3EssbuGsaqdtqWIe5uaFup4fGt2husmMSy4l1mpySJqc3NHf+qQ5tSHunDWmvlaT5rcTyBu6aRuq2GtZhbm6o2+mh8S2am+yYxHJinSanpMnpDc2df6pDG9LeaUPaayVpfiuxvIG7ppG6rYZ1mJsb6rY9wJwaqftkg/WZmyTNxy3NbtMhN326xXYtN9in32B7/6ZvGtax3Hirz5ySNB9JmrduqNv2AHNqpO6TDdZnbpI0H7c0u02H3PTpFtu13GCffoPt/Zu+aVjHcuOtPnNK0nwkad66oW7bA8ypkbpPNlifuUnSfNzS7DYdctOnW2zXcoN9+g2292/6pmEdy423+swpSfORpHnrhl37L5rH2KHE8rew+8zNhrT3iUbqnhqpe7rFdpnfSG5yaqTuk2SbE3YoSfPTt7CbzE0jdcc3+OhK8xHsUGL5W9h95mZD2vtEI3VPjdQ93WK7zG8kNzk1UvdJss0JO5Sk+elb2E3mppG64xt8dKX5CHYosfwt7D5zsyHtfaKRuqdG6p5usV3mN5KbnBqp+yTZ5oQdStL89C3sJnPTSN3xDa6v2Adtc8IONVL39C3spuWk6RDrM6dG6o7EcmIdy7fwjknS/JS8lTfYLnOTWP4WzX12KEnz0ze4vmIftM0JO9RI3dO3sJuWk6ZDrM+cGqk7EsuJdSzfwjsmSfNT8lbeYLvMTWL5WzT32aEkzU/f4PqKfdA2J+xQI3VP38JuWk6aDrE+c2qk7kgsJ9axfAvvmCTNT8lbeYPtMjeJ5W/R3GeHkjQ/fYP6SvNw02ngnUaS5q0N1n8r32J3LDeaPjuUWE6aDrnpU2I5YcckTW4aqftkQ9o7bUh7o9F0fqLebB5rOg2800jSvLXB+m/lW+yO5UbTZ4cSy0nTITd9Siwn7JikyU0jdZ9sSHunDWlvNJrOT9SbzWNNp4F3GkmatzZY/618i92x3Gj67FBiOWk65KZPieWEHZM0uWmk7pMNae+0Ie2NRtP5iY827WHmb2lsO9SwjuUNtsv8LUmaj4Z1mJvkJm80UrfVaDrE+sxNYrnBvkksJ+xsJdv8J3btv7DHmL+lse1QwzqWN9gu87ckaT4a1mFukpu80UjdVqPpEOszN4nlBvsmsZyws5Vs85/Ytf/CHmP+lsa2Qw3rWN5gu8zfkqT5aFiHuUlu8kYjdVuNpkOsz9wklhvsm8Ryws5Wss1/YtcO8GGzIe21GtZhTkmajyTNnySWG9a3/AbebDTe6jRs77C/1bDOWzlpOuSf6jM3N+zagfQBpw1pr9WwDnNK0nwkaf4ksdywvuU38Gaj8VanYXuH/a2Gdd7KSdMh/1Sfublh1w6kDzhtSHuthnWYU5LmI0nzJ4nlhvUtv4E3G423Og3bO+xvNazzVk6aDvmn+szNDbv2AvugJm80mo7BXUosN6z/7Zx8u7PNG7hLDetsc8IObUh7I0nzU5Lmpw1pbyQ3OX2b9y/+hX10kzcaTcfgLiWWG9b/dk6+3dnmDdylhnW2OWGHNqS9kaT5KUnz04a0N5KbnL7N+xf/wj66yRuNpmNwlxLLDet/Oyff7mzzBu5SwzrbnLBDG9LeSNL8lKT5aUPaG8lNTt+mvmgfwdxsSHsjSfPWb9Dct47lhvW3OWk6hH1KLCfbDiVpPjZYn/lWkuatJM0/kaT5kw1pr3VD3bYHmJsNaW8kad76DZr71rHcsP42J02HsE+J5WTboSTNxwbrM99K0ryVpPknkjR/siHttW6o2/YAc7Mh7Y0kzVu/QXPfOpYb1t/mpOkQ9imxnGw7lKT52GB95ltJmreSNP9EkuZPNqS91g11Oz10StL8TUmTm2SbE+s0+daGtDfekO6NW7a7TZ+drW9hN5lTo+k0NHesw3yrkbrjhrqdHjolaf6mpMlNss2JdZp8a0PaG29I98Yt292mz87Wt7CbzKnRdBqaO9ZhvtVI3XFD3U4PnZI0f1PS5CbZ5sQ6Tb61Ie2NN6R745btbtNnZ+tb2E3m1Gg6Dc0d6zDfaqTuuKFu2wNNThu2ffLWLiVpPm6x3SanJM0/sSHtnZImN0matzakvZGk+djQ9NkxG6xvObGO5Qb75oa6bQ80OW3Y9slbu5Sk+bjFdpuckjT/xIa0d0qa3CRp3tqQ9kaS5mND02fHbLC+5cQ6lhvsmxvqtj3Q5LRh2ydv7VKS5uMW221yStL8ExvS3ilpcpOkeWtD2htJmo8NTZ8ds8H6lhPrWG6wb27YtX/APoI5NVL3tCHtPUnS/LQh7Y1b0o3TLenGaFiHOTWsw5wSywk7JknzU8M6zCn5Rk6J5YQdkzS5+Smfbwbsg5hTI3VPG9LekyTNTxvS3rgl3Tjdkm6MhnWYU8M6zCmxnLBjkjQ/NazDnJJv5JRYTtgxSZObn/L5ZsA+iDk1Uve0Ie09SdL8tCHtjVvSjdMt6cZoWIc5NazDnBLLCTsmSfNTwzrMKflGTonlhB2TNLn5KfVmevRJYrnBPiVpPm6xXeaUNPnWLenGk8Ryo+lbhzklaT42pL2RWG5Yv8kbG9Lekw1v9ZmbRtNJ1G0+0EgsN9inJM3HLbbLnJIm37ol3XiSWG40feswpyTNx4a0NxLLDes3eWND2nuy4a0+c9NoOom6zQcaieUG+5Sk+bjFdplT0uRbt6QbTxLLjaZvHeaUpPnYkPZGYrlh/SZvbEh7Tza81WduGk0nUbf5ACVNTonl5Nsd5pTc5NSwzjYnNx3m1LAOc/p38ta7vENJmreSNB9Jmo8kzcct6cYpSfPxU+rN9OhImpwSy8m3O8wpucmpYZ1tTm46zKlhHeb07+Std3mHkjRvJWk+kjQfSZqPW9KNU5Lm46fUm+nRkTQ5JZaTb3eYU3KTU8M625zcdJhTwzrM6d/JW+/yDiVp3krSfCRpPpI0H7ekG6ckzcdP+XzzB24+znYt39Lcsc42J+zQhqZvHebUsI7lhvUtJ+xQkuanW9KNU2L5FrvDvPEGu9PkjcTyn7j7Cx/49IMG27V8S3PHOtucsEMbmr51mFPDOpYb1recsENJmp9uSTdOieVb7A7zxhvsTpM3Est/4u4vfODTDxps1/ItzR3rbHPCDm1o+tZhTg3rWG5Y33LCDiVpfrol3Tgllm+xO8wbb7A7Td5ILP+Ju7/wgB9BieWEHWqk7ilJ80/ckm6c3mB3mnxrQ9o7JWneStL8tCHtnTZYv8nNG9K90bAOc/NtXr2YPngklhN2qJG6pyTNP3FLunF6g91p8q0Nae+UpHkrSfPThrR32mD9JjdvSPdGwzrMzbd59WL64JFYTtihRuqekjT/xC3pxukNdqfJtzakvVOS5q0kzU8b0t5pg/Wb3Lwh3RsN6zA33+b6YvrIJ98i3R4b0t7YkPZGYjlhh5Imp8a2Q0maj6TJqXHTYU4brM+cNlifOd2y3WW/seHb/f+x/+8c8OHGt0i3x4a0NzakvZFYTtihpMmpse1QkuYjaXJq3HSY0wbrM6cN1mdOt2x32W9s+Hb/f+z/Owd8uPEt0u2xIe2NDWlvJJYTdihpcmpsO5Sk+UianBo3Hea0wfrMaYP1mdMt2132Gxu+3f8f+//OAR+mRuo+SSw3rM/cvCHdG0maP0nS/BMN6zCnDWmvlaT5eIPduclNkuatZJuTprOFNymx/Ceuv5IPUyN1nySWG9Znbt6Q7o0kzZ8kaf6JhnWY04a010rSfLzB7tzkJknzVrLNSdPZwpuUWP4T11/Jh6mRuk8Syw3rMzdvSPdGkuZPkjT/RMM6zGlD2mslaT7eYHducpOkeSvZ5qTpbOFNSiz/ibrNB240Unf8BumdkVhO2Gkk/1RuWJ/51gbr3+QmSfPTG75xxyRpPjakvdOGtHf6KfVmevQTjdQdv0F6ZySWE3YayT+VG9ZnvrXB+je5SdL89IZv3DFJmo8Nae+0Ie2dfkq9mR79RCN1x2+Q3hmJ5YSdRvJP5Yb1mW9tsP5NbpI0P73hG3dMkuZjQ9o7bUh7p5/y0ebNw9zdSizfwjtbtzS7b3UM22XeSNJ83JJujCTNT0majyTNT29I91rJNjes/1b+TT566eZDubuVWL6Fd7ZuaXbf6hi2y7yRpPm4Jd0YSZqfkjQfSZqf3pDutZJtblj/rfybfPTSzYdydyuxfAvvbN3S7L7VMWyXeSNJ83FLujGSND8laT6SND+9Id1rJdvcsP5b+TepX+LHmYZ1mFOS5iNJ85Gk+UgsJ+xQkuZPkjQ/JWk+kianhnWYmw3Wt3xLc+emw3xrQ9prJWk+kia/8VPqzfToqWEd5pSk+UjSfCRpPhLLCTuUpPmTJM1PSZqPpMmpYR3mZoP1Ld/S3LnpMN/akPZaSZqPpMlv/JR6Mz16aliHOSVpPpI0H0maj8Rywg4laf4kSfNTkuYjaXJqWIe52WB9y7c0d246zLc2pL1WkuYjafIbP+Xzzb9IHzMa1tnmpOkQ9huJ5Yb1mW81mg6xPvO3JJZ/G75LSZqPZJsTdsyGtPcksZxYx/Itn965e/U/8GFqWGebk6ZD2G8klhvWZ77VaDrE+szfklj+bfguJWk+km1O2DEb0t6TxHJiHcu3fHrn7tX/wIepYZ1tTpoOYb+RWG5Yn/lWo+kQ6zN/S2L5t+G7lKT5SLY5YcdsSHtPEsuJdSzf8umdj161xyw3rM+8kaT5JxLL34L3KUnz0Ujd04a3+pYTdihJ89Yb7A5z+hbp9mhsO9RI3VOS5uMbfHTFPsJyw/rMG0mafyKx/C14n5I0H43UPW14q285YYeSNG+9we4wp2+Rbo/GtkON1D0laT6+wUdX7CMsN6zPvJGk+ScSy9+C9ylJ89FI3dOGt/qWE3YoSfPWG+wOc/oW6fZobDvUSN1TkubjG1xfsQ9qcrOh6bNDjdR9kqT5kw1pbySWb7E7lpOmQ6zP3DRSd7zB7jCnhnUsJ+xQYrnBvtmQ9p58g+sr9kFNbjY0fXaokbpPkjR/siHtjcTyLXbHctJ0iPWZm0bqjjfYHebUsI7lhB1KLDfYNxvS3pNvcH3FPqjJzYamzw41UvdJkuZPNqS9kVi+xe5YTpoOsT5z00jd8Qa7w5wa1rGcsEOJ5Qb7ZkPae/INPrqSPqbVSN0nDetYbjR9dr5hQ9PfdqiRuk+SJjdJmo8kzceGps8OJdvcYN9ssD5z2pD2Tt/goyvpY1qN1H3SsI7lRtNn5xs2NP1thxqp+yRpcpOk+UjSfGxo+uxQss0N9s0G6zOnDWnv9A0+upI+ptVI3ScN61huNH12vmFD0992qJG6T5ImN0majyTNx4amzw4l29xg32ywPnPakPZO3+D6SvqwTyT/hpw2WJ85JducsEON1D01bjrMzS3b3W/3G+ym5cQ6Nzk1rMO88Q2ur6QP+0Tyb8hpg/WZU7LNCTvUSN1T46bD3Nyy3f12v8FuWk6sc5NTwzrMG9/g+kr6sE8k/4acNlifOSXbnLBDjdQ9NW46zM0t291v9xvspuXEOjc5NazDvPENPrqSPubJLenGkyTNx4a0d0puctpgfcsN62/zb2Pv/ok5JWl+aqTuk8Ry46bfuGHX/ov06JNb0o0nSZqPDWnvlNzktMH6lhvW3+bfxt79E3NK0vzUSN0nieXGTb9xw679F+nRJ7ekG0+SNB8b0t4puclpg/UtN6y/zb+Nvfsn5pSk+amRuk8Sy42bfuOGup0eGkmajyTNT0mTU5Lmp0bqjjekeyNJ81NiucF+Y0PaOyVp3tqQ9p40Und8i+YmO5RYTthpJE1uvk19MX3MSNJ8JGl+SpqckjQ/NVJ3vCHdG0manxLLDfYbG9LeKUnz1oa096SRuuNbNDfZocRywk4jaXLzbeqL6WNGkuYjSfNT0uSUpPmpkbrjDeneSNL8lFhusN/YkPZOSZq3NqS9J43UHd+iuckOJZYTdhpJk5tvU1+0j7CcWId5I0nzkTQ5JWk+kjQ/JWl+usV2mdMG61tOrGO5wT4llhN2KEnzkaT5SJqckpu8kVhOrGM5sQ5zuqFu2wOWE+swbyRpPpImpyTNR5LmpyTNT7fYLnPaYH3LiXUsN9inxHLCDiVpPpI0H0mTU3KTNxLLiXUsJ9ZhTjfUbXvAcmId5o0kzUfS5JSk+UjS/JSk+ekW22VOG6xvObGO5Qb7lFhO2KEkzUeS5iNpckpu8kZiObGO5cQ6zOmGum0P3OQmSfORbHNiHebUSN2xIe2NxHKDffpPkb5lJGk+3pDujUbqjiTNx4a0d/oW6fZImpwaqdu6oW7bAze5SdJ8JNucWIc5NVJ3bEh7I7HcYJ/+U6RvGUmajzeke6ORuiNJ87Eh7Z2+Rbo9kianRuq2bqjb9sBNbpI0H8k2J9ZhTo3UHRvS3kgsN9in/xTpW0aS5uMN6d5opO5I0nxsSHunb5Fuj6TJqZG6rRvqdnpoNLYdc0u6cUrS/JRYTtgxDeswp0bqnjakvSdJmo8NaW80Uve0Ie2NhnWYNxrWsbzhG7vMt26o2+mh0dh2zC3pxilJ81NiOWHHNKzDnBqpe9qQ9p4kaT42pL3RSN3ThrQ3GtZh3mhYx/KGb+wy37qhbqeHRmPbMbekG6ckzU+J5YQd07AOc2qk7mlD2nuSpPnYkPZGI3VPG9LeaFiHeaNhHcsbvrHLfOuG/ReX2Ac1uWncdJg3EssJO5RY3tDsbjuUNDk1rMOcGtZ5Kyfs0Ia0d2o0nQbeaSRN3vgG71wJ2Ic2uWncdJg3EssJO5RY3tDsbjuUNDk1rMOcGtZ5Kyfs0Ia0d2o0nQbeaSRN3vgG71wJ2Ic2uWncdJg3EssJO5RY3tDsbjuUNDk1rMOcGtZ5Kyfs0Ia0d2o0nQbeaSRN3vgG9ZX0ASNJ89O32N7c9g3eoSTNn9ySboxb0o3ThrQ3GtZhbhqpOxLLDetbbljf8gbumoZ1mFMjdceGbf9/1G0+QEman77F9ua2b/AOJWn+5JZ0Y9ySbpw2pL3RsA5z00jdkVhuWN9yw/qWN3DXNKzDnBqpOzZs+/+jbvMBStL89C22N7d9g3coSfMnt6Qb45Z047Qh7Y2GdZibRuqOxHLD+pYb1re8gbumYR3m1EjdsWHb/x+79l/wMdpgfeaUNPk3bLA+87cklpOm08A7jUbqjiTNR5Lmn0gsb+CuaVjHcsKOaViH+bfdsGv/RXp0bLA+c0qa/Bs2WJ/5WxLLSdNp4J1GI3VHkuYjSfNPJJY3cNc0rGM5Ycc0rMP8227Ytf8iPTo2WJ85JU3+DRusz/wtieWk6TTwTqORuiNJ85Gk+ScSyxu4axrWsZywYxrWYf5tN+zaX6T5A9ihRuqOxPIt2zvf7hPuUtLktMH6zGlD2jttSHu3EssJO43EcsP6zM2GtNe6Ydf+Is0fwA41Uncklm/Z3vl2n3CXkianDdZnThvS3mlD2ruVWE7YaSSWG9ZnbjakvdYNu/YXaf4AdqiRuiOxfMv2zrf7hLuUNDltsD5z2pD2ThvS3q3EcsJOI7HcsD5zsyHttW6o2+mhWw3rMKfEcoN9StJ83JJujKTJzS3pxukNdsdywg4laT6SbU6sY7nBfqORuk+SNB8N6zQ5JZZvqDf52Fsa1mFOieUG+5Sk+bgl3RhJk5tb0o3TG+yO5YQdStJ8JNucWMdyg/1GI3WfJGk+GtZpckos31Bv8rG3NKzDnBLLDfYpSfNxS7oxkiY3t6QbpzfYHcsJO5Sk+Ui2ObGO5Qb7jUbqPknSfDSs0+SUWL6h3nzjscHuMG8k27yBu43EctJ0iPUtJ02ngXfe8i22N7d9wl1K0vx0i+1abrDf2GB95uaGuv3pAyd2h3kj2eYN3G0klpOmQ6xvOWk6Dbzzlm+xvbntE+5SkuanW2zXcoP9xgbrMzc31O1PHzixO8wbyTZv4G4jsZw0HWJ9y0nTaeCdt3yL7c1tn3CXkjQ/3WK7lhvsNzZYn7m5oW7bA8xNss0JOyax3Gj67Gwlad5qpO6T38DuM6c3pHufaDQdg7umYZ2bnJIm30rS/HRD3bYHmJtkmxN2TGK50fTZ2UrSvNVI3Se/gd1nTm9I9z7RaDoGd03DOjc5JU2+laT56Ya6bQ8wN8k2J+yYxHKj6bOzlaR5q5G6T34Du8+c3pDufaLRdAzumoZ1bnJKmnwrSfPTDXXbHmBuEsuJdSwn7FDDOpY3cNckaX66xXabnJI0H43U/USS5qdbbJc5NZpOA+80Gjcd5pSk+Ui2+U/UbXuAuUksJ9axnLBDDetY3sBdk6T56RbbbXJK0nw0UvcTSZqfbrFd5tRoOg2802jcdJhTkuYj2eY/UbftAeYmsZxYx3LCDjWsY3kDd02S5qdbbLfJKUnz0UjdTyRpfrrFdplTo+k08E6jcdNhTkmaj2Sb/0TdtgeYm8Ry0nSI9ZlvJZbfwJtmw7Zv8E4jSfPRSN1PJE1OjdRtNVL3tCHtjTc0d7Yd8w3qK/Ywc5NYTpoOsT7zrcTyG3jTbNj2Dd5pJGk+Gqn7iaTJqZG6rUbqnjakvfGG5s62Y75BfcUeZm4Sy0nTIdZnvpVYfgNvmg3bvsE7jSTNRyN1P5E0OTVSt9VI3dOGtDfe0NzZdsw3qK+89bDdYb7VaDqG7TL/hkbqfiJJ89FI3ZE0uUksJ9ZhTonlxDrfzgk7lFhO2KHEcoN9StL8dEPd/vSBE7vDfKvRdAzbZf4NjdT9RJLmo5G6I2lyk1hOrMOcEsuJdb6dE3YosZywQ4nlBvuUpPnphrr96QMndof5VqPpGLbL/BsaqfuJJM1HI3VH0uQmsZxYhzkllhPrfDsn7FBiOWGHEssN9ilJ89MNdTs9dCux3GD/RpLmI2nyRrLNG5pd6zBvJE1ubkk3RiN1xy222+S0wfqWE3Yo2ebEOswpsfwn6jYfeEtiucH+jSTNR9LkjWSbNzS71mHeSJrc3JJujEbqjltst8lpg/UtJ+xQss2JdZhTYvlP1G0+8JbEcoP9G0maj6TJG8k2b2h2rcO8kTS5uSXdGI3UHbfYbpPTButbTtihZJsT6zCnxPKf2LV/+eWXX/5Bfn+wfvnllz+G3x+sX3755Y/h9wfrl19++WP4/cH65Zdf/hh+f7B++eWXP4bfH6xffvnlj+H3B+uXX375Y/j9wfrll1/+GH5/sH755Zc/ht8frF9++eUP4f/9v/8P5pFnNVi538QAAAAASUVORK5CYII=" id="ctl00_ContenedorContenidoSeccion_citaDetalle1_imgQr" alt="Imagen código QR para capturar con un dispositivo móvil" class="center-block imgQr" title="Imagen código QR para capturar con un dispositivo móvil">
+                </div>
+            </div>
+            <!--Pie-->
+            <div class="modal-footer justify-content-center">
+                <a href="#" data-dismiss="modal" class="btn btn-rojo" title="Cerrar ventana">Cerrar</a>
+            </div>
+        </div>
+    </div>
+</div>
+	
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

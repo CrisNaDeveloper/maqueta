@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Donación de médula ósea</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2>Donación de médula ósea</h2>
+    </div>
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Acceso</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<h3>Formulario online para donantes de progenitores hematopoyéticos</h3>
+
+		<div class="divTableMsgInfoRojo" role="dialog" aria-label="Información del servicio">
+			<p>Este servicio está dirigido a los ciudadanos de la Comunidad de Madrid. Si usted
+			pertenece a otra Comunidad infórmese de cuál es su centro correspondiente en el
+			apartado de Donación de Médula Ósea de la Organización Nacional de Trasplantes.</p>
+
+			<p>Los requisitos imprescindibles para registrarse en España como donante de progenitores hematopoyéticos de médula ósea son tener entre 18 y 40 años, pesar 50 kilos o más, y gozar de buen estado de salud.</p>
+		</div>
+
+		<form method="GET" action="#">
+
+    <div id="dvDatos">
+        <div class="panel_info alert alert-info" role="dialog" aria-label="Mensaje de información">
+            <div class="row">
+                <div class="col-sm-1 hidden-xs">
+                    <img src="img/icono-info.svg" alt="información" title="icono de mensaje de información" />
+                </div>
+                <div class="col-xs-12 col-sm-11 panel_texto">
+                    <p>Los campos precedidos de * son obligatorios y deberá rellenarlos en su totalidad
+                        antes de pulsar el botón Enviar.</p>
+                </div>
+            </div>
+        </div>
+        <div id="PanelAvisos2_PanelError" class="panel_ alert alert-danger">
+	
+    <div class="row" role="alert" aria-label="Aviso de errores" aria-live="assertive">
+    <div class="col-sm-1 hidden-xs"><img id="PanelAvisos2_ImagePanelError" title="Icono de error" src="img/icono-error.png" alt="¡Errror!" /></div>
+    <div  class="col-xs-12 col-sm-11 panel_texto">
+     <span id="PanelAvisos2_LabelPanelError"><p>Los siguientes campos son obligatorios: <br/>DNI - NIE, Fecha de nacimiento, Nombre, Apellidos, Domicilio, Municipio, Provincia, Código postal, Teléfono de contacto, Teléfono móvil, Correo electrónico, Altura, Peso.</p></span>
+            </div>
+        </div>
+
+</div>
+
+		
+        <div class="panel">
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos de Identificación del donante:</legend>
+                <div class="col-xs-12 panel-formulario">
+                        <div class="col-xs-12 col-sm-5 col-md-6 form-group">
+                            <label for="txtdni" id="lbltxtdni" class="control-label col-sm-5 col-md-4"><span class="obligatorio">*</span> <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número de identificación de extranjero">NIE</abbr>:</label>
+                            <div class="col-sm-7 col-md-6">
+                                <input name="txtdni" type="text" maxlength="9" id="txtdni" title="Introduzca los ocho dígitos y la letra del documento nacional de identidad del donante,
+o la letra, los siete digitos y el dígito de control de su número de identificación de extranjero" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-7 col-md-6 form-group">
+                            <label for="txtFechaNacimiento" class="control-label labelWrap-sm col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                                <span class="obligatorio">*</span> Fecha de nacimiento (18&nbsp;a&nbsp;40&nbsp;años):</label>
+                            <div class=" col-sm-5 col-md-5 col-lg-4">
+                                <div class="input-group date campoFechaLanza" id="dpFechaNac">
+                                    <input name="txtFechaNacimiento" type="text" id="txtFechaNacimiento" title="Introduzca la fecha de nacimiento del donante,
+cuya edad comprenderá entre los 18 y 40 años" class="form-control datepicker" placeholder="dd/mm/aaaa" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-md-6 form-group">
+                            <label for="txt_nombre" id="lbltxt_nombre" class="control-label col-sm-5 col-md-4"><span class="obligatorio">*</span> Nombre:</label>
+                            <div class="col-sm-7 col-md-6">
+                                <input name="txt_nombre" type="text" maxlength="50" id="txt_nombre" title="Introduzca el nombre del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-6 form-group">
+                            <label for="txtApell1" id="lbltxtApell1" title="Introduzca sus apellidos" class="control-label col-sm-3 col-md-3"><span class="obligatorio">*</span> Apellidos:</label>
+                            <div class="col-sm-9 col-md-9">
+                                <input name="txtApell1" type="text" maxlength="100" id="txtApell1" title="Introduzca los apellidos del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div id="divHospitales" class="col-sm-12 col-md-6 form-group">
+                            <label for="txtDomicilio" id="lbltxtDomicilio" class="control-label col-sm-2 col-md-4"><span class="obligatorio">*</span> Domicilio:</label>
+                            <div class="col-sm-10 col-md-8">
+                                <input name="txtDomicilio" type="text" maxlength="100" id="txtDomicilio" title="Introduzca el domincilio del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-md-6 form-group">
+                            <label for="txtPoblacion" id="lbltxtPoblacion" class="control-label col-sm-5 col-md-3"><span class="obligatorio">*</span> Municipio:</label>
+                            <div class="col-sm-7 col-md-9">
+                                <input name="txtPoblacion" type="text" maxlength="50" id="txtPoblacion" title="Introduzca el municipio del domicilio del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-6 form-group">
+                            <label for="ddlProvincia" id="lbltxtProvincia" class="control-label col-sm-3 col-md-4"><span class="obligatorio">*</span> Provincia:</label>
+                            <div class="col-sm-9 col-md-6">
+                                <select name="ddlProvincia" id="ddlProvincia" title="Seleccione la provincia del domicilio del donante" class="form-control" aria-required="true">
+	<option selected="selected" value="0">Seleccione una provincia</option>
+	<option value="01">ALAVA</option>
+	<option value="02">ALBACETE</option>
+	<option value="03">ALICANTE</option>
+	<option value="04">ALMERIA</option>
+	<option value="33">ASTURIAS</option>
+	<option value="05">AVILA</option>
+	<option value="06">BADAJOZ</option>
+	<option value="07">BALEARES</option>
+	<option value="08">BARCELONA</option>
+	<option value="09">BURGOS</option>
+	<option value="10">CACERES</option>
+	<option value="11">CADIZ</option>
+	<option value="39">CANTABRIA</option>
+	<option value="12">CASTELLON</option>
+	<option value="51">CEUTA</option>
+	<option value="13">CIUDAD REAL</option>
+	<option value="14">CORDOBA</option>
+	<option value="15">CORU&#209;A</option>
+	<option value="16">CUENCA</option>
+	<option value="17">GERONA</option>
+	<option value="18">GRANADA</option>
+	<option value="19">GUADALAJARA</option>
+	<option value="20">GUIPUZCOA</option>
+	<option value="21">HUELVA</option>
+	<option value="22">HUESCA</option>
+	<option value="23">JAEN</option>
+	<option value="26">LA RIOJA</option>
+	<option value="35">LAS PALMAS</option>
+	<option value="24">LEON</option>
+	<option value="25">LERIDA</option>
+	<option value="27">LUGO</option>
+	<option value="28">MADRID</option>
+	<option value="29">MALAGA</option>
+	<option value="52">MELILLA</option>
+	<option value="30">MURCIA</option>
+	<option value="31">NAVARRA</option>
+	<option value="32">ORENSE</option>
+	<option value="34">PALENCIA</option>
+	<option value="36">PONTEVEDRA</option>
+	<option value="37">SALAMANCA</option>
+	<option value="40">SEGOVIA</option>
+	<option value="41">SEVILLA</option>
+	<option value="42">SORIA</option>
+	<option value="43">TARRAGONA</option>
+	<option value="38">TENERIFE</option>
+	<option value="44">TERUEL</option>
+	<option value="45">TOLEDO</option>
+	<option value="46">VALENCIA</option>
+	<option value="47">VALLADOLID</option>
+	<option value="48">VIZCAYA</option>
+	<option value="49">ZAMORA</option>
+	<option value="50">ZARAGOZA</option>
+
+</select>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-md-6 form-group">
+                            <label for="txtCodPos" id="lbltxtCodPos" class="control-label col-sm-3 col-md-8"><span class="obligatorio">*</span> Código postal:</label>
+                            <div class="col-sm-3 col-md-4">
+                                <input name="txtCodPos" type="text" maxlength="5" id="txtCodPos" title="Introduzca el código postal del domicilio del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-md-6 form-group">
+                            <label for="txtTelefConta" id="lbltxtTelefConta" class="control-label col-sm-5 col-md-4"><span class="obligatorio">*</span> Teléfono:</label>
+                            <div class="col-sm-5 col-md-6">
+                                <input name="txtTelefConta" type="text" maxlength="9" id="txtTelefConta" title="Introduzca el teléfono del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-6 form-group">
+                            <label for="txtMovil" id="lbltxtMovil" class="control-label col-sm-8 col-md-8"><span class="obligatorio">*</span> Teléfono móvil:</label>
+                            <div class="col-sm-4 col-md-4">
+                                <input name="txtMovil" type="text" maxlength="9" id="txtMovil" title="Introduzca el teléfono móvil del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="txtEmail" id="lbltxtEmail" class="control-label col-sm-3 col-md-4"><span class="obligatorio">*</span> Correo electrónico:</label>
+                            <div class="col-sm-9 col-md-8">
+                                <input name="txtEmail" type="text" maxlength="150" id="txtEmail" title="Introduzca el correo electrónico del donante" class="form-control" aria-required="true" />
+                                <div class="validadorMail">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </fieldset>
+			
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos complementarios:</legend>
+                <div class="col-xs-12 panel-formulario">
+                        <div class="col-xs-6  minw115 form-group">
+                            <label for="txtAltura" id="lbltxtAltura" class="control-label col-sm-6 col-md-6"><span class="obligatorio">*</span> Altura(<abbr title="centimetros">cm</abbr>):</label>
+                            <div class="col-sm-3 col-md-4">
+                                <input name="txtAltura" type="text" maxlength="3" id="txtAltura" title="Introduzca la altura en centímetros del donante" class="form-control" aria-required="true" />
+                            </div>
+						</div>
+                        <div class="col-xs-6 minw115 form-group">
+                            <label for="txtPeso" id="lbltxtPeso" class="control-label col-sm-6 col-md-6"><span class="obligatorio">*</span> Peso(<abbr title="kilogramos">kg</abbr>):</label>
+                            <div class="col-sm-3 col-md-4">
+                                <input name="txtPeso" type="text" maxlength="3" id="txtPeso" title="Introduzca el peso en kilogramos del donante" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 form-group">
+                                <div class="col-xs-12"><label for="txtObservaciones" id="lbltxtObservaciones" class="control-label text-left">Le agradecemos indique a continuación cualquier enfermedad, operación quirúrgica
+                                    o alergia que tenga o haya tenido por poco importante que le parezca; así como las
+                                    medicaciones que ha tomado de forma habitual y prolongada:</label><!--/div>
+                            
+                               <div class="col-xs-12"--> <textarea name="txtObservaciones" rows="2" cols="20" id="txtObservaciones" title="Introduzca cualquier enfermedad, operación quirúrgica o alergia
+que tenga o haya tenido por poco importante que le parezca; así
+como las medicaciones que ha tomado de forma habitual
+y prolongada" class="form-control">
+</textarea></div>
+                            </div>
+                        
+                        <div class="col-xs-12 form-group">
+                                <div class="col-xs-12"><label for="txtDudas" id="lbltxtDudas" class="control-label text-left">¿Tiene alguna duda sobre la donación de médula después de la lectura detenida de
+                                    la revista informativa?</label><!--/div>
+                            <div class="col-xs-12"-->
+                                <textarea name="txtDudas" rows="2" cols="20" id="txtDudas" title="Introduzca sus dudas sobre la donación de médula" class="form-control">
+</textarea></div>
+                        </div>
+            </fieldset>
+            <div class="form-group text-center panel-botonera">
+                <input type="submit" name="btnCancelar" value="Cancelar" id="btnCancelar" title="Cancelar envio de formulario" class="btn btn-gris" />
+                <input type="submit" name="btnEnviar" value="Enviar" id="btnEnviar" title="Enviar datos de identificación del donante" class="btn btn-rojo" />
+            </div>
+        </div>
+    </div>
+
+		</form>
+
+	</main>
+
+	
+	
+
+
+	<div class="container" role="region" aria-label="Protección de datos">
+	<div class="contenedorLegal">
+	  <div class="cabeceraLegal">
+		<h4>Información básica sobre Protección de Datos</h4>
+	  </div>
+	  <div class="panel-body">
+			<div class="col-xs-12 col-sm-3"><strong>Responsable</strong></div>
+			<div class="col-xs-12 col-sm-9">Centro de Transfusión de la Comunidad de Madrid.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Finalidad</strong></div>
+			<div class="col-xs-12 col-sm-9">Gestión de la solicitud de donante de médula ósea.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Legitimación</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								La prestación del consentimiento del solicitante (<abbr title="Reglamento General de Protección de Datos">RGPD</abbr> 6.1.a y c) y obligación legal.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Destinatarios</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								No se cederán datos salvo obligación legal.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Derechos</strong></div>
+			<div class="col-xs-12 col-sm-9">Acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, cuando sean aplicables.</div>
+			<div class="col-xs-12 col-sm-3"><strong>Información adicional</strong></div>
+			<div class="col-xs-12 col-sm-9">Puede consultar la información adicional y detallada sobre Protección de Datos en el siguiente enlace: <a href="proteccion_de_datos.aspx" title="Ver más detalle">Aquí</a>.</div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container contenedorContacto" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-12 col-sm-2 col-md-1">
+					<img alt="Este icono simboliza un sobre de correo electrónico" src="images/ico_mail.gif" title="Imagen de contacto">
+				</div>
+				<div class="col-xs-12 col-sm-10 col-md-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012 o el 900 30 35 30, teléfono de información del Centro de Transfusión.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

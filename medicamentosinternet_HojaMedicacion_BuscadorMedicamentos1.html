@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Medicamentos - Hoja de medicación personalizada</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Medicamentos - Consultas <em>online</em></h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">Hoja de medicación personalizada</a></li>
+						<li>Inicio hoja</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Hoja de medicación personalizada</h3>
+	
+          
+
+    <div class="divTableMsgInfoRojo" aria-label="información del servicio" role="dialog">
+        <p>Construya su hoja de medicación personalizada agregando medicamentos mediante este buscador.</p>
+        <p>La información de este buscador se actualiza periódicamente. No obstante, si encuentra a faltar algún medicamento o quiere hacer algún comentario o sugerencia, puede enviar un correo electrónico a la dirección <a href='mailto:proyectos.farmacia@salud.madrid.org' class='link'>proyectos.farmacia@salud.madrid.org</a></p>
+        <p>También puede acceder al <a href='https://www.msssi.gob.es/profesionales/nomenclator.do' target='_blank' title='Nomenclátor de Facturación del Ministerio de Sanidad - Información sobre los productos incluidos en la prestación farmacéutica del SNS ' class='link'>Nomenclátor de Facturación del Ministerio de Sanidad</a> para ver la información sobre los productos dispensables en oficinas de farmacias incluidos en la prestación farmacéutica del Sistema Nacional de Salud.</p>
+    </div>
+
+    
+
+    <h4>Información para: mi</h4>        
+
+    <div class="alert alert-info" role="dialog" aria-label="mensaje informativo">
+        <div class="row">
+            <div class="col-sm-1 hidden-xs">
+                <img title="Información" src="../img/icono-info.png" alt="Icono con una i latina que acompaña a un texto informativo"></div>
+            <div class="col-xs-12 col-sm-11">
+                <p>Teclee el nombre comercial o el principio activo completo o la parte que conozca en el primer campo del buscador, o el código nacional del medicamento en el segundo campo.</p>
+            </div>
+        </div>
+    </div>
+	
+	
+        <!-- Datos del medicamento -->
+        <div class="panel">
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos del medicamento</legend>
+                <div class="col-xs-12 panel-formulario pastillas">
+                    <!-- Nombre del medicamento -->
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtNombre" id="ctl00_ContenedorContenidoSeccion_labelBuscador" class="col-sm-4 col-md-3 control-label">
+                            Nombre del medicamento:</label>
+                        <div class="col-sm-6 col-md-7">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtNombre" type="text" id="ctl00_ContenedorContenidoSeccion_txtNombre" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Código nacional del medicamento -->
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtCodigo" id="ctl00_ContenedorContenidoSeccion_Label1" class="col-sm-4 col-md-3 control-label">
+                            Código nacional del medicamento:</label>
+                        <div class="col-sm-6 col-md-7">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtCodigo" type="text" id="ctl00_ContenedorContenidoSeccion_txtCodigo" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+                <div id="ctl00_ContenedorContenidoSeccion_divBtnConfirmar" class="div_confirmar text-center panel-botonera">
+                   <input type="submit" name="ctl00$ContenedorContenidoSeccion$btnBuscar3" value="Buscar" id="ctl00_ContenedorContenidoSeccion_btnBuscar3" title="Boton Buscar" class="btn btn-primary" />
+                </div>
+            
+        </div>
+
+		</form>
+
+	</main>
+
+	
+<div class="container" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-0 col-sm-1">
+					<span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

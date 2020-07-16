@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Medicamentos - Sugerencias</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Medicamentos - Consultas <em>online</em></h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li>Opinión</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Sugerencias</h3>
+
+
+        <h4 class="blue col-xs-12">Su opinión nos interesa</h4>
+        <div class="clearfix">
+        </div>
+        <div id="ctl00_ContenedorContenidoSeccion_pnlFormulario" class="panel">
+	
+            <fieldset class="form-horizontal panel-body">
+                <legend class="row col-xs-12">Datos básicos</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtEmail" id="ctl00_ContenedorContenidoSeccion_labeltxtEmail" class="col-sm-6 col-md-5 col-lg-4 control-label label2l">¿Desea que le contestemos por correo electrónico?, si es así indíquenoslo:</label>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtEmail" type="text" id="ctl00_ContenedorContenidoSeccion_txtEmail" title="Introduzca su correo electrónico" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtDireccion" id="ctl00_ContenedorContenidoSeccion_labeltxtDireccion" class="col-sm-6 col-md-5 col-lg-4 control-label label2l">Si desea que le contestemos por correo ordinario, indiquenos su dirección postal:</label>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtDireccion" type="text" id="ctl00_ContenedorContenidoSeccion_txtDireccion" title="Introduzca su dirección postal" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtMunicipio" id="ctl00_ContenedorContenidoSeccion_LabeltxtMunicipio" class="col-sm-4 control-label">Municipio:</label>
+                        <div class="col-sm-8">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtMunicipio" type="text" id="ctl00_ContenedorContenidoSeccion_txtMunicipio" title="Introduzca el municipio donde reside" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtPais" id="ctl00_ContenedorContenidoSeccion_LabeltxtPais" class="col-sm-4 control-label">Pais:</label>
+                        <div class="col-sm-8">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtPais" type="text" id="ctl00_ContenedorContenidoSeccion_txtPais" title="Introduzca el pais de residencia" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-horizontal panel-body">
+                <legend class="hidden">Su opinión nos interesa</legend>
+                <div class="col-xs-12 panel-formulario">
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtEdad" id="ctl00_ContenedorContenidoSeccion_LabeltxtEdad" class="col-sm-6 col-md-5 col-lg-4 control-label">Edad (años):</label>
+                        <div class="col-sm-2 col-md-1">
+                            <input name="ctl00$ContenedorContenidoSeccion$txtEdad" type="text" id="ctl00_ContenedorContenidoSeccion_txtEdad" title="Introduzca su edad en años" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-sm-6 col-md-5 col-lg-4 control-label">¿Ha encontrado la información que necesitaba?</span>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <label class="radio-inline">
+                                <input id="ctl00_ContenedorContenidoSeccion_rbtInfoEncontradaSI" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtInfoEncontrada" value="rbtInfoEncontradaSI" checked="checked" />Si
+                            </label>
+                            <label class="radio-inline">
+                                <input id="ctl00_ContenedorContenidoSeccion_rbtInfoEncontradaNO" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtInfoEncontrada" value="rbtInfoEncontradaNO" />No
+                            </label>
+                            <label class="radio-inline">
+                                <input id="ctl00_ContenedorContenidoSeccion_rbtInfoEncontradaPARTE" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtInfoEncontrada" value="rbtInfoEncontradaPARTE" />En
+                            parte
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-sm-6 col-md-5 col-lg-4 control-label">¿Le ha resultado útil esta información?</span>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <label class="radio-inline">
+                                <input id="ctl00_ContenedorContenidoSeccion_rbtInfoUtilSI" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtInfoUtil" value="rbtInfoUtilSI" checked="checked" />Si
+                            </label>
+                            <label class="radio-inline">
+                                <input id="ctl00_ContenedorContenidoSeccion_rbtInfoUtilNO" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtInfoUtil" value="rbtInfoUtilNO" />No
+                            </label>
+                            <label class="radio-inline">
+                                <input id="ctl00_ContenedorContenidoSeccion_rbtInfoUtilPARTE" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtInfoUtil" value="rbtInfoUtilPARTE" />En
+                            parte
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtApartado" id="ctl00_ContenedorContenidoSeccion_LabeltxtApartado" class="col-sm-6 col-md-5 col-lg-4 control-label">¿Hay algún apartado que le gustaría que incluyéramos?</label>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <div class="radio">
+                                <label>
+                                    <input id="ctl00_ContenedorContenidoSeccion_rbtApartadoNO" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtApartado" value="rbtApartadoNO" checked="checked" />
+                                    NO, es suficiente con la información disponible.
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input id="ctl00_ContenedorContenidoSeccion_rbtApartadoSI" type="radio" name="ctl00$ContenedorContenidoSeccion$rbtApartado" value="rbtApartadoSI" />
+                                    Si, indique cual:
+                                </label>
+                            </div>
+                            <textarea name="ctl00$ContenedorContenidoSeccion$txtApartado" rows="2" cols="20" id="ctl00_ContenedorContenidoSeccion_txtApartado" title="Indique el apartado que le gustaría que incluyéramos" class="form-control">
+</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtErrores" id="ctl00_ContenedorContenidoSeccion_LabeltxtErrores" class="col-sm-6 col-md-5 col-lg-4 control-label">Si ha advertido algún error en alguna de las págimas que ha consultado, por favor,
+                        ayúdenos a corregirlo:</label>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <textarea name="ctl00$ContenedorContenidoSeccion$txtErrores" rows="2" cols="20" id="ctl00_ContenedorContenidoSeccion_txtErrores" title="Indique si ha advertido algún error en alguna página" class="form-control">
+</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ctl00_ContenedorContenidoSeccion_txtSugerencia" id="ctl00_ContenedorContenidoSeccion_LabeltxtSugerencia" class="col-sm-6 col-md-5 col-lg-4 control-label">Comentarios o sugerencias:</label>
+                        <div class="col-sm-6 col-md-7 col-lg-8">
+                            <textarea name="ctl00$ContenedorContenidoSeccion$txtSugerencia" rows="2" cols="20" id="ctl00_ContenedorContenidoSeccion_txtSugerencia" title="Induque comentarios o sugerencias" class="form-control">
+</textarea>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="panel-botonera text-center">
+                <div id="ctl00_ContenedorContenidoSeccion_divBtnEnviar" class="div_confirmar">
+                    <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$btnInicio1','')" id="ctl00_ContenedorContenidoSeccion_btnInicio1" type="button" class="btn btn-gris" title="Volver">
+                        Volver a 'Su opinión'
+                    </button>
+                    <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$btnBuscar','')" id="ctl00_ContenedorContenidoSeccion_btnBuscar" type="button" class="btn btn-rojo" title="Enviar">
+                        Enviar
+                    </button>
+                </div>
+                
+            </div>
+        
+</div>
+        
+    </form>
+
+
+	</main>
+
+	
+
+
+<div class="container" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-0 col-sm-1">
+					<span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lista de Espera</title>
+
+    <meta name="description" content="Medicamentos Internet" />
+    <meta name="keywords" content="medicamentos, sanidad, madrid" />
+    <meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+
+    <meta name="apple-mobile-web-app-title" content="Medicamentos">
+    <meta name="application-name" content="Medicamentos">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sanidad.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.min.css">
+
+	<!--
+	<link rel="manifest" href="site_webmanifest.json">
+	    <asp:ContentPlaceHolder ID="site_webmanifiest" runat="server"></asp:ContentPlaceHolder>
+	-->
+
+    <!-- FAVICON -->
+	<!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon144.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon114.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon72.png">
+	<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicon57.png">
+	<!-- basic favicon -->
+	<link rel="icon" href="images/favicon32.png" />
+    <!--link rel="icon" type="image/x-icon" href="images/favicon.ico"  /-->
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <h2>Lista de Espera</h2>
+    </div>
+    <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Su situación actual <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seleccione y elija...<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+	</ul>
+
+    </div-->
+  </div>
+</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+
+	<nav class="container-fluid">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9" aria-label="Migas de pan">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver"><i aria-hidden="true">&lt;</i> Volver</a></li>
+						<li><i aria-hidden="true">|</i></li>
+						<li><strong>Está en:</strong></li>
+						<li>Activos en Lista de Espera de Pruebas Diagnósticas y Terapéuticas</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right" aria-label="Tamaño de fuente">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> <i aria-hidden="true">|</i>
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+
+
+	<main class="container">
+
+		<form method="GET" action="#">
+
+			
+	<h3>Activos en Lista de Espera de Pruebas Diagnósticas y Terapéuticas</h3>
+
+
+
+<div class="panel_info alert alert-info" role="dialog" aria-label="información">
+    <div class="row">
+        <div class="col-sm-1 hidden-xs"><img src="../img/ico_information.gif" alt="Información" title="icono de mensaje de información"></div>
+        <div class="col-xs-12 col-sm-11 panel_texto">
+            <p>Todos los campos son obligatorios</p>
+            <ul>
+            <li>NOTA: Los datos de Junio, Julio y Agosto 2018 de H. Ramón y Cajal y H. La Paz, son parciales por motivos técnicos.</li>
+            <li>NOTA: No hay datos de Marzo 2019 del H. Príncipe de Asturias por motivos técnicos.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+
+    <div class="panel">
+        <fieldset class="form-horizontal panel-body" aria-required="true" aria-label="Datos de consulta">
+            <legend class="row col-xs-12">Datos de consulta:</legend>
+            <div class="col-xs-12 panel-formulario fondoLEQ">
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <label for="ContenedorContenidoSeccion_ddlHospital" id="ContenedorContenidoSeccion_lblddlHospital" class="control-label col-sm-3 col-md-2">
+                            Hospital:</label>
+                        <div class="col-sm-8 col-md-7 col-lg-8">
+                            <select name="ctl00$ContenedorContenidoSeccion$ddlHospital" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$ddlHospital\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContenedorContenidoSeccion_ddlHospital" title="Seleccione un Hospital" class="form-control" aria-required="true" aria-label="Hospital">
+	<option selected="selected" value=""></option>
+	<option value="2552">FUNDACION JIMENEZ DIAZ</option>
+	<option value="2549">HOSPITAL CENTRAL DE LA CRUZ ROJA</option>
+	<option value="3026">HOSPITAL DE COLLADO VILLALBA</option>
+	<option value="2560">HOSPITAL DE EL ESCORIAL</option>
+	<option value="2555">HOSPITAL DE FUENLABRADA</option>
+	<option value="2540">HOSPITAL DE MOSTOLES</option>
+	<option value="2828">HOSPITAL DE TORREJON</option>
+	<option value="2663">HOSPITAL DEL SURESTE - ARGANDA</option>
+	<option value="2665">HOSPITAL DEL TAJO - ARANJUEZ</option>
+	<option value="2541">HOSPITAL FUNDACION DE ALCORCON</option>
+	<option value="2628">HOSPITAL GOMEZ ULLA</option>
+	<option value="2659">HOSPITAL INFANTA ELENA</option>
+	<option value="2662">HOSPITAL INFANTA LEONOR - VALLECAS</option>
+	<option value="2547">HOSPITAL INFANTIL UNIVERSITARIO NI&#209;O JESUS</option>
+	<option value="2829">HOSPITAL REY JUAN CARLOS</option>
+	<option value="2557">HOSPITAL UNIVERSITARIO 12 DE OCTUBRE</option>
+	<option value="2546">HOSPITAL UNIVERSITARIO CLINICO SAN CARLOS</option>
+	<option value="2558">HOSPITAL UNIVERSITARIO DE GETAFE</option>
+	<option value="2548">HOSPITAL UNIVERSITARIO DE LA PRINCESA</option>
+	<option value="2661">HOSPITAL UNIVERSITARIO DEL HENARES</option>
+	<option value="2550">HOSPITAL UNIVERSITARIO GREGORIO MARA&#209;ON</option>
+	<option value="2664">HOSPITAL UNIVERSITARIO INFANTA CRISTINA</option>
+	<option value="2660">HOSPITAL UNIVERSITARIO INFANTA SOFIA</option>
+	<option value="2539">HOSPITAL UNIVERSITARIO LA PAZ</option>
+	<option value="2556">HOSPITAL UNIVERSITARIO PRINCIPE DE ASTURIAS</option>
+	<option value="2712">HOSPITAL UNIVERSITARIO PUERTA DE HIERRO MAJADAHONDA</option>
+	<option value="2559">HOSPITAL UNIVERSITARIO RAMON Y CAJAL</option>
+	<option value="2545">HOSPITAL UNIVERSITARIO SANTA CRISTINA</option>
+	<option value="2544">HOSPITAL UNIVERSITARIO SEVERO OCHOA</option>
+
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <label for="ContenedorContenidoSeccion_ddlEspecialidad" id="ContenedorContenidoSeccion_lblddlEspecialidad" class="control-label col-sm-3 col-md-2">
+                            Prueba:</label>
+                        <div class="col-sm-8 col-md-7 col-lg-8">
+                            <select name="ctl00$ContenedorContenidoSeccion$ddlEspecialidad" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContenedorContenidoSeccion$ddlEspecialidad\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContenedorContenidoSeccion_ddlEspecialidad" disabled="disabled" title="Seleccione una prueba" class="aspNetDisabled form-control" aria-required="true" aria-label="Pruebas">
+
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <fieldset aria-required="true" role="radiogroup" aria-label="Intervalo de búsqueda" class="col-xs-12">
+                        <legend Class="control-label col-sm-3 col-md-2">Intervalo:</legend>
+                        <div class="col-sm-8 col-md-7 col-lg-8">
+						    <label for="Radio1"><input id="Radio1" type="radio" name="intervaloAA" value="2" />
+						    mes</label>
+						    <label for="Radio2"><input id="Radio2" type="radio" name="intervaloAA" value="1" />
+						    semana</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <label for="ContenedorContenidoSeccion_ddlFecha" id="ContenedorContenidoSeccion_lblddlFecha" class="control-label col-sm-3 col-md-2">
+                            Fecha:</label>
+                        <div class="col-sm-8 col-md-7 col-lg-8">
+                            <select name="ctl00$ContenedorContenidoSeccion$ddlFecha" id="ContenedorContenidoSeccion_ddlFecha" disabled="disabled" title="Seleccione una fecha" class="aspNetDisabled form-control">
+
+</select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group text-center panel-botonera">
+            <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$Button1','')" id="ContenedorContenidoSeccion_Button1" type="button" class="btn btn-gris" title="Reiniciar formulario">
+                Reiniciar
+            </button>
+            <button onclick="__doPostBack('ctl00$ContenedorContenidoSeccion$btnEnviar','')" id="ContenedorContenidoSeccion_btnEnviar" type="button" class="btn btn-rojo" title="Buscar información">
+                Buscar
+            </button>
+        </div>
+        
+    </div>
+    
+
+
+
+        <div id="ContenedorContenidoSeccion_pnlResultado" class="resultadoBuscador">	
+            <div class="row">
+                <div class="col-xs-12 col-sm-offset-2 col-sm-10 col-md-offset-3 col-md-9 col-lg-offset-4 col-lg-8">
+                    <span id="ContenedorContenidoSeccion_lblIndicadores"><abbr title="Número">Nº</abbr> total de pacientes en la lista de espera:  109   <br />Demora media:  5,24   <br /></span>
+                </div>
+            </div>
+		</div>
+
+
+
+</form>
+
+</main>
+
+<div class="container" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-0 col-sm-1">
+					<span role="img" aria-label="Contacte con nosotros">
+						<span class="fas fa-envelope-open-text" role="img" aria-hidden="true"></span>
+						<span class="fas fa-reply" role="img" aria-hidden="true"></span>
+					</span>
+				</div>
+				<div class="col-xs-12 col-sm-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid" aria-label="pie de página">
+	  <div class="row">
+	  <div class="col-xs-12 col-sm-6">
+		<a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank" title="Icono de conformidad con el Nivel Doble A, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI (se abre en ventana nueva)"><img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble AA, de las Directrices de Accesibilidad para el Contenido Web 2.1 del W3C-WAI"></a> <i aria-hidden="true">|</i>
+		<a title="Accesibilidad" href="./Accesibilidad.aspx">Accesibilidad</a> <i aria-hidden="true">|</i><a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a></div>
+	  <div class="col-xs-12 col-sm-6">Copyright <i title="copyright" aria-hidden="true">©</i> Comunidad de Madrid </div>
+	  </div>
+	</footer>
+
+<!-- Aquí irían las modales -->	
+
+
+
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/locales/es.js"></script>
+	<script src="js/datepicker.js"></script>	
+
+<script>
+
+function resizeText(multiplier) {
+    var p = 100;
+    if (multiplier != 0) {
+        p = document.body.style.fontSize;
+        if (p == '' || p == undefined) {
+            p = 100;
+        }
+    }
+    var offset = (parseFloat(p) + multiplier) + "%";
+    document.body.style.fontSize = offset;
+}
+
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+
+document.getElementById("demo2").innerHTML = diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
+
+
+var n = f.toLocaleDateString();
+
+	(function($) {
+            $(function() {
+                $(".datepicker")
+                    .filter(function() {
+                        return !this.disabled && !this.readOnly;
+                    })
+                    .datepicker({ 
+						markup: 'bootstrap3',
+						gainFocusOnConstruction: false,
+					});
+            });
+        })(this.jQuery);
+
+$('#date11,#date12').datepicker({
+	theme: 'bootstrap',
+                    inputFormat: 'dd/MM/yyyy',
+                    outputFormat: 'dd/MM/yyyy',
+	modal: true,
+	min: n,
+	daysOfWeekDisabled: [0,6],
+
+});
+
+
+</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+﻿<!doctype html>
+
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Cita para Vacunación Internacional - Acceso</title>
+
+	<meta name="description" content="Servicio online para solicitar una cita para vacunación internacional. Se puede consultar, cambiar o anular la cita para la vacuna." />
+	<meta name="keywords" content="vacuna,vacunación internacional, unidad del viajero" />
+	<meta name="author" content="Consejería de Sanidad de la Comunidad de Madrid" />
+ 
+    
+    <!-- FAVICON -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    
+    <!-- Configuración de inicio -->
+    <link rel="manifest" href="/site_webmanifest.json" />
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+	
+	<meta name="apple-mobile-web-app-title" content="Vacunación Internacional" />
+	<meta name="application-name" content="Vacunación Internacional" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="theme-color" content="#ffffff" />
+    
+    
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/sanidad.css" rel="stylesheet" media="screen" />
+	<link href="css/all.min.css" rel="Stylesheet" media="all" />
+	<link href="webfonts/fontawesome.css" rel="stylesheet" type="text/css" />
+	<link href="css/datepicker.css" rel="stylesheet" type="text/css" />
+    
+    <!-- JS -->
+    <script src="Bootstrap/js/modernizr.js"></script>
+    
+    <!-- jQuery (necesario para los plugins de Bootstrap's y otros) -->
+
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Incluye todos los componentes compilados o archivos individuales según sea necesario -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <script src="Bootstrap/js/moment-with-locales.js"></script>
+    <script src="Bootstrap/js/bootstrap-datetimepicker.min.js" ></script>
+    <script src="Bootstrap/js/bootstrap-waiting.js" ></script>
+    
+   
+    <!--Otros javascripts -->
+    <script src="js/locales/es.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/js.js"></script>
+
+</head>
+<body>
+	<header class="container-fluid">
+		<div class="row" id="cabecera" role="banner">
+			<div class="col-xs-2 col-sm-3 col-md-4 logosalud" aria-label="logotipo Salud Madrid">
+				<a href="#"><img src="images/logo_salud.svg"></a>
+			</div>
+			<div class="col-xs-10 col-sm-9 col-md-8">
+				<h1 class="text-right">
+				Servicio Madrileño de Salud<br />
+				<span>Consejería de Sanidad </span>
+				</h1>
+			</div>
+		</div>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h2>Vacunación Internacional</h2>
+			</div>
+		  </div>
+		</nav>
+		<div class="row barraAcceso">
+				<div class="col-xs-12">
+				<div class="fechaActual" id="demo2"></div>
+					<div class="btn-group pull-right" role="group">
+						<a id="ctl00_linkSession" title="Ir a la página de acceso" class="btn btn-default" href="#">Acceder</a>
+					</div>
+				</div>
+		</div>
+	</header>	
+	<nav class="container-fluid" aria-label="Migas de pan">
+		<div class="row barraMigas hidden-xs">
+				<div class="col-xs-12 col-sm-9">
+					<ul class="breadcrumb">
+						<li><a href="javascript:history.back()" title="Volver">&lt; Volver</a></li>
+						<li>|</li>
+						<li><strong>Está en:</strong></li>
+						<li><a href="#">página de prueba de estilos</a></li>
+						<li>Acceso</li>
+					</ul>
+				</div>
+				<div class="col-xs-4 col-sm-3 text-right">
+					<a href="javascript:resizeText(-1)" class="jfontsize-button" title="Disminuir tamaño del texto">A-</a> |
+					<a href="javascript:resizeText(0)" class="jfontsize-button" title="Reestablecer tamaño del texto">A</a> |
+					<a href="javascript:resizeText(1)" class="jfontsize-button" title="Aumentar tamaño del texto">A+</a> 
+				</div>
+	     </div>	
+	</nav>
+        <!--Cuerpo-->
+	<main id="seccion" class="container" aria-label="Contenido principal">
+		<h3>Acceso al servicio de cita online</h3>
+		<form name="aspnetForm" method="post" action="./Servicio.aspx" id="aspnetForm">
+		<div class="alert alert-info" role="dialog" aria-label="mensaje informativo">  
+			<div class="row">
+				<div class="col-sm-1 hidden-xs"><img title="Información para acceder" src="images/icono-info.png" alt="Icono con una i latina que acompaña a un texto informativo"></div>
+				<div class="col-xs-12 col-sm-11">
+                        <p>Se recomienda pedir cita con un mes de antelación. Tenga en cuenta que durante el período estival hay más demanda, por lo que se aconseja pedirla meses antes.</p>
+                        <p>El campo <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número de identificación de extranjero">NIE</abbr> es obligatorio.</p>
+                        <p>Si la cita es para un menor de 16 años, el <abbr title="Documento nacional de identidad">DNI</abbr>/<abbr title="Número de identificación de extranjero">NIE</abbr> que debe introducir es el del adulto que se haga responsable de la cita.</p>
+
+                        <p>Por favor, antes de solicitar cita en nuestros centros, compruebe en el apartado de 
+                        <a id="lkbBuscadorVacunas" title="Consulte si el país al que va a viajar requiere algún tipo de vacunación o si se recomienda la prescripción del tratamiento contra la malaria" class="link" href="#">Antes del viaje</a>
+                        de la informaci&oacute;n general sobre Vacunas y Consejos Sanitarios para Viajeros si se exige o se recomienda alg&uacute;n tipo de vacuna o tratamiento en el lugar de destino de su viaje.<br />
+                        </p>
+                        <p>Existen algunas vacunas que para su administraci&oacute;n es necesario abonar una tasa fijada por el Ministerio de Hacienda y Administraciones P&uacute;blicas.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel">
+			<fieldset class="form-horizontal panel-body">
+				<legend class="col-xs-12">Formulario de acceso al servicio:</legend>
+				<!--Formulario de acceso-->
+				<div class="col-xs-12 panel-formulario">
+					<div class="row form-group">
+						<label for="tbxNumTarjeta" id="lblNumTarjeta" class="col-sm-6 col-lg-5 control-label text-right labelCenter">Código de identificación personal autonómico:</label>
+						<div class="col-sm-4 col-md-3">
+							<div class="input-group">
+								<input name="tbxNumTarjeta" type="text" maxlength="10" id="tbxNumTarjeta" title="Introduzca los diez dígitos de su código de identificación personal autonómico" class="form-control" />
+								<a href="#" title="El Código es un número de 10 dígitos que se encuentra situado
+en la tarjeta sanitaria en la mitad superior centro o en la mitad
+superior derecha según el modelo. Consulte en las imágenes
+dónde encontrar el código."  data-toggle="modal" data-target="#modalTarjeta" class="input-group-btn">
+								  <img src="images/icono-tarjeta.png" alt="Este icono simboliza la Tarjeta Sanitaria de la Comunidad de Madrid">
+								</a>
+							</div>
+						</div>
+					</div>
+            <div class="row form-group">
+                <span id="lblFNac" class="col-sm-6 col-lg-5 control-label text-right labelCenter falsoLabel">Fecha de nacimiento:</span>
+                <div class="col-sm-4 col-md-3">
+            <!--Fecha inicio-->
+                                <div class="input-group date campoFechaLanza" id="datetimepicker1">
+                                    <input name="txtFechaNacimiento" type="text" id="txtFechaNacimiento" class="form-control" data-date-format="DD/MM/YYYY" placeholder="dd/mm/aaaa" title="Introduzca su fecha de nacimiento" />
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+            <!--Fin de inicio-->
+                </div>
+                <div class="col-sm-6 col-md-4 hidden"> <!-- Fecha a eliminar -->
+                    <div class="col-xs-3">
+                        <div class="row">
+                            <input name="tbxFechaDD" type="text" maxlength="2" id="tbxFechaDD" title="Día de la fecha de nacimiento (2 dígitos)" class="form-control" Size="2" placeholder="Día" onkeyup="fn_saltar(this);" onblur="javascript:ValidaNumero(this, event);" onkeydown="javascript:Numeros(this, event);" />
+                            <label for="tbxFechaDD" class="help-block hidden">Día</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <input name="tbxFechaMM" type="text" maxlength="2" id="tbxFechaMM" title="Mes de la fecha de nacimiento (2 dígitos)" class="form-control" Size="2" placeholder="Mes" onblur="javascript:ValidaNumero(this, event);" onkeydown="javascript:Numeros(this, event);" onkeyup="fn_saltar2(this);" />
+                        <label for="tbxFechaMM" class="help-block hidden">Mes</label>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <input name="tbxFechaAAAA" type="text" maxlength="4" id="tbxFechaAAAA" title="Año de la fecha de nacimiento (4 dígitos)" class="form-control" Size="4" placeholder="Año" onblur="javascript:ValidaNumero(this, event);" onkeydown="javascript:Numeros(this, event);" />
+                            <label for="tbxFechaAAAA" class="help-block hidden">Año</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="tbxDNI" id="lblDNI" class="col-sm-6 col-lg-5 control-label text-right labelCenter"><abbr title="Documento nacional de identidad">DNI</abbr> / <abbr title="Número de identificación de extranjero">NIE</abbr>:</label>
+                <div class="col-sm-4 col-md-3">
+                    <input name="tbxDNI" type="text" maxlength="12" id="tbxDNI" title="Introduzca los ocho dígitos y la letra de su documento nacional de identidad;
+o la letra, los siete digitos y el dígito de control de su número de identificación
+de extranjero" class="form-control" Size="12" />
+                    
+                </div>
+            </div>
+    </fieldset>
+    <!--Botonera-->
+    <div class="form-group text-center panel-botonera">
+            <input type="submit" name="TipoAcceso" value="Acceder" onclick="waitingDialog.show();" id="TipoAcceso" class="btn btn-rojo" title="Acceder al servicio" />
+    </div>
+</div>
+
+		</div>
+		</form>
+	</main>
+
+        <div class="clearfix"></div>
+
+	<div class="container" role="region" aria-label="Protección de datos">
+	<div class="contenedorLegal">
+	  <div class="cabeceraLegal">
+		<h4>Información básica sobre Protección de Datos</h4>
+	  </div>
+	  <div class="panel-body">
+			<div class="col-xs-12 col-sm-3 text-sm-right"><strong>Responsable</strong></div>
+			<div class="col-xs-12 col-sm-9">
+				Hospital Universitario La Paz – Carlos <abbr title="Tercero">III</abbr>, Hospital Universitario 12 de Octubre
+				y Dirección General de Salud Pública. Cada uno de estos organismos será responsable
+				del tratamiento de los datos de aquellos pacientes que trate.</div>
+			<div class="col-xs-12 col-sm-3 text-sm-right"><strong>Finalidad</strong></div>
+			<div class="col-xs-12 col-sm-9">
+				Planificación y gestión de la asistencia sanitaria a las personas que viajan al
+				extranjero.</div>
+			<div class="col-xs-12 col-sm-3 text-sm-right"><strong>Legitimación</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								Obligación legal (<abbr title="Reglamento General de Protección de Datos">RGPD</abbr> 6.1.c)</div>
+			<div class="col-xs-12 col-sm-3 text-sm-right"><strong>Destinatarios</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								No se cederán datos salvo obligación legal.</div>
+			<div class="col-xs-12 col-sm-3 text-sm-right"><strong>Derechos</strong></div>
+			<div class="col-xs-12 col-sm-9">
+								Acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad,
+								cuando sean aplicables.</div>
+			<div class="col-xs-12 col-sm-3 text-sm-right"><strong>Información adicional</strong></div>
+			<div class="col-xs-12 col-sm-9">
+				Puede consultar la información adicional y detallada sobre Protección de Datos en el siguiente enlace: <a href="../proteccion_de_datos.aspx" title="Ver más detalle">Aquí</a>.</div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container contenedorContacto" role="region" aria-label="contacte con nosotros">
+		<div class="divTableMsg">
+			<div class="row">
+				<div class="col-xs-12 col-sm-2 col-md-1">
+					<img alt="Este icono simboliza un sobre de correo electrónico" src="images/ico_mail.gif" title="Imagen de contacto">
+				</div>
+				<div class="col-xs-12 col-sm-10 col-md-11"><p>Para más información, puede contactar con el teléfono de información general de la Comunidad de Madrid 012.</p></div>
+			</div>
+		</div>
+	</div>
+
+        <!-- Pie-->
+        <footer class="container-fluid">
+	      <div class="row">
+	          <div class="col-xs-12 col-sm-7">
+	            <a title="Explicación del Nivel Doble A de Conformidad" href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank">
+		            <img src="images/wcag2.1AA-v.svg" alt="Icono de conformidad con el Nivel Doble-A del W3C-WAI">
+		        </a>
+		        |
+		        <a title="Consulta la declaración de conformidad" href="/accesibilidad.aspx" >Accesibilidad</a>
+		        |
+		        <a title="Consulta los requisitos técnicos para el acceso" href="/informacion_tecnica.aspx">Información técnica</a>
+		        |
+		        <a title="Consulta la lista de las páginas del sitio web" href="/mapa_web.aspx" >Mapa web</a>
+	         </div>
+	         <div class="col-xs-12 col-sm-5">Copyright &copy; Comunidad de Madrid </div>
+	      </div>
+        </footer>
+        <!--Fin del pie-->
+
+
+    <!-- Modal información Tarjeta Sanitaria-->
+    <div id="modalTarjeta" class="modal fade" role="dialog" aria-hidden="true" aria-modal="true" aria-label="Identifica el código de identificación personal autonómico en tu tarjeta">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Cabecera-->
+                <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="cerrar">&times;</button>
+                    <h4 class="modal-title">
+                        ¿Dónde encontrar su código de identificación personal autonómico?
+                    </h4>
+                </div>
+                <!--Cuerpo-->
+                <div class="modal-body">
+					<p>
+						El Código de Identificación Personal Autonómico se encuentra situado en la tarjeta sanitaria en la mitad superior centro o en la
+						mitad superior derecha según el modelo.
+					</p>
+					<div class="text-center">
+						<img src="images/TSI_nueva.png" title="En este modelo de Tarjeta Sanitaria el 
+Código de Identificación Personal Autonómico
+se encuentra en la mitad superior centro"
+                                class="form-group" />
+                            <img src="images/TSI_vieja.png" title="En este modelo de Tarjeta Sanitaria
+el Código de Identificación Personal Autonómico
+se encuentra en la mitad superior derecha"
+                                class="form-group" />
+                        </div>
+            </div>
+				<!--Pie-->
+				<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>            </div>
+			</div>
+		</div>
+    </div>
+	    
+    <!-- JS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-waiting.js" type="text/javascript"></script>
+
+</body>
+</html>
