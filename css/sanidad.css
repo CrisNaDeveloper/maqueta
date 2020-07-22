@@ -96,8 +96,8 @@ h3 { /* 1.3em > 1.538461538461538em ---> 20px */
 
 /*** Body ***/
 body {
-    font-family: Arial, Verdana, Helvetica, sans-serif;
-    line-height: 1.5;
+    font-family: Source Sans Pro;
+    line-height: 1.8;
 }
 
 /**** Header ****/
