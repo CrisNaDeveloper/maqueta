@@ -35,7 +35,7 @@ ul.nav, .barraAcceso, .barraMigas { /* menú de navegación principal, Barra de 
 /**************** MAIN y FOOTER ********************/
 
 main, footer, .contenedorLegal, .divTableMsg, .contenedorContacto, .modal-content {
-    font-size: 1.3em;
+    font-size: 1.6em;
 }
 
 .form-control, .input-group-addon, .panel-acordeon, .panelDetalle .panel-acordeon .titulo_acordeon, .detalleAcordeon ul li a, th a, td a, button i, button span {
