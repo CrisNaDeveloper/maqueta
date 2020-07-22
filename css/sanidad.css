@@ -96,7 +96,7 @@ h3 { /* 1.3em > 1.538461538461538em ---> 20px */
 
 /*** Body ***/
 body {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.8;
 }
 
